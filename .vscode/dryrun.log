@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/moh/Downloads/repos/autoMPI'
+make: Leaving directory `/Users/moh/Downloads/repos/autoMPI'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

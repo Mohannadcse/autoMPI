@@ -1,0 +1,2445 @@
+strategy: callout
+
+logging: stderr_printf
+
+functions:
+- callee: [entry, exit]
+  name: ap_get_server_built
+- callee: [entry, exit]
+  name: main
+- callee: [entry, exit]
+  name: init_process
+- callee: [entry, exit]
+  name: abort_on_oom
+- callee: [entry, exit]
+  name: destroy_and_exit_process
+- callee: [entry, exit]
+  name: usage
+- callee: [entry, exit]
+  name: show_compile_settings
+- callee: [entry, exit]
+  name: show_mpm_settings
+- callee: [entry, exit]
+  name: ap_suck_in_APR
+- callee: [entry, exit]
+  name: ap_init_vhost_config
+- callee: [entry, exit]
+  name: vhost_check_config
+- callee: [entry, exit]
+  name: ap_parse_vhost_addrs
+- callee: [entry, exit]
+  name: get_addresses
+- callee: [entry, exit]
+  name: ap_set_name_virtual_host
+- callee: [entry, exit]
+  name: ap_fini_vhost_config
+- callee: [entry, exit]
+  name: find_default_server
+- callee: [entry, exit]
+  name: add_name_vhost_config
+- callee: [entry, exit]
+  name: new_name_chain
+- callee: [entry, exit]
+  name: new_ipaddr_chain
+- callee: [entry, exit]
+  name: find_ipaddr
+- callee: [entry, exit]
+  name: hash_addr
+- callee: [entry, exit]
+  name: hash_inaddr
+- callee: [entry, exit]
+  name: dump_vhost_config
+- callee: [entry, exit]
+  name: dump_a_vhost
+- callee: [entry, exit]
+  name: ap_matches_request_vhost
+- callee: [entry, exit]
+  name: matches_aliases
+- callee: [entry, exit]
+  name: ap_update_vhost_from_headers
+- callee: [entry, exit]
+  name: fix_hostname
+- callee: [entry, exit]
+  name: fix_hostname_v6_literal
+- callee: [entry, exit]
+  name: fix_hostname_non_v6
+- callee: [entry, exit]
+  name: strict_hostname_check
+- callee: [entry, exit]
+  name: construct_host_header
+- callee: [entry, exit]
+  name: check_hostalias
+- callee: [entry, exit]
+  name: check_serverpath
+- callee: [entry, exit]
+  name: ap_vhost_iterate_given_conn
+- callee: [entry, exit]
+  name: ap_update_vhost_given_ip
+- callee: [entry, exit]
+  name: ap_field_noparam
+- callee: [entry, exit]
+  name: ap_ht_time
+- callee: [entry, exit]
+  name: ap_strcmp_match
+- callee: [entry, exit]
+  name: ap_strcasecmp_match
+- callee: [entry, exit]
+  name: ap_os_is_path_absolute
+- callee: [entry, exit]
+  name: ap_is_matchexp
+- callee: [entry, exit]
+  name: ap_pregcomp
+- callee: [entry, exit]
+  name: ap_abort_on_oom
+- callee: [entry, exit]
+  name: regex_cleanup
+- callee: [entry, exit]
+  name: ap_pregfree
+- callee: [entry, exit]
+  name: ap_strcasestr
+- callee: [entry, exit]
+  name: ap_stripprefix
+- callee: [entry, exit]
+  name: ap_pregsub
+- callee: [entry, exit]
+  name: regsub_core
+- callee: [entry, exit]
+  name: ap_varbuf_strmemcat
+- callee: [entry, exit]
+  name: ap_varbuf_grow
+- callee: [entry, exit]
+  name: varbuf_cleanup
+- callee: [entry, exit]
+  name: ap_pregsub_ex
+- callee: [entry, exit]
+  name: ap_getparents
+- callee: [entry, exit]
+  name: ap_no2slash
+- callee: [entry, exit]
+  name: ap_make_dirstr_prefix
+- callee: [entry, exit]
+  name: ap_make_dirstr_parent
+- callee: [entry, exit]
+  name: ap_count_dirs
+- callee: [entry, exit]
+  name: ap_getword_nc
+- callee: [entry, exit]
+  name: ap_getword
+- callee: [entry, exit]
+  name: ap_getword_white_nc
+- callee: [entry, exit]
+  name: ap_getword_white
+- callee: [entry, exit]
+  name: ap_getword_nulls_nc
+- callee: [entry, exit]
+  name: ap_getword_nulls
+- callee: [entry, exit]
+  name: ap_getword_conf_nc
+- callee: [entry, exit]
+  name: ap_getword_conf
+- callee: [entry, exit]
+  name: substring_conf
+- callee: [entry, exit]
+  name: ap_getword_conf2_nc
+- callee: [entry, exit]
+  name: ap_getword_conf2
+- callee: [entry, exit]
+  name: ap_cfg_closefile
+- callee: [entry, exit]
+  name: ap_pcfg_openfile
+- callee: [entry, exit]
+  name: cfg_getch
+- callee: [entry, exit]
+  name: cfg_getstr
+- callee: [entry, exit]
+  name: cfg_close
+- callee: [entry, exit]
+  name: ap_pcfg_open_custom
+- callee: [entry, exit]
+  name: ap_cfg_getc
+- callee: [entry, exit]
+  name: ap_pcfg_strerror
+- callee: [entry, exit]
+  name: ap_cfg_getline
+- callee: [entry, exit]
+  name: ap_cfg_getline_core
+- callee: [entry, exit]
+  name: cfg_trim_line
+- callee: [entry, exit]
+  name: ap_varbuf_cfg_getline
+- callee: [entry, exit]
+  name: ap_size_list_item
+- callee: [entry, exit]
+  name: ap_get_list_item
+- callee: [entry, exit]
+  name: ap_find_list_item
+- callee: [entry, exit]
+  name: find_list_item
+- callee: [entry, exit]
+  name: ap_find_etag_strong
+- callee: [entry, exit]
+  name: ap_find_etag_weak
+- callee: [entry, exit]
+  name: ap_parse_token_list_strict
+- callee: [entry, exit]
+  name: ap_scan_http_field_content
+- callee: [entry, exit]
+  name: ap_scan_http_token
+- callee: [entry, exit]
+  name: ap_scan_vchar_obstext
+- callee: [entry, exit]
+  name: ap_get_token
+- callee: [entry, exit]
+  name: ap_find_token
+- callee: [entry, exit]
+  name: ap_find_last_token
+- callee: [entry, exit]
+  name: ap_escape_shell_cmd
+- callee: [entry, exit]
+  name: ap_unescape_url
+- callee: [entry, exit]
+  name: unescape_url
+- callee: [entry, exit]
+  name: x2c
+- callee: [entry, exit]
+  name: ap_unescape_url_keep2f
+- callee: [entry, exit]
+  name: ap_unescape_urlencoded
+- callee: [entry, exit]
+  name: ap_construct_server
+- callee: [entry, exit]
+  name: ap_unescape_all
+- callee: [entry, exit]
+  name: ap_escape_path_segment_buffer
+- callee: [entry, exit]
+  name: c2x
+- callee: [entry, exit]
+  name: ap_escape_path_segment
+- callee: [entry, exit]
+  name: ap_os_escape_path
+- callee: [entry, exit]
+  name: ap_escape_urlencoded_buffer
+- callee: [entry, exit]
+  name: ap_escape_urlencoded
+- callee: [entry, exit]
+  name: ap_escape_html2
+- callee: [entry, exit]
+  name: ap_escape_logitem
+- callee: [entry, exit]
+  name: ap_escape_errorlog_item
+- callee: [entry, exit]
+  name: ap_bin2hex
+- callee: [entry, exit]
+  name: ap_is_directory
+- callee: [entry, exit]
+  name: ap_is_rdirectory
+- callee: [entry, exit]
+  name: ap_make_full_path
+- callee: [entry, exit]
+  name: ap_is_url
+- callee: [entry, exit]
+  name: ap_ind
+- callee: [entry, exit]
+  name: ap_rind
+- callee: [entry, exit]
+  name: ap_str_tolower
+- callee: [entry, exit]
+  name: ap_str_toupper
+- callee: [entry, exit]
+  name: ap_get_local_host
+- callee: [entry, exit]
+  name: ap_pbase64decode
+- callee: [entry, exit]
+  name: ap_pbase64encode
+- callee: [entry, exit]
+  name: ap_content_type_tolower
+- callee: [entry, exit]
+  name: ap_escape_quotes
+- callee: [entry, exit]
+  name: ap_append_pid
+- callee: [entry, exit]
+  name: ap_timeout_parameter_parse
+- callee: [entry, exit]
+  name: ap_request_has_body
+- callee: [entry, exit]
+  name: ap_pool_cleanup_set_null
+- callee: [entry, exit]
+  name: ap_str2_alnum
+- callee: [entry, exit]
+  name: ap_pstr2_alnum
+- callee: [entry, exit]
+  name: ap_parse_form_data
+- callee: [entry, exit]
+  name: ap_varbuf_init
+- callee: [entry, exit]
+  name: ap_varbuf_free
+- callee: [entry, exit]
+  name: ap_varbuf_pdup
+- callee: [entry, exit]
+  name: ap_varbuf_regsub
+- callee: [entry, exit]
+  name: ap_malloc
+- callee: [entry, exit]
+  name: ap_calloc
+- callee: [entry, exit]
+  name: ap_realloc
+- callee: [entry, exit]
+  name: ap_get_sload
+- callee: [entry, exit]
+  name: ap_get_loadavg
+- callee: [entry, exit]
+  name: ap_get_exec_line
+- callee: [entry, exit]
+  name: ap_array_str_index
+- callee: [entry, exit]
+  name: ap_array_str_contains
+- callee: [entry, exit]
+  name: ap_cstr_casecmp
+- callee: [entry, exit]
+  name: ap_cstr_casecmpn
+- callee: [entry, exit]
+  name: ap_hook_monitor
+- callee: [entry, exit]
+  name: ap_hook_get_monitor
+- callee: [entry, exit]
+  name: ap_run_monitor
+- callee: [entry, exit]
+  name: ap_hook_drop_privileges
+- callee: [entry, exit]
+  name: ap_hook_get_drop_privileges
+- callee: [entry, exit]
+  name: ap_run_drop_privileges
+- callee: [entry, exit]
+  name: ap_hook_mpm
+- callee: [entry, exit]
+  name: ap_hook_get_mpm
+- callee: [entry, exit]
+  name: ap_run_mpm
+- callee: [entry, exit]
+  name: ap_hook_mpm_query
+- callee: [entry, exit]
+  name: ap_hook_get_mpm_query
+- callee: [entry, exit]
+  name: ap_run_mpm_query
+- callee: [entry, exit]
+  name: ap_hook_mpm_register_timed_callback
+- callee: [entry, exit]
+  name: ap_hook_get_mpm_register_timed_callback
+- callee: [entry, exit]
+  name: ap_run_mpm_register_timed_callback
+- callee: [entry, exit]
+  name: ap_hook_end_generation
+- callee: [entry, exit]
+  name: ap_hook_get_end_generation
+- callee: [entry, exit]
+  name: ap_run_end_generation
+- callee: [entry, exit]
+  name: ap_hook_child_status
+- callee: [entry, exit]
+  name: ap_hook_get_child_status
+- callee: [entry, exit]
+  name: ap_run_child_status
+- callee: [entry, exit]
+  name: ap_hook_suspend_connection
+- callee: [entry, exit]
+  name: ap_hook_get_suspend_connection
+- callee: [entry, exit]
+  name: ap_run_suspend_connection
+- callee: [entry, exit]
+  name: ap_hook_resume_connection
+- callee: [entry, exit]
+  name: ap_hook_get_resume_connection
+- callee: [entry, exit]
+  name: ap_run_resume_connection
+- callee: [entry, exit]
+  name: ap_hook_mpm_get_name
+- callee: [entry, exit]
+  name: ap_hook_get_mpm_get_name
+- callee: [entry, exit]
+  name: ap_run_mpm_get_name
+- callee: [entry, exit]
+  name: mpm_common_pre_config
+- callee: [entry, exit]
+  name: ap_wait_or_timeout
+- callee: [entry, exit]
+  name: ap_sock_disable_nagle
+- callee: [entry, exit]
+  name: ap_uname2id
+- callee: [entry, exit]
+  name: ap_gname2id
+- callee: [entry, exit]
+  name: ap_mpm_set_pidfile
+- callee: [entry, exit]
+  name: ap_mpm_dump_pidfile
+- callee: [entry, exit]
+  name: ap_mpm_set_max_requests
+- callee: [entry, exit]
+  name: ap_mpm_set_coredumpdir
+- callee: [entry, exit]
+  name: ap_mpm_set_graceful_shutdown
+- callee: [entry, exit]
+  name: ap_mpm_set_max_mem_free
+- callee: [entry, exit]
+  name: ap_mpm_set_thread_stacksize
+- callee: [entry, exit]
+  name: ap_mpm_query
+- callee: [entry, exit]
+  name: ap_mpm_end_gen_helper
+- callee: [entry, exit]
+  name: end_gen
+- callee: [entry, exit]
+  name: ap_core_child_status
+- callee: [entry, exit]
+  name: ap_mpm_register_timed_callback
+- callee: [entry, exit]
+  name: ap_show_mpm
+- callee: [entry, exit]
+  name: ap_check_mpm
+- callee: [entry, exit]
+  name: ap_get_output_filter_handle
+- callee: [entry, exit]
+  name: get_filter_handle
+- callee: [entry, exit]
+  name: ap_get_input_filter_handle
+- callee: [entry, exit]
+  name: ap_register_input_filter
+- callee: [entry, exit]
+  name: register_filter
+- callee: [entry, exit]
+  name: trie_node_alloc
+- callee: [entry, exit]
+  name: trie_node_link
+- callee: [entry, exit]
+  name: filter_cleanup
+- callee: [entry, exit]
+  name: ap_register_output_filter
+- callee: [entry, exit]
+  name: ap_register_output_filter_protocol
+- callee: [entry, exit]
+  name: ap_add_input_filter
+- callee: [entry, exit]
+  name: add_any_filter
+- callee: [entry, exit]
+  name: add_any_filter_handle
+- callee: [entry, exit]
+  name: ap_add_input_filter_handle
+- callee: [entry, exit]
+  name: ap_add_output_filter
+- callee: [entry, exit]
+  name: ap_add_output_filter_handle
+- callee: [entry, exit]
+  name: ap_remove_input_filter
+- callee: [entry, exit]
+  name: remove_any_filter
+- callee: [entry, exit]
+  name: ap_remove_output_filter
+- callee: [entry, exit]
+  name: ap_remove_input_filter_byhandle
+- callee: [entry, exit]
+  name: ap_remove_output_filter_byhandle
+- callee: [entry, exit]
+  name: ap_get_brigade
+- callee: [entry, exit]
+  name: ap_pass_brigade
+- callee: [entry, exit]
+  name: ap_pass_brigade_fchk
+- callee: [entry, exit]
+  name: ap_save_brigade
+- callee: [entry, exit]
+  name: ap_filter_flush
+- callee: [entry, exit]
+  name: ap_fflush
+- callee: [entry, exit]
+  name: ap_fputstrs
+- callee: [entry, exit]
+  name: ap_fprintf
+- callee: [entry, exit]
+  name: ap_filter_protocol
+- callee: [entry, exit]
+  name: ap_regerror
+- callee: [entry, exit]
+  name: ap_regfree
+- callee: [entry, exit]
+  name: ap_regcomp
+- callee: [entry, exit]
+  name: ap_regexec
+- callee: [entry, exit]
+  name: ap_regexec_len
+- callee: [entry, exit]
+  name: ap_regname
+- callee: [entry, exit]
+  name: ap_set_scoreboard
+- callee: [entry, exit]
+  name: ap_set_extended_status
+- callee: [entry, exit]
+  name: ap_set_reqtail
+- callee: [entry, exit]
+  name: ap_hook_pre_mpm
+- callee: [entry, exit]
+  name: ap_hook_get_pre_mpm
+- callee: [entry, exit]
+  name: ap_run_pre_mpm
+- callee: [entry, exit]
+  name: ap_calc_scoreboard_size
+- callee: [entry, exit]
+  name: ap_init_scoreboard
+- callee: [entry, exit]
+  name: ap_reopen_scoreboard
+- callee: [entry, exit]
+  name: ap_cleanup_scoreboard
+- callee: [entry, exit]
+  name: ap_cleanup_shared_mem
+- callee: [entry, exit]
+  name: ap_create_scoreboard
+- callee: [entry, exit]
+  name: open_scoreboard
+- callee: [entry, exit]
+  name: create_namebased_scoreboard
+- callee: [entry, exit]
+  name: ap_exists_scoreboard_image
+- callee: [entry, exit]
+  name: ap_increment_counts
+- callee: [entry, exit]
+  name: ap_find_child_by_pid
+- callee: [entry, exit]
+  name: ap_create_sb_handle
+- callee: [entry, exit]
+  name: ap_update_child_status_from_indexes
+- callee: [entry, exit]
+  name: update_child_status_internal
+- callee: [entry, exit]
+  name: copy_request
+- callee: [entry, exit]
+  name: ap_update_child_status
+- callee: [entry, exit]
+  name: ap_update_child_status_from_conn
+- callee: [entry, exit]
+  name: ap_update_child_status_from_server
+- callee: [entry, exit]
+  name: ap_update_child_status_descr
+- callee: [entry, exit]
+  name: ap_time_process_request
+- callee: [entry, exit]
+  name: ap_get_scoreboard_worker_from_indexes
+- callee: [entry, exit]
+  name: ap_get_scoreboard_worker
+- callee: [entry, exit]
+  name: ap_copy_scoreboard_worker
+- callee: [entry, exit]
+  name: ap_get_scoreboard_process
+- callee: [entry, exit]
+  name: ap_get_scoreboard_global
+- callee: [entry, exit]
+  name: error_bucket_destroy
+- callee: [entry, exit]
+  name: error_bucket_read
+- callee: [entry, exit]
+  name: ap_bucket_error_make
+- callee: [entry, exit]
+  name: ap_bucket_error_create
+- callee: [entry, exit]
+  name: ap_setup_make_content_type
+- callee: [entry, exit]
+  name: ap_make_content_type
+- callee: [entry, exit]
+  name: ap_set_content_length
+- callee: [entry, exit]
+  name: ap_rationalize_mtime
+- callee: [entry, exit]
+  name: ap_rgetline_core
+- callee: [entry, exit]
+  name: ap_getline
+- callee: [entry, exit]
+  name: ap_parse_uri
+- callee: [entry, exit]
+  name: ap_run_http_scheme
+- callee: [entry, exit]
+  name: ap_get_mime_headers_core
+- callee: [entry, exit]
+  name: field_name_len
+- callee: [entry, exit]
+  name: table_do_fn_check_lengths
+- callee: [entry, exit]
+  name: ap_get_mime_headers
+- callee: [entry, exit]
+  name: ap_read_request
+- callee: [entry, exit]
+  name: ap_run_pre_read_request
+- callee: [entry, exit]
+  name: read_request_line
+- callee: [entry, exit]
+  name: ap_run_log_transaction
+- callee: [entry, exit]
+  name: ap_run_post_read_request
+- callee: [entry, exit]
+  name: ap_set_sub_req_protocol
+- callee: [entry, exit]
+  name: strip_headers_request_body
+- callee: [entry, exit]
+  name: ap_finalize_sub_req_protocol
+- callee: [entry, exit]
+  name: end_output_stream
+- callee: [entry, exit]
+  name: ap_finalize_request_protocol
+- callee: [entry, exit]
+  name: ap_note_auth_failure
+- callee: [entry, exit]
+  name: ap_run_note_auth_failure
+- callee: [entry, exit]
+  name: ap_note_basic_auth_failure
+- callee: [entry, exit]
+  name: ap_note_digest_auth_failure
+- callee: [entry, exit]
+  name: ap_get_basic_auth_pw
+- callee: [entry, exit]
+  name: ap_get_basic_auth_components
+- callee: [entry, exit]
+  name: ap_content_length_filter
+- callee: [entry, exit]
+  name: ap_send_fd
+- callee: [entry, exit]
+  name: ap_send_mmap
+- callee: [entry, exit]
+  name: ap_old_write_filter
+- callee: [entry, exit]
+  name: ap_rputc
+- callee: [entry, exit]
+  name: buffer_output
+- callee: [entry, exit]
+  name: insert_old_write_filter
+- callee: [entry, exit]
+  name: ap_rwrite
+- callee: [entry, exit]
+  name: ap_vrprintf
+- callee: [entry, exit]
+  name: r_flush
+- callee: [entry, exit]
+  name: ap_rprintf
+- callee: [entry, exit]
+  name: ap_rvputs
+- callee: [entry, exit]
+  name: ap_rflush
+- callee: [entry, exit]
+  name: ap_set_last_modified
+- callee: [entry, exit]
+  name: ap_send_interim_response
+- callee: [entry, exit]
+  name: send_header
+- callee: [entry, exit]
+  name: ap_get_protocol
+- callee: [entry, exit]
+  name: ap_run_protocol_get
+- callee: [entry, exit]
+  name: ap_get_protocol_upgrades
+- callee: [entry, exit]
+  name: ap_select_protocol
+- callee: [entry, exit]
+  name: ap_run_protocol_propose
+- callee: [entry, exit]
+  name: protocol_cmp
+- callee: [entry, exit]
+  name: ap_switch_protocol
+- callee: [entry, exit]
+  name: ap_run_protocol_switch
+- callee: [entry, exit]
+  name: ap_is_allowed_protocol
+- callee: [entry, exit]
+  name: ap_hook_pre_read_request
+- callee: [entry, exit]
+  name: ap_hook_get_pre_read_request
+- callee: [entry, exit]
+  name: ap_hook_post_read_request
+- callee: [entry, exit]
+  name: ap_hook_get_post_read_request
+- callee: [entry, exit]
+  name: ap_hook_log_transaction
+- callee: [entry, exit]
+  name: ap_hook_get_log_transaction
+- callee: [entry, exit]
+  name: ap_hook_http_scheme
+- callee: [entry, exit]
+  name: ap_hook_get_http_scheme
+- callee: [entry, exit]
+  name: ap_hook_default_port
+- callee: [entry, exit]
+  name: ap_hook_get_default_port
+- callee: [entry, exit]
+  name: ap_run_default_port
+- callee: [entry, exit]
+  name: ap_hook_note_auth_failure
+- callee: [entry, exit]
+  name: ap_hook_get_note_auth_failure
+- callee: [entry, exit]
+  name: ap_hook_protocol_propose
+- callee: [entry, exit]
+  name: ap_hook_get_protocol_propose
+- callee: [entry, exit]
+  name: ap_hook_protocol_switch
+- callee: [entry, exit]
+  name: ap_hook_get_protocol_switch
+- callee: [entry, exit]
+  name: ap_hook_protocol_get
+- callee: [entry, exit]
+  name: ap_hook_get_protocol_get
+- callee: [entry, exit]
+  name: create_core_dir_config
+- callee: [entry, exit]
+  name: merge_core_dir_configs
+- callee: [entry, exit]
+  name: create_core_server_config
+- callee: [entry, exit]
+  name: merge_core_server_configs
+- callee: [entry, exit]
+  name: dirsection
+- callee: [entry, exit]
+  name: ap_check_cmd_context
+- callee: [entry, exit]
+  name: find_parent
+- callee: [entry, exit]
+  name: unclosed_directive
+- callee: [entry, exit]
+  name: missing_container_arg
+- callee: [entry, exit]
+  name: ap_add_per_dir_conf
+- callee: [entry, exit]
+  name: urlsection
+- callee: [entry, exit]
+  name: ap_add_per_url_conf
+- callee: [entry, exit]
+  name: virtualhost_section
+- callee: [entry, exit]
+  name: filesection
+- callee: [entry, exit]
+  name: ap_add_file_conf
+- callee: [entry, exit]
+  name: ap_limit_section
+- callee: [entry, exit]
+  name: start_ifmod
+- callee: [entry, exit]
+  name: find_module
+- callee: [entry, exit]
+  name: start_ifdefine
+- callee: [entry, exit]
+  name: ap_exists_config_define
+- callee: [entry, exit]
+  name: set_add_default_charset
+- callee: [entry, exit]
+  name: set_accept_path_info
+- callee: [entry, exit]
+  name: set_define
+- callee: [entry, exit]
+  name: init_config_defines
+- callee: [entry, exit]
+  name: unset_define
+- callee: [entry, exit]
+  name: generate_error
+- callee: [entry, exit]
+  name: ifsection
+- callee: [entry, exit]
+  name: ap_add_if_conf
+- callee: [entry, exit]
+  name: set_access_name
+- callee: [entry, exit]
+  name: set_document_root
+- callee: [entry, exit]
+  name: set_error_document
+- callee: [entry, exit]
+  name: set_override
+- callee: [entry, exit]
+  name: set_allow_opts
+- callee: [entry, exit]
+  name: set_override_list
+- callee: [entry, exit]
+  name: set_options
+- callee: [entry, exit]
+  name: set_default_type
+- callee: [entry, exit]
+  name: set_etag_bits
+- callee: [entry, exit]
+  name: set_enable_mmap
+- callee: [entry, exit]
+  name: set_enable_sendfile
+- callee: [entry, exit]
+  name: set_protocol
+- callee: [entry, exit]
+  name: set_accf_map
+- callee: [entry, exit]
+  name: set_hostname_lookups
+- callee: [entry, exit]
+  name: set_server_string_slot
+- callee: [entry, exit]
+  name: server_hostname_port
+- callee: [entry, exit]
+  name: set_signature_flag
+- callee: [entry, exit]
+  name: set_server_root
+- callee: [entry, exit]
+  name: set_runtime_dir
+- callee: [entry, exit]
+  name: set_errorlog_format
+- callee: [entry, exit]
+  name: parse_errorlog_string
+- callee: [entry, exit]
+  name: parse_errorlog_item
+- callee: [entry, exit]
+  name: parse_errorlog_misc_string
+- callee: [entry, exit]
+  name: log_constant_item
+- callee: [entry, exit]
+  name: set_server_alias
+- callee: [entry, exit]
+  name: set_serverpath
+- callee: [entry, exit]
+  name: set_timeout
+- callee: [entry, exit]
+  name: set_content_md5
+- callee: [entry, exit]
+  name: set_use_canonical_name
+- callee: [entry, exit]
+  name: set_use_canonical_phys_port
+- callee: [entry, exit]
+  name: include_config
+- callee: [entry, exit]
+  name: set_loglevel
+- callee: [entry, exit]
+  name: set_serv_tokens
+- callee: [entry, exit]
+  name: set_limit_req_line
+- callee: [entry, exit]
+  name: set_limit_req_fieldsize
+- callee: [entry, exit]
+  name: set_limit_req_fields
+- callee: [entry, exit]
+  name: set_limit_req_body
+- callee: [entry, exit]
+  name: set_limit_xml_req_body
+- callee: [entry, exit]
+  name: set_max_ranges
+- callee: [entry, exit]
+  name: set_max_overlaps
+- callee: [entry, exit]
+  name: set_max_reversals
+- callee: [entry, exit]
+  name: set_limit_cpu
+- callee: [entry, exit]
+  name: set_limit_mem
+- callee: [entry, exit]
+  name: set_limit_nproc
+- callee: [entry, exit]
+  name: set_recursion_limit
+- callee: [entry, exit]
+  name: set_cgi_pass_auth
+- callee: [entry, exit]
+  name: set_cgi_var
+- callee: [entry, exit]
+  name: set_qualify_redirect_url
+- callee: [entry, exit]
+  name: set_sethandler
+- callee: [entry, exit]
+  name: set_allow2f
+- callee: [entry, exit]
+  name: set_trace_enable
+- callee: [entry, exit]
+  name: set_merge_trailers
+- callee: [entry, exit]
+  name: set_protocols
+- callee: [entry, exit]
+  name: set_protocols_honor_order
+- callee: [entry, exit]
+  name: set_http_protocol_options
+- callee: [entry, exit]
+  name: set_http_method
+- callee: [entry, exit]
+  name: register_hooks
+- callee: [entry, exit]
+  name: core_create_conn
+- callee: [entry, exit]
+  name: core_pre_connection
+- callee: [entry, exit]
+  name: core_pre_config
+- callee: [entry, exit]
+  name: reset_config_defines
+- callee: [entry, exit]
+  name: core_post_config
+- callee: [entry, exit]
+  name: set_banner
+- callee: [entry, exit]
+  name: ap_add_version_component
+- callee: [entry, exit]
+  name: reset_banner
+- callee: [entry, exit]
+  name: core_check_config
+- callee: [entry, exit]
+  name: check_errorlog_dir
+- callee: [entry, exit]
+  name: core_dump_config
+- callee: [entry, exit]
+  name: ap_core_translate
+- callee: [entry, exit]
+  name: ap_document_root
+- callee: [entry, exit]
+  name: core_upgrade_storage
+- callee: [entry, exit]
+  name: core_upgrade_handler
+- callee: [entry, exit]
+  name: core_map_to_storage
+- callee: [entry, exit]
+  name: core_child_init
+- callee: [entry, exit]
+  name: default_handler
+- callee: [entry, exit]
+  name: do_nothing
+- callee: [entry, exit]
+  name: core_override_type
+- callee: [entry, exit]
+  name: core_create_req
+- callee: [entry, exit]
+  name: core_create_proxy_req
+- callee: [entry, exit]
+  name: core_insert_network_bucket
+- callee: [entry, exit]
+  name: ap_hook_insert_network_bucket
+- callee: [entry, exit]
+  name: core_dirwalk_stat
+- callee: [entry, exit]
+  name: core_optional_fn_retrieve
+- callee: [entry, exit]
+  name: core_insert_filter
+- callee: [entry, exit]
+  name: ap_hook_get_mgmt_items
+- callee: [entry, exit]
+  name: ap_hook_get_get_mgmt_items
+- callee: [entry, exit]
+  name: ap_run_get_mgmt_items
+- callee: [entry, exit]
+  name: ap_hook_get_insert_network_bucket
+- callee: [entry, exit]
+  name: ap_run_insert_network_bucket
+- callee: [entry, exit]
+  name: ap_core_reorder_directories
+- callee: [entry, exit]
+  name: reorder_sorter
+- callee: [entry, exit]
+  name: ap_allow_options
+- callee: [entry, exit]
+  name: ap_allow_overrides
+- callee: [entry, exit]
+  name: ap_auth_type
+- callee: [entry, exit]
+  name: ap_auth_name
+- callee: [entry, exit]
+  name: ap_satisfies
+- callee: [entry, exit]
+  name: ap_context_prefix
+- callee: [entry, exit]
+  name: ap_context_document_root
+- callee: [entry, exit]
+  name: ap_set_document_root
+- callee: [entry, exit]
+  name: ap_set_context_info
+- callee: [entry, exit]
+  name: ap_response_code_string
+- callee: [entry, exit]
+  name: ap_get_remote_host
+- callee: [entry, exit]
+  name: do_double_reverse
+- callee: [entry, exit]
+  name: ap_get_useragent_host
+- callee: [entry, exit]
+  name: ap_get_remote_logname
+- callee: [entry, exit]
+  name: ap_get_server_name
+- callee: [entry, exit]
+  name: ap_get_server_name_for_url
+- callee: [entry, exit]
+  name: ap_get_server_port
+- callee: [entry, exit]
+  name: ap_construct_url
+- callee: [entry, exit]
+  name: ap_get_limit_req_body
+- callee: [entry, exit]
+  name: ap_resolve_env
+- callee: [entry, exit]
+  name: ap_custom_response
+- callee: [entry, exit]
+  name: ap_get_server_protocol
+- callee: [entry, exit]
+  name: ap_set_server_protocol
+- callee: [entry, exit]
+  name: ap_psignature
+- callee: [entry, exit]
+  name: ap_get_server_banner
+- callee: [entry, exit]
+  name: ap_get_server_revision
+- callee: [entry, exit]
+  name: ap_get_server_description
+- callee: [entry, exit]
+  name: ap_get_limit_xml_body
+- callee: [entry, exit]
+  name: ap_is_recursion_limit_exceeded
+- callee: [entry, exit]
+  name: log_backtrace
+- callee: [entry, exit]
+  name: ap_register_errorlog_handler
+- callee: [entry, exit]
+  name: ap_sys_privileges_handlers
+- callee: [entry, exit]
+  name: ap_register_request_note
+- callee: [entry, exit]
+  name: reset_request_notes
+- callee: [entry, exit]
+  name: ap_get_request_note
+- callee: [entry, exit]
+  name: ap_get_conn_socket
+- callee: [entry, exit]
+  name: ap_state_query
+- callee: [entry, exit]
+  name: ap_random_parent_after_fork
+- callee: [entry, exit]
+  name: ap_init_rng
+- callee: [entry, exit]
+  name: ap_random_insecure_bytes
+- callee: [entry, exit]
+  name: ap_random_pick
+- callee: [entry, exit]
+  name: ap_hook_translate_name
+- callee: [entry, exit]
+  name: ap_hook_get_translate_name
+- callee: [entry, exit]
+  name: ap_run_translate_name
+- callee: [entry, exit]
+  name: ap_hook_map_to_storage
+- callee: [entry, exit]
+  name: ap_hook_get_map_to_storage
+- callee: [entry, exit]
+  name: ap_run_map_to_storage
+- callee: [entry, exit]
+  name: ap_hook_check_user_id
+- callee: [entry, exit]
+  name: ap_hook_get_check_user_id
+- callee: [entry, exit]
+  name: ap_run_check_user_id
+- callee: [entry, exit]
+  name: ap_hook_fixups
+- callee: [entry, exit]
+  name: ap_hook_get_fixups
+- callee: [entry, exit]
+  name: ap_run_fixups
+- callee: [entry, exit]
+  name: ap_hook_type_checker
+- callee: [entry, exit]
+  name: ap_hook_get_type_checker
+- callee: [entry, exit]
+  name: ap_run_type_checker
+- callee: [entry, exit]
+  name: ap_hook_access_checker
+- callee: [entry, exit]
+  name: ap_hook_get_access_checker
+- callee: [entry, exit]
+  name: ap_run_access_checker
+- callee: [entry, exit]
+  name: ap_hook_access_checker_ex
+- callee: [entry, exit]
+  name: ap_hook_get_access_checker_ex
+- callee: [entry, exit]
+  name: ap_run_access_checker_ex
+- callee: [entry, exit]
+  name: ap_hook_auth_checker
+- callee: [entry, exit]
+  name: ap_hook_get_auth_checker
+- callee: [entry, exit]
+  name: ap_run_auth_checker
+- callee: [entry, exit]
+  name: ap_hook_insert_filter
+- callee: [entry, exit]
+  name: ap_hook_get_insert_filter
+- callee: [entry, exit]
+  name: ap_run_insert_filter
+- callee: [entry, exit]
+  name: ap_hook_create_request
+- callee: [entry, exit]
+  name: ap_hook_get_create_request
+- callee: [entry, exit]
+  name: ap_run_create_request
+- callee: [entry, exit]
+  name: ap_hook_post_perdir_config
+- callee: [entry, exit]
+  name: ap_hook_get_post_perdir_config
+- callee: [entry, exit]
+  name: ap_run_post_perdir_config
+- callee: [entry, exit]
+  name: ap_hook_dirwalk_stat
+- callee: [entry, exit]
+  name: ap_hook_get_dirwalk_stat
+- callee: [entry, exit]
+  name: ap_run_dirwalk_stat
+- callee: [entry, exit]
+  name: ap_hook_force_authn
+- callee: [entry, exit]
+  name: ap_hook_get_force_authn
+- callee: [entry, exit]
+  name: ap_run_force_authn
+- callee: [entry, exit]
+  name: ap_some_authn_required
+- callee: [entry, exit]
+  name: ap_process_request_internal
+- callee: [entry, exit]
+  name: ap_location_walk
+- callee: [entry, exit]
+  name: prep_walk_cache
+- callee: [entry, exit]
+  name: ap_if_walk
+- callee: [entry, exit]
+  name: ap_if_walk_sub
+- callee: [entry, exit]
+  name: decl_die
+- callee: [entry, exit]
+  name: ap_directory_walk
+- callee: [entry, exit]
+  name: resolve_symlink
+- callee: [entry, exit]
+  name: core_opts_merge
+- callee: [entry, exit]
+  name: ap_file_walk
+- callee: [entry, exit]
+  name: ap_sub_req_output_filter
+- callee: [entry, exit]
+  name: ap_some_auth_required
+- callee: [entry, exit]
+  name: ap_clear_auth_internal
+- callee: [entry, exit]
+  name: ap_setup_auth_internal
+- callee: [entry, exit]
+  name: ap_register_auth_provider
+- callee: [entry, exit]
+  name: ap_hook_check_access
+- callee: [entry, exit]
+  name: ap_hook_check_access_ex
+- callee: [entry, exit]
+  name: ap_hook_check_authn
+- callee: [entry, exit]
+  name: ap_hook_check_authz
+- callee: [entry, exit]
+  name: ap_sub_req_method_uri
+- callee: [entry, exit]
+  name: make_sub_request
+- callee: [entry, exit]
+  name: ap_sub_req_lookup_uri
+- callee: [entry, exit]
+  name: ap_sub_req_lookup_dirent
+- callee: [entry, exit]
+  name: ap_sub_req_lookup_file
+- callee: [entry, exit]
+  name: ap_run_sub_req
+- callee: [entry, exit]
+  name: ap_destroy_sub_req
+- callee: [entry, exit]
+  name: ap_update_mtime
+- callee: [entry, exit]
+  name: ap_is_initial_req
+- callee: [entry, exit]
+  name: ap_register_provider
+- callee: [entry, exit]
+  name: cleanup_global_providers
+- callee: [entry, exit]
+  name: ap_lookup_provider
+- callee: [entry, exit]
+  name: ap_list_provider_names
+- callee: [entry, exit]
+  name: ap_list_provider_groups
+- callee: [entry, exit]
+  name: eoc_bucket_read
+- callee: [entry, exit]
+  name: ap_bucket_eoc_make
+- callee: [entry, exit]
+  name: ap_bucket_eoc_create
+- callee: [entry, exit]
+  name: eor_bucket_destroy
+- callee: [entry, exit]
+  name: eor_bucket_read
+- callee: [entry, exit]
+  name: ap_bucket_eor_make
+- callee: [entry, exit]
+  name: ap_bucket_eor_create
+- callee: [entry, exit]
+  name: eor_bucket_cleanup
+- callee: [entry, exit]
+  name: ap_core_input_filter
+- callee: [entry, exit]
+  name: ap_core_output_filter
+- callee: [entry, exit]
+  name: send_brigade_nonblocking
+- callee: [entry, exit]
+  name: remove_empty_buckets
+- callee: [entry, exit]
+  name: writev_nonblocking
+- callee: [entry, exit]
+  name: sendfile_nonblocking
+- callee: [entry, exit]
+  name: setaside_remaining_output
+- callee: [entry, exit]
+  name: send_brigade_blocking
+- callee: [entry, exit]
+  name: ap_hook_expr_lookup
+- callee: [entry, exit]
+  name: ap_hook_get_expr_lookup
+- callee: [entry, exit]
+  name: ap_run_expr_lookup
+- callee: [entry, exit]
+  name: ap_expr_lookup_default
+- callee: [entry, exit]
+  name: ap_expr_parse
+- callee: [entry, exit]
+  name: ap_expr_parse_cmd_mi
+- callee: [entry, exit]
+  name: ap_expr_make
+- callee: [entry, exit]
+  name: ap_expr_str_func_make
+- callee: [entry, exit]
+  name: ap_expr_info_make
+- callee: [entry, exit]
+  name: ap_expr_list_func_make
+- callee: [entry, exit]
+  name: ap_expr_unary_op_make
+- callee: [entry, exit]
+  name: ap_expr_binary_op_make
+- callee: [entry, exit]
+  name: ap_expr_var_make
+- callee: [entry, exit]
+  name: ap_expr_exec
+- callee: [entry, exit]
+  name: ap_expr_exec_re
+- callee: [entry, exit]
+  name: ap_expr_exec_ctx
+- callee: [entry, exit]
+  name: ap_expr_eval_word
+- callee: [entry, exit]
+  name: inc_rec
+- callee: [entry, exit]
+  name: ap_expr_eval_var
+- callee: [entry, exit]
+  name: ap_expr_eval_string_func
+- callee: [entry, exit]
+  name: ap_expr_eval_re_backref
+- callee: [entry, exit]
+  name: ap_expr_eval
+- callee: [entry, exit]
+  name: ap_expr_eval_unary_op
+- callee: [entry, exit]
+  name: ap_expr_eval_binary_op
+- callee: [entry, exit]
+  name: ssl_expr_eval_comp
+- callee: [entry, exit]
+  name: strcmplex
+- callee: [entry, exit]
+  name: ap_expr_eval_comp
+- callee: [entry, exit]
+  name: intstrcmp
+- callee: [entry, exit]
+  name: ap_expr_str_exec_re
+- callee: [entry, exit]
+  name: ap_expr_str_exec
+- callee: [entry, exit]
+  name: ap_expr_init
+- callee: [entry, exit]
+  name: core_expr_lookup
+- callee: [entry, exit]
+  name: misc_var_fn
+- callee: [entry, exit]
+  name: req_header_var_fn
+- callee: [entry, exit]
+  name: add_vary
+- callee: [entry, exit]
+  name: request_var_fn
+- callee: [entry, exit]
+  name: conn_var_fn
+- callee: [entry, exit]
+  name: osenv_func
+- callee: [entry, exit]
+  name: env_func
+- callee: [entry, exit]
+  name: req_table_func
+- callee: [entry, exit]
+  name: tolower_func
+- callee: [entry, exit]
+  name: toupper_func
+- callee: [entry, exit]
+  name: escape_func
+- callee: [entry, exit]
+  name: unescape_func
+- callee: [entry, exit]
+  name: file_func
+- callee: [entry, exit]
+  name: filesize_func
+- callee: [entry, exit]
+  name: base64_func
+- callee: [entry, exit]
+  name: unbase64_func
+- callee: [entry, exit]
+  name: sha1_func
+- callee: [entry, exit]
+  name: md5_func
+- callee: [entry, exit]
+  name: op_nz
+- callee: [entry, exit]
+  name: op_R
+- callee: [entry, exit]
+  name: subnet_parse_arg
+- callee: [entry, exit]
+  name: op_T
+- callee: [entry, exit]
+  name: op_file_min
+- callee: [entry, exit]
+  name: op_file_link
+- callee: [entry, exit]
+  name: op_file_xbit
+- callee: [entry, exit]
+  name: op_file_subr
+- callee: [entry, exit]
+  name: op_url_subr
+- callee: [entry, exit]
+  name: op_ipmatch
+- callee: [entry, exit]
+  name: op_fnmatch
+- callee: [entry, exit]
+  name: op_strmatch
+- callee: [entry, exit]
+  name: op_strcmatch
+- callee: [entry, exit]
+  name: expr_lookup_not_found
+- callee: [entry, exit]
+  name: ap_expr_post_config
+- callee: [entry, exit]
+  name: ap_hook_header_parser
+- callee: [entry, exit]
+  name: ap_hook_get_header_parser
+- callee: [entry, exit]
+  name: ap_run_header_parser
+- callee: [entry, exit]
+  name: ap_hook_pre_config
+- callee: [entry, exit]
+  name: ap_hook_get_pre_config
+- callee: [entry, exit]
+  name: ap_run_pre_config
+- callee: [entry, exit]
+  name: ap_hook_check_config
+- callee: [entry, exit]
+  name: ap_hook_get_check_config
+- callee: [entry, exit]
+  name: ap_run_check_config
+- callee: [entry, exit]
+  name: ap_hook_test_config
+- callee: [entry, exit]
+  name: ap_hook_get_test_config
+- callee: [entry, exit]
+  name: ap_run_test_config
+- callee: [entry, exit]
+  name: ap_hook_post_config
+- callee: [entry, exit]
+  name: ap_hook_get_post_config
+- callee: [entry, exit]
+  name: ap_run_post_config
+- callee: [entry, exit]
+  name: ap_hook_open_logs
+- callee: [entry, exit]
+  name: ap_hook_get_open_logs
+- callee: [entry, exit]
+  name: ap_run_open_logs
+- callee: [entry, exit]
+  name: ap_hook_child_init
+- callee: [entry, exit]
+  name: ap_hook_get_child_init
+- callee: [entry, exit]
+  name: ap_run_child_init
+- callee: [entry, exit]
+  name: ap_hook_handler
+- callee: [entry, exit]
+  name: ap_hook_get_handler
+- callee: [entry, exit]
+  name: ap_run_handler
+- callee: [entry, exit]
+  name: ap_hook_quick_handler
+- callee: [entry, exit]
+  name: ap_hook_get_quick_handler
+- callee: [entry, exit]
+  name: ap_run_quick_handler
+- callee: [entry, exit]
+  name: ap_hook_open_htaccess
+- callee: [entry, exit]
+  name: ap_hook_get_open_htaccess
+- callee: [entry, exit]
+  name: ap_run_open_htaccess
+- callee: [entry, exit]
+  name: ap_hook_optional_fn_retrieve
+- callee: [entry, exit]
+  name: ap_hook_get_optional_fn_retrieve
+- callee: [entry, exit]
+  name: ap_run_optional_fn_retrieve
+- callee: [entry, exit]
+  name: ap_merge_per_dir_configs
+- callee: [entry, exit]
+  name: ap_create_request_config
+- callee: [entry, exit]
+  name: create_empty_config
+- callee: [entry, exit]
+  name: ap_create_conn_config
+- callee: [entry, exit]
+  name: ap_create_per_dir_config
+- callee: [entry, exit]
+  name: ap_invoke_handler
+- callee: [entry, exit]
+  name: invoke_filter_init
+- callee: [entry, exit]
+  name: ap_method_is_limited
+- callee: [entry, exit]
+  name: ap_register_hooks
+- callee: [entry, exit]
+  name: ap_add_module
+- callee: [entry, exit]
+  name: ap_add_module_commands
+- callee: [entry, exit]
+  name: rebuild_conf_hash
+- callee: [entry, exit]
+  name: ap_remove_module
+- callee: [entry, exit]
+  name: ap_add_loaded_module
+- callee: [entry, exit]
+  name: ap_remove_loaded_module
+- callee: [entry, exit]
+  name: ap_setup_prelinked_modules
+- callee: [entry, exit]
+  name: ap_find_module_name
+- callee: [entry, exit]
+  name: ap_find_module_short_name
+- callee: [entry, exit]
+  name: ap_find_linked_module
+- callee: [entry, exit]
+  name: ap_find_command
+- callee: [entry, exit]
+  name: ap_find_command_in_modules
+- callee: [entry, exit]
+  name: ap_set_config_vectors
+- callee: [entry, exit]
+  name: ap_build_cont_config
+- callee: [entry, exit]
+  name: ap_build_config_sub
+- callee: [entry, exit]
+  name: execute_now
+- callee: [entry, exit]
+  name: invoke_cmd
+- callee: [entry, exit]
+  name: ap_walk_config
+- callee: [entry, exit]
+  name: ap_walk_config_sub
+- callee: [entry, exit]
+  name: ap_build_config
+- callee: [entry, exit]
+  name: ap_set_string_slot
+- callee: [entry, exit]
+  name: ap_set_int_slot
+- callee: [entry, exit]
+  name: ap_set_string_slot_lower
+- callee: [entry, exit]
+  name: ap_set_flag_slot
+- callee: [entry, exit]
+  name: ap_set_flag_slot_char
+- callee: [entry, exit]
+  name: ap_set_file_slot
+- callee: [entry, exit]
+  name: ap_server_root_relative
+- callee: [entry, exit]
+  name: ap_set_deprecated
+- callee: [entry, exit]
+  name: ap_reset_module_loglevels
+- callee: [entry, exit]
+  name: ap_set_module_loglevel
+- callee: [entry, exit]
+  name: ap_runtime_dir_relative
+- callee: [entry, exit]
+  name: ap_soak_end_container
+- callee: [entry, exit]
+  name: ap_process_resource_config
+- callee: [entry, exit]
+  name: dump_config_name
+- callee: [entry, exit]
+  name: ap_process_fnmatch_configs
+- callee: [entry, exit]
+  name: process_resource_config_nofnmatch
+- callee: [entry, exit]
+  name: fname_alphasort
+- callee: [entry, exit]
+  name: process_resource_config_fnmatch
+- callee: [entry, exit]
+  name: ap_process_config_tree
+- callee: [entry, exit]
+  name: ap_open_htaccess
+- callee: [entry, exit]
+  name: ap_parse_htaccess
+- callee: [entry, exit]
+  name: ap_init_virtual_host
+- callee: [entry, exit]
+  name: ap_new_log_config
+- callee: [entry, exit]
+  name: ap_merge_log_config
+- callee: [entry, exit]
+  name: ap_fixup_virtual_hosts
+- callee: [entry, exit]
+  name: merge_server_configs
+- callee: [entry, exit]
+  name: ap_register_config_hooks
+- callee: [entry, exit]
+  name: conf_vector_length_pre_config
+- callee: [entry, exit]
+  name: reset_conf_vector_length
+- callee: [entry, exit]
+  name: ap_read_config
+- callee: [entry, exit]
+  name: init_server_config
+- callee: [entry, exit]
+  name: create_server_config
+- callee: [entry, exit]
+  name: create_default_per_dir_config
+- callee: [entry, exit]
+  name: init_config_globals
+- callee: [entry, exit]
+  name: process_command_config
+- callee: [entry, exit]
+  name: arr_elts_getstr
+- callee: [entry, exit]
+  name: arr_elts_close
+- callee: [entry, exit]
+  name: ap_single_module_configure
+- callee: [entry, exit]
+  name: ap_run_rewrite_args
+- callee: [entry, exit]
+  name: ap_show_directives
+- callee: [entry, exit]
+  name: show_overrides
+- callee: [entry, exit]
+  name: ap_show_modules
+- callee: [entry, exit]
+  name: ap_retained_data_get
+- callee: [entry, exit]
+  name: ap_retained_data_create
+- callee: [entry, exit]
+  name: ap_reserve_module_slots
+- callee: [entry, exit]
+  name: ap_reserve_module_slots_directive
+- callee: [entry, exit]
+  name: count_directives_sub
+- callee: [entry, exit]
+  name: ap_piped_log_read_fd
+- callee: [entry, exit]
+  name: ap_piped_log_write_fd
+- callee: [entry, exit]
+  name: ap_logs_child_init
+- callee: [entry, exit]
+  name: ap_open_stderr_log
+- callee: [entry, exit]
+  name: ap_replace_stderr_log
+- callee: [entry, exit]
+  name: ap_log_error_
+- callee: [entry, exit]
+  name: log_error_core
+- callee: [entry, exit]
+  name: add_log_id
+- callee: [entry, exit]
+  name: ap_run_generate_log_id
+- callee: [entry, exit]
+  name: do_errorlog_format
+- callee: [entry, exit]
+  name: do_errorlog_default
+- callee: [entry, exit]
+  name: log_ctime
+- callee: [entry, exit]
+  name: log_module_name
+- callee: [entry, exit]
+  name: cpystrn
+- callee: [entry, exit]
+  name: log_loglevel
+- callee: [entry, exit]
+  name: log_pid
+- callee: [entry, exit]
+  name: log_tid
+- callee: [entry, exit]
+  name: log_file_line
+- callee: [entry, exit]
+  name: log_apr_status
+- callee: [entry, exit]
+  name: log_header
+- callee: [entry, exit]
+  name: log_table_entry
+- callee: [entry, exit]
+  name: write_logline
+- callee: [entry, exit]
+  name: ap_run_error_log
+- callee: [entry, exit]
+  name: ap_open_logs
+- callee: [entry, exit]
+  name: open_error_log
+- callee: [entry, exit]
+  name: log_child
+- callee: [entry, exit]
+  name: log_child_errfn
+- callee: [entry, exit]
+  name: ap_error_log2stderr
+- callee: [entry, exit]
+  name: ap_register_log_hooks
+- callee: [entry, exit]
+  name: core_generate_log_id
+- callee: [entry, exit]
+  name: ap_hook_generate_log_id
+- callee: [entry, exit]
+  name: log_remote_address
+- callee: [entry, exit]
+  name: log_local_address
+- callee: [entry, exit]
+  name: log_env_var
+- callee: [entry, exit]
+  name: log_keepalives
+- callee: [entry, exit]
+  name: log_log_id
+- callee: [entry, exit]
+  name: log_note
+- callee: [entry, exit]
+  name: log_virtual_host
+- callee: [entry, exit]
+  name: log_server_name
+- callee: [entry, exit]
+  name: ap_log_perror_
+- callee: [entry, exit]
+  name: ap_log_rerror_
+- callee: [entry, exit]
+  name: ap_log_cserror_
+- callee: [entry, exit]
+  name: ap_log_cerror_
+- callee: [entry, exit]
+  name: ap_log_data_
+- callee: [entry, exit]
+  name: log_data_core
+- callee: [entry, exit]
+  name: log_error_va_glue
+- callee: [entry, exit]
+  name: fmt_data
+- callee: [entry, exit]
+  name: ap_log_rdata_
+- callee: [entry, exit]
+  name: ap_log_cdata_
+- callee: [entry, exit]
+  name: ap_log_csdata_
+- callee: [entry, exit]
+  name: ap_log_command_line
+- callee: [entry, exit]
+  name: ap_log_mpm_common
+- callee: [entry, exit]
+  name: ap_remove_pid
+- callee: [entry, exit]
+  name: ap_log_pid
+- callee: [entry, exit]
+  name: ap_read_pid
+- callee: [entry, exit]
+  name: ap_log_assert
+- callee: [entry, exit]
+  name: ap_open_piped_log_ex
+- callee: [entry, exit]
+  name: piped_log_cleanup
+- callee: [entry, exit]
+  name: piped_log_cleanup_for_exec
+- callee: [entry, exit]
+  name: piped_log_spawn
+- callee: [entry, exit]
+  name: piped_log_maintenance
+- callee: [entry, exit]
+  name: close_handle_in_child
+- callee: [entry, exit]
+  name: ap_open_piped_log
+- callee: [entry, exit]
+  name: ap_close_piped_log
+- callee: [entry, exit]
+  name: ap_parse_log_level
+- callee: [entry, exit]
+  name: ap_hook_error_log
+- callee: [entry, exit]
+  name: ap_hook_get_error_log
+- callee: [entry, exit]
+  name: ap_hook_get_generate_log_id
+- callee: [entry, exit]
+  name: ap_fcgi_header_to_array
+- callee: [entry, exit]
+  name: ap_fcgi_header_from_array
+- callee: [entry, exit]
+  name: ap_fcgi_header_fields_from_array
+- callee: [entry, exit]
+  name: ap_fcgi_begin_request_body_to_array
+- callee: [entry, exit]
+  name: ap_fcgi_fill_in_header
+- callee: [entry, exit]
+  name: ap_fcgi_fill_in_request_body
+- callee: [entry, exit]
+  name: ap_fcgi_encoded_env_len
+- callee: [entry, exit]
+  name: ap_fcgi_encode_env
+- callee: [entry, exit]
+  name: ap_create_environment
+- callee: [entry, exit]
+  name: ap_add_common_vars
+- callee: [entry, exit]
+  name: http2env
+- callee: [entry, exit]
+  name: add_unless_null
+- callee: [entry, exit]
+  name: env2env
+- callee: [entry, exit]
+  name: ap_find_path_info
+- callee: [entry, exit]
+  name: ap_add_cgi_vars
+- callee: [entry, exit]
+  name: original_uri
+- callee: [entry, exit]
+  name: ap_scan_script_header_err_core_ex
+- callee: [entry, exit]
+  name: set_cookie_doo_doo
+- callee: [entry, exit]
+  name: ap_scan_script_header_err_core
+- callee: [entry, exit]
+  name: ap_scan_script_header_err
+- callee: [entry, exit]
+  name: getsfunc_FILE
+- callee: [entry, exit]
+  name: ap_scan_script_header_err_ex
+- callee: [entry, exit]
+  name: ap_scan_script_header_err_brigade
+- callee: [entry, exit]
+  name: getsfunc_BRIGADE
+- callee: [entry, exit]
+  name: ap_scan_script_header_err_brigade_ex
+- callee: [entry, exit]
+  name: ap_scan_script_header_err_strs_ex
+- callee: [entry, exit]
+  name: getsfunc_STRING
+- callee: [entry, exit]
+  name: ap_scan_script_header_err_strs
+- callee: [entry, exit]
+  name: ap_args_to_table
+- callee: [entry, exit]
+  name: argstr_to_table
+- callee: [entry, exit]
+  name: ap_md5_binary
+- callee: [entry, exit]
+  name: ap_md5
+- callee: [entry, exit]
+  name: ap_md5contextTo64
+- callee: [entry, exit]
+  name: ap_md5digest
+- callee: [entry, exit]
+  name: ap_add_node
+- callee: [entry, exit]
+  name: ap_explode_recent_localtime
+- callee: [entry, exit]
+  name: cached_explode
+- callee: [entry, exit]
+  name: ap_explode_recent_gmt
+- callee: [entry, exit]
+  name: ap_recent_ctime
+- callee: [entry, exit]
+  name: ap_recent_ctime_ex
+- callee: [entry, exit]
+  name: ap_recent_rfc822_date
+- callee: [entry, exit]
+  name: ap_hook_create_connection
+- callee: [entry, exit]
+  name: ap_hook_get_create_connection
+- callee: [entry, exit]
+  name: ap_run_create_connection
+- callee: [entry, exit]
+  name: ap_hook_process_connection
+- callee: [entry, exit]
+  name: ap_hook_get_process_connection
+- callee: [entry, exit]
+  name: ap_run_process_connection
+- callee: [entry, exit]
+  name: ap_hook_pre_connection
+- callee: [entry, exit]
+  name: ap_hook_get_pre_connection
+- callee: [entry, exit]
+  name: ap_run_pre_connection
+- callee: [entry, exit]
+  name: ap_hook_pre_close_connection
+- callee: [entry, exit]
+  name: ap_hook_get_pre_close_connection
+- callee: [entry, exit]
+  name: ap_run_pre_close_connection
+- callee: [entry, exit]
+  name: ap_shutdown_conn
+- callee: [entry, exit]
+  name: ap_flush_conn
+- callee: [entry, exit]
+  name: ap_prep_lingering_close
+- callee: [entry, exit]
+  name: ap_start_lingering_close
+- callee: [entry, exit]
+  name: ap_lingering_close
+- callee: [entry, exit]
+  name: ap_process_connection
+- callee: [entry, exit]
+  name: ap_setup_listeners
+- callee: [entry, exit]
+  name: open_listeners
+- callee: [entry, exit]
+  name: make_sock
+- callee: [entry, exit]
+  name: ap_close_listeners_ex
+- callee: [entry, exit]
+  name: close_listeners_on_exec
+- callee: [entry, exit]
+  name: ap_close_listeners
+- callee: [entry, exit]
+  name: ap_apply_accept_filter
+- callee: [entry, exit]
+  name: find_accf_name
+- callee: [entry, exit]
+  name: ap_duplicate_listeners
+- callee: [entry, exit]
+  name: ap_close_selected_listeners
+- callee: [entry, exit]
+  name: ap_listen_pre_config
+- callee: [entry, exit]
+  name: ap_set_listener
+- callee: [entry, exit]
+  name: alloc_listener
+- callee: [entry, exit]
+  name: ap_set_listenbacklog
+- callee: [entry, exit]
+  name: ap_set_listencbratio
+- callee: [entry, exit]
+  name: ap_set_send_buffer_size
+- callee: [entry, exit]
+  name: ap_set_receive_buffer_size
+- callee: [entry, exit]
+  name: ap_parse_mutex
+- callee: [entry, exit]
+  name: ap_mutex_init
+- callee: [entry, exit]
+  name: ap_set_mutex
+- callee: [entry, exit]
+  name: ap_mutex_register
+- callee: [entry, exit]
+  name: ap_global_mutex_create
+- callee: [entry, exit]
+  name: mxcfg_lookup
+- callee: [entry, exit]
+  name: mutex_needs_file
+- callee: [entry, exit]
+  name: log_bad_create_options
+- callee: [entry, exit]
+  name: log_unknown_type
+- callee: [entry, exit]
+  name: get_mutex_filename
+- callee: [entry, exit]
+  name: log_create_failure
+- callee: [entry, exit]
+  name: log_perms_failure
+- callee: [entry, exit]
+  name: ap_proc_mutex_create
+- callee: [entry, exit]
+  name: ap_dump_mutexes
+- callee: [entry, exit]
+  name: ap_register_extra_mpm_process
+- callee: [entry, exit]
+  name: ap_unregister_extra_mpm_process
+- callee: [entry, exit]
+  name: ap_reclaim_child_processes
+- callee: [entry, exit]
+  name: reclaim_one_pid
+- callee: [entry, exit]
+  name: ap_process_child_status
+- callee: [entry, exit]
+  name: ap_relieve_child_processes
+- callee: [entry, exit]
+  name: ap_mpm_safe_kill
+- callee: [entry, exit]
+  name: ap_mpm_pod_open
+- callee: [entry, exit]
+  name: ap_mpm_pod_check
+- callee: [entry, exit]
+  name: ap_mpm_pod_close
+- callee: [entry, exit]
+  name: ap_mpm_podx_open
+- callee: [entry, exit]
+  name: ap_mpm_podx_check
+- callee: [entry, exit]
+  name: ap_mpm_podx_close
+- callee: [entry, exit]
+  name: ap_mpm_podx_signal
+- callee: [entry, exit]
+  name: podx_signal_internal
+- callee: [entry, exit]
+  name: ap_mpm_podx_killpg
+- callee: [entry, exit]
+  name: ap_mpm_pod_signal
+- callee: [entry, exit]
+  name: pod_signal_internal
+- callee: [entry, exit]
+  name: dummy_connection
+- callee: [entry, exit]
+  name: ap_mpm_pod_killpg
+- callee: [entry, exit]
+  name: ap_signal_server
+- callee: [entry, exit]
+  name: send_signal
+- callee: [entry, exit]
+  name: ap_mpm_rewrite_args
+- callee: [entry, exit]
+  name: ap_fatal_signal_child_setup
+- callee: [entry, exit]
+  name: ap_fatal_signal_setup
+- callee: [entry, exit]
+  name: sig_coredump
+- callee: [entry, exit]
+  name: ap_cookie_write
+- callee: [entry, exit]
+  name: ap_cookie_write2
+- callee: [entry, exit]
+  name: ap_cookie_remove
+- callee: [entry, exit]
+  name: ap_cookie_remove2
+- callee: [entry, exit]
+  name: ap_cookie_read
+- callee: [entry, exit]
+  name: extract_cookie_line
+- callee: [entry, exit]
+  name: ap_cookie_check_string
+- callee: [entry, exit]
+  name: ap_strchr
+- callee: [entry, exit]
+  name: ap_strchr_c
+- callee: [entry, exit]
+  name: ap_strrchr
+- callee: [entry, exit]
+  name: ap_strrchr_c
+- callee: [entry, exit]
+  name: ap_strstr
+- callee: [entry, exit]
+  name: ap_strstr_c
+- callee: [entry, exit]
+  name: ap_get_module_config
+- callee: [entry, exit]
+  name: ap_get_core_module_config
+- callee: [entry, exit]
+  name: ap_get_server_module_loglevel
+- callee: [entry, exit]
+  name: ap_get_conn_module_loglevel
+- callee: [entry, exit]
+  name: ap_get_conn_server_module_loglevel
+- callee: [entry, exit]
+  name: ap_get_request_module_loglevel
+- callee: [entry, exit]
+  name: ap_set_module_config
+- callee: [entry, exit]
+  name: ap_set_core_module_config
+- callee: [entry, exit]
+  name: ap_xml_parse_input
+- callee: [entry, exit]
+  name: ap_rxplus_compile
+- callee: [entry, exit]
+  name: rxplus_cleanup
+- callee: [entry, exit]
+  name: ap_rxplus_exec
+- callee: [entry, exit]
+  name: ap_rxplus_match
+- callee: [entry, exit]
+  name: ap_rxplus_pmatch
+- callee: [entry, exit]
+  name: ap_expr_yyparse
+- callee: [entry, exit]
+  name: yysyntax_error
+- callee: [entry, exit]
+  name: yytnamerr
+- callee: [entry, exit]
+  name: ap_expr_yyerror
+- callee: [entry, exit]
+  name: yydestruct
+- callee: [entry, exit]
+  name: ap_expr_yylex
+- callee: [entry, exit]
+  name: ap_expr_yyensure_buffer_stack
+- callee: [entry, exit]
+  name: ap_expr_yyalloc
+- callee: [entry, exit]
+  name: yy_fatal_error
+- callee: [entry, exit]
+  name: ap_expr_yyrealloc
+- callee: [entry, exit]
+  name: ap_expr_yy_create_buffer
+- callee: [entry, exit]
+  name: ap_expr_yy_init_buffer
+- callee: [entry, exit]
+  name: ap_expr_yy_flush_buffer
+- callee: [entry, exit]
+  name: ap_expr_yy_load_buffer_state
+- callee: [entry, exit]
+  name: yy_push_state
+- callee: [entry, exit]
+  name: yy_pop_state
+- callee: [entry, exit]
+  name: yy_get_previous_state
+- callee: [entry, exit]
+  name: yy_try_NUL_trans
+- callee: [entry, exit]
+  name: yy_get_next_buffer
+- callee: [entry, exit]
+  name: ap_expr_yyrestart
+- callee: [entry, exit]
+  name: ap_expr_yy_switch_to_buffer
+- callee: [entry, exit]
+  name: ap_expr_yy_delete_buffer
+- callee: [entry, exit]
+  name: ap_expr_yyfree
+- callee: [entry, exit]
+  name: ap_expr_yypush_buffer_state
+- callee: [entry, exit]
+  name: ap_expr_yypop_buffer_state
+- callee: [entry, exit]
+  name: ap_expr_yy_scan_buffer
+- callee: [entry, exit]
+  name: ap_expr_yy_scan_string
+- callee: [entry, exit]
+  name: ap_expr_yy_scan_bytes
+- callee: [entry, exit]
+  name: ap_expr_yyget_extra
+- callee: [entry, exit]
+  name: ap_expr_yyget_lineno
+- callee: [entry, exit]
+  name: ap_expr_yyget_in
+- callee: [entry, exit]
+  name: ap_expr_yyget_out
+- callee: [entry, exit]
+  name: ap_expr_yyget_leng
+- callee: [entry, exit]
+  name: ap_expr_yyget_text
+- callee: [entry, exit]
+  name: ap_expr_yyset_extra
+- callee: [entry, exit]
+  name: ap_expr_yyset_lineno
+- callee: [entry, exit]
+  name: ap_expr_yyset_in
+- callee: [entry, exit]
+  name: ap_expr_yyset_out
+- callee: [entry, exit]
+  name: ap_expr_yyget_debug
+- callee: [entry, exit]
+  name: ap_expr_yyset_debug
+- callee: [entry, exit]
+  name: ap_expr_yyget_lval
+- callee: [entry, exit]
+  name: ap_expr_yyset_lval
+- callee: [entry, exit]
+  name: ap_expr_yylex_init
+- callee: [entry, exit]
+  name: yy_init_globals
+- callee: [entry, exit]
+  name: ap_expr_yylex_init_extra
+- callee: [entry, exit]
+  name: ap_expr_yylex_destroy
+- callee: [entry, exit]
+  name: so_sconf_create
+- callee: [entry, exit]
+  name: load_module
+- callee: [entry, exit]
+  name: dso_load
+- callee: [entry, exit]
+  name: unload_module
+- callee: [entry, exit]
+  name: load_file
+- callee: [entry, exit]
+  name: register_hooks.2129
+- callee: [entry, exit]
+  name: ap_find_loaded_module_symbol
+- callee: [entry, exit]
+  name: dump_loaded_modules
+- callee: [entry, exit]
+  name: set_keep_alive_timeout
+- callee: [entry, exit]
+  name: set_keep_alive_max
+- callee: [entry, exit]
+  name: set_keep_alive
+- callee: [entry, exit]
+  name: register_hooks.2146
+- callee: [entry, exit]
+  name: http_post_config
+- callee: [entry, exit]
+  name: ap_process_http_connection
+- callee: [entry, exit]
+  name: ap_process_http_async_connection
+- callee: [entry, exit]
+  name: ap_process_http_sync_connection
+- callee: [entry, exit]
+  name: http_send_options
+- callee: [entry, exit]
+  name: http_scheme
+- callee: [entry, exit]
+  name: http_port
+- callee: [entry, exit]
+  name: http_create_request
+- callee: [entry, exit]
+  name: ap_hook_insert_error_filter
+- callee: [entry, exit]
+  name: ap_hook_get_insert_error_filter
+- callee: [entry, exit]
+  name: ap_run_insert_error_filter
+- callee: [entry, exit]
+  name: ap_set_keepalive
+- callee: [entry, exit]
+  name: is_mpm_running
+- callee: [entry, exit]
+  name: ap_condition_if_match
+- callee: [entry, exit]
+  name: ap_condition_if_unmodified_since
+- callee: [entry, exit]
+  name: ap_condition_if_none_match
+- callee: [entry, exit]
+  name: ap_condition_if_modified_since
+- callee: [entry, exit]
+  name: ap_condition_if_range
+- callee: [entry, exit]
+  name: ap_meets_conditions
+- callee: [entry, exit]
+  name: ap_method_registry_init
+- callee: [entry, exit]
+  name: ap_method_registry_destroy
+- callee: [entry, exit]
+  name: register_one_method
+- callee: [entry, exit]
+  name: ap_method_register
+- callee: [entry, exit]
+  name: ap_method_number_of
+- callee: [entry, exit]
+  name: lookup_builtin_method
+- callee: [entry, exit]
+  name: ap_method_name_of
+- callee: [entry, exit]
+  name: ap_index_of_response
+- callee: [entry, exit]
+  name: ap_get_status_line
+- callee: [entry, exit]
+  name: ap_send_http_options
+- callee: [entry, exit]
+  name: make_allow
+- callee: [entry, exit]
+  name: ap_set_content_type
+- callee: [entry, exit]
+  name: ap_set_accept_ranges
+- callee: [entry, exit]
+  name: ap_send_error_response
+- callee: [entry, exit]
+  name: ap_rputs
+- callee: [entry, exit]
+  name: get_canned_error_string
+- callee: [entry, exit]
+  name: add_optional_notes
+- callee: [entry, exit]
+  name: ap_make_method_list
+- callee: [entry, exit]
+  name: ap_copy_method_list
+- callee: [entry, exit]
+  name: ap_method_in_list
+- callee: [entry, exit]
+  name: ap_method_list_add
+- callee: [entry, exit]
+  name: ap_method_list_remove
+- callee: [entry, exit]
+  name: ap_clear_method_list
+- callee: [entry, exit]
+  name: ap_die
+- callee: [entry, exit]
+  name: ap_die_r
+- callee: [entry, exit]
+  name: update_r_in_filters
+- callee: [entry, exit]
+  name: ap_internal_redirect
+- callee: [entry, exit]
+  name: internal_internal_redirect
+- callee: [entry, exit]
+  name: rename_original_env
+- callee: [entry, exit]
+  name: ap_check_pipeline
+- callee: [entry, exit]
+  name: ap_process_request_after_handler
+- callee: [entry, exit]
+  name: ap_process_async_request
+- callee: [entry, exit]
+  name: ap_process_request
+- callee: [entry, exit]
+  name: ap_internal_fast_redirect
+- callee: [entry, exit]
+  name: ap_internal_redirect_handler
+- callee: [entry, exit]
+  name: ap_allow_methods
+- callee: [entry, exit]
+  name: ap_allow_standard_methods
+- callee: [entry, exit]
+  name: ap_http_filter
+- callee: [entry, exit]
+  name: bail_out_on_error
+- callee: [entry, exit]
+  name: parse_chunk_size
+- callee: [entry, exit]
+  name: read_chunked_trailers
+- callee: [entry, exit]
+  name: ap_basic_http_header
+- callee: [entry, exit]
+  name: basic_http_header_check
+- callee: [entry, exit]
+  name: validate_status_line
+- callee: [entry, exit]
+  name: basic_http_header
+- callee: [entry, exit]
+  name: form_header_field
+- callee: [entry, exit]
+  name: ap_send_http_trace
+- callee: [entry, exit]
+  name: ap_setup_client_block
+- callee: [entry, exit]
+  name: ap_should_client_block
+- callee: [entry, exit]
+  name: ap_get_client_block
+- callee: [entry, exit]
+  name: ap_http_header_filter
+- callee: [entry, exit]
+  name: check_headers
+- callee: [entry, exit]
+  name: check_headers_table
+- callee: [entry, exit]
+  name: check_header
+- callee: [entry, exit]
+  name: check_headers_recursion
+- callee: [entry, exit]
+  name: fixup_vary
+- callee: [entry, exit]
+  name: uniq_field_values
+- callee: [entry, exit]
+  name: send_all_header_fields
+- callee: [entry, exit]
+  name: terminate_header
+- callee: [entry, exit]
+  name: ap_map_http_request_error
+- callee: [entry, exit]
+  name: ap_discard_request_body
+- callee: [entry, exit]
+  name: ap_http_outerror_filter
+- callee: [entry, exit]
+  name: ap_http_chunk_filter
+- callee: [entry, exit]
+  name: ap_byterange_filter
+- callee: [entry, exit]
+  name: ap_set_byterange
+- callee: [entry, exit]
+  name: send_416
+- callee: [entry, exit]
+  name: use_range_x
+- callee: [entry, exit]
+  name: copy_brigade_range
+- callee: [entry, exit]
+  name: ap_make_etag
+- callee: [entry, exit]
+  name: etag_uint64_to_hex
+- callee: [entry, exit]
+  name: ap_set_etag
+- callee: [entry, exit]
+  name: set_daemons_to_start
+- callee: [entry, exit]
+  name: set_server_limit
+- callee: [entry, exit]
+  name: set_min_spare_threads
+- callee: [entry, exit]
+  name: set_max_spare_threads
+- callee: [entry, exit]
+  name: set_max_workers
+- callee: [entry, exit]
+  name: set_threads_per_child
+- callee: [entry, exit]
+  name: set_thread_limit
+- callee: [entry, exit]
+  name: set_worker_factor
+- callee: [entry, exit]
+  name: event_hooks
+- callee: [entry, exit]
+  name: event_open_logs
+- callee: [entry, exit]
+  name: event_pre_config
+- callee: [entry, exit]
+  name: event_post_config
+- callee: [entry, exit]
+  name: event_check_config
+- callee: [entry, exit]
+  name: event_run
+- callee: [entry, exit]
+  name: startup_children
+- callee: [entry, exit]
+  name: make_child
+- callee: [entry, exit]
+  name: event_note_child_started
+- callee: [entry, exit]
+  name: child_main
+- callee: [entry, exit]
+  name: clean_child_exit
+- callee: [entry, exit]
+  name: event_note_child_killed
+- callee: [entry, exit]
+  name: timer_comp
+- callee: [entry, exit]
+  name: start_threads
+- callee: [entry, exit]
+  name: worker_thread
+- callee: [entry, exit]
+  name: signal_threads
+- callee: [entry, exit]
+  name: wakeup_listener
+- callee: [entry, exit]
+  name: close_worker_sockets
+- callee: [entry, exit]
+  name: worker_thread_should_exit_early
+- callee: [entry, exit]
+  name: process_socket
+- callee: [entry, exit]
+  name: decrement_connection_count
+- callee: [entry, exit]
+  name: ptrans_pre_cleanup
+- callee: [entry, exit]
+  name: notify_resume
+- callee: [entry, exit]
+  name: notify_suspend
+- callee: [entry, exit]
+  name: start_lingering_close_blocking
+- callee: [entry, exit]
+  name: start_lingering_close_common
+- callee: [entry, exit]
+  name: create_listener_thread
+- callee: [entry, exit]
+  name: listener_thread
+- callee: [entry, exit]
+  name: init_pollset
+- callee: [entry, exit]
+  name: unblock_signal
+- callee: [entry, exit]
+  name: dummy_signal_handler
+- callee: [entry, exit]
+  name: close_listeners
+- callee: [entry, exit]
+  name: disable_listensocks
+- callee: [entry, exit]
+  name: check_infinite_requests
+- callee: [entry, exit]
+  name: push_timer2worker
+- callee: [entry, exit]
+  name: get_worker
+- callee: [entry, exit]
+  name: start_lingering_close_nonblocking
+- callee: [entry, exit]
+  name: push2worker
+- callee: [entry, exit]
+  name: process_lingering_close
+- callee: [entry, exit]
+  name: enable_listensocks
+- callee: [entry, exit]
+  name: process_timeout_queue
+- callee: [entry, exit]
+  name: stop_lingering_close
+- callee: [entry, exit]
+  name: check_signal
+- callee: [entry, exit]
+  name: join_start_thread
+- callee: [entry, exit]
+  name: join_workers
+- callee: [entry, exit]
+  name: just_die
+- callee: [entry, exit]
+  name: server_main_loop
+- callee: [entry, exit]
+  name: perform_idle_server_maintenance
+- callee: [entry, exit]
+  name: event_query
+- callee: [entry, exit]
+  name: event_register_timed_callback
+- callee: [entry, exit]
+  name: event_pre_read_request
+- callee: [entry, exit]
+  name: event_request_cleanup
+- callee: [entry, exit]
+  name: event_post_read_request
+- callee: [entry, exit]
+  name: event_get_name
+- callee: [entry, exit]
+  name: event_pre_connection
+- callee: [entry, exit]
+  name: setup_slave_conn
+- callee: [entry, exit]
+  name: event_protocol_switch
+- callee: [entry, exit]
+  name: ap_queue_info_create
+- callee: [entry, exit]
+  name: queue_info_cleanup
+- callee: [entry, exit]
+  name: ap_queue_info_set_idle
+- callee: [entry, exit]
+  name: ap_push_pool
+- callee: [entry, exit]
+  name: ap_queue_info_try_get_idler
+- callee: [entry, exit]
+  name: ap_queue_info_wait_for_idler
+- callee: [entry, exit]
+  name: ap_queue_info_get_idlers
+- callee: [entry, exit]
+  name: ap_pop_pool
+- callee: [entry, exit]
+  name: ap_free_idle_pools
+- callee: [entry, exit]
+  name: ap_queue_info_term
+- callee: [entry, exit]
+  name: ap_queue_init
+- callee: [entry, exit]
+  name: ap_queue_destroy
+- callee: [entry, exit]
+  name: ap_queue_push
+- callee: [entry, exit]
+  name: ap_queue_push_timer
+- callee: [entry, exit]
+  name: ap_queue_pop_something
+- callee: [entry, exit]
+  name: ap_queue_interrupt_all
+- callee: [entry, exit]
+  name: queue_interrupt
+- callee: [entry, exit]
+  name: ap_queue_interrupt_one
+- callee: [entry, exit]
+  name: ap_queue_term
+- callee: [entry, exit]
+  name: ap_unixd_set_rlimit
+- callee: [entry, exit]
+  name: ap_hook_get_suexec_identity
+- callee: [entry, exit]
+  name: ap_hook_get_get_suexec_identity
+- callee: [entry, exit]
+  name: ap_run_get_suexec_identity
+- callee: [entry, exit]
+  name: ap_os_create_privileged_process
+- callee: [entry, exit]
+  name: ap_unix_create_privileged_process
+- callee: [entry, exit]
+  name: ap_unixd_set_proc_mutex_perms
+- callee: [entry, exit]
+  name: proc_mutex_mech
+- callee: [entry, exit]
+  name: ap_unixd_set_global_mutex_perms
+- callee: [entry, exit]
+  name: ap_unixd_accept
+- callee: [entry, exit]
+  name: ap_unixd_mpm_get_retained_data
+- callee: [entry, exit]
+  name: ap_unixd_mpm_set_signals
+- callee: [entry, exit]
+  name: sig_term
+- callee: [entry, exit]
+  name: sig_restart
+- callee: [entry, exit]
+  name: unset_signals

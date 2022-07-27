@@ -1,0 +1,694 @@
+enter main: 3 0x7ffdc779af08
+enter most_initialize_most:
+leave most_initialize_most: %void%
+enter most: 3 0x7ffdc779af08
+enter do_switches: 0x7ffdc779b795
+leave do_switches: %void% 0x7ffdc779b795
+enter most_setup_colors:
+leave most_setup_colors: %void%
+enter most_init_tty:
+enter init_tty:
+leave init_tty: %void%
+leave most_init_tty: %void%
+enter most_init_keymaps:
+enter most_load_user_keymaps:
+enter parse_file: 0x41a991
+leave parse_file: 1 0x41a991
+enter parse_file: 0x7ffdc779a200
+leave parse_file: 1 0x7ffdc779a200
+leave most_load_user_keymaps: 1
+leave most_init_keymaps: %void%
+enter most_get_cdir: 0x62ab20
+leave most_get_cdir: %void% 0x62ab20
+enter most_find_file: 0x7ffdc779a9d0
+enter most_create_buffer: 0x7ffdc779a9d0
+leave most_create_buffer: 0xb868c0 0x7ffdc779a9d0
+enter most_switch_to_buffer: 0xb868c0
+leave most_switch_to_buffer: (nil) 0xb868c0
+enter most_read_file_dsc: 1
+enter most_flush_message: 0x419a78
+leave most_flush_message: %void% 0x419a78
+enter most_count_lines: 0x7f1253e6c000 0x7f1253e6c022
+enter most_forward_line: 1000
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c007
+leave end_of_line: 0x7f1253e6c007 (nil)
+enter end_of_line: 0x7f1253e6c008
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c011
+leave end_of_line: 0x7f1253e6c011 0x7f1253e6c008
+enter end_of_line: 0x7f1253e6c012
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c01b
+leave end_of_line: 0x7f1253e6c01b 0x7f1253e6c012
+enter end_of_line: 0x7f1253e6c01c
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c021
+leave end_of_line: 0x7f1253e6c021 0x7f1253e6c01c
+enter end_of_line: 0x7f1253e6c022
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 0x7f1253e6c022
+leave most_forward_line: 4 1000
+enter most_forward_line: 4
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 4
+leave most_count_lines: 5 0x7f1253e6c000 0x7f1253e6c022
+enter most_message: 0x419b3c 0
+leave most_message: %void% 0x419b3c 0
+leave most_read_file_dsc: 1 1
+leave most_find_file: 0 0x7ffdc779a9d0
+enter most_init_display:
+enter most_get_term_dimensions: 0x622740 0x622774
+leave most_get_term_dimensions: %void% 0x622740 0x622774
+enter most_malloc: 96
+leave most_malloc: 0xb86d00 96
+enter most_goto_rc: 1 1
+leave most_goto_rc: %void% 1 1
+leave most_init_display: %void%
+enter most_goto_line: 0
+enter most_read_to_line: 1
+enter most_read_file_dsc: 1
+leave most_read_file_dsc: 0 1
+leave most_read_to_line: %void% 1
+enter most_forward_line: 0
+leave most_forward_line: 0 0
+leave most_goto_line: %void% 0
+enter most_window_buffer:
+leave most_window_buffer: %void%
+enter most_redraw_window:
+enter most_goto_line: -59
+enter most_read_to_line: 1
+enter most_read_file_dsc: 1
+leave most_read_file_dsc: 0 1
+leave most_read_to_line: %void% 1
+enter most_forward_line: 0
+leave most_forward_line: 0 0
+leave most_goto_line: %void% -59
+enter most_goto_rc: 1 1
+leave most_goto_rc: %void% 1 1
+enter most_display_line:
+enter most_extract_line: 0x7ffdc779a698 0x7ffdc779a690
+enter most_beg_of_line:
+leave most_beg_of_line: 0x7f1253e6c000
+enter end_of_line: 0x7f1253e6c000
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c007
+leave end_of_line: 0x7f1253e6c007 0x7f1253e6c000
+leave most_extract_line: 0 0x7ffdc779a698 0x7ffdc779a690
+leave most_display_line: %void%
+enter most_goto_rc: 2 1
+leave most_goto_rc: %void% 2 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c007
+leave end_of_line: 0x7f1253e6c007 (nil)
+leave most_forward_line: 1 1
+enter most_display_line:
+enter most_extract_line: 0x7ffdc779a698 0x7ffdc779a690
+enter most_beg_of_line:
+leave most_beg_of_line: 0x7f1253e6c008
+enter end_of_line: 0x7f1253e6c008
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c011
+leave end_of_line: 0x7f1253e6c011 0x7f1253e6c008
+leave most_extract_line: 0 0x7ffdc779a698 0x7ffdc779a690
+leave most_display_line: %void%
+enter most_goto_rc: 3 1
+leave most_goto_rc: %void% 3 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c011
+leave end_of_line: 0x7f1253e6c011 (nil)
+leave most_forward_line: 1 1
+enter most_display_line:
+enter most_extract_line: 0x7ffdc779a698 0x7ffdc779a690
+enter most_beg_of_line:
+leave most_beg_of_line: 0x7f1253e6c012
+enter end_of_line: 0x7f1253e6c012
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c01b
+leave end_of_line: 0x7f1253e6c01b 0x7f1253e6c012
+leave most_extract_line: 0 0x7ffdc779a698 0x7ffdc779a690
+leave most_display_line: %void%
+enter most_goto_rc: 4 1
+leave most_goto_rc: %void% 4 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c01b
+leave end_of_line: 0x7f1253e6c01b (nil)
+leave most_forward_line: 1 1
+enter most_display_line:
+enter most_extract_line: 0x7ffdc779a698 0x7ffdc779a690
+enter most_beg_of_line:
+leave most_beg_of_line: 0x7f1253e6c01c
+enter end_of_line: 0x7f1253e6c01c
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c021
+leave end_of_line: 0x7f1253e6c021 0x7f1253e6c01c
+leave most_extract_line: 0 0x7ffdc779a698 0x7ffdc779a690
+leave most_display_line: %void%
+enter most_goto_rc: 5 1
+leave most_goto_rc: %void% 5 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c021
+leave end_of_line: 0x7f1253e6c021 (nil)
+leave most_forward_line: 1 1
+enter most_display_line:
+enter most_extract_line: 0x7ffdc779a698 0x7ffdc779a690
+enter most_beg_of_line:
+leave most_beg_of_line: 0x7f1253e6c022
+enter end_of_line: 0x7f1253e6c022
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 0x7f1253e6c022
+leave most_extract_line: 0 0x7ffdc779a698 0x7ffdc779a690
+leave most_display_line: %void%
+enter most_goto_rc: 6 1
+leave most_goto_rc: %void% 6 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 7 1
+leave most_goto_rc: %void% 7 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 8 1
+leave most_goto_rc: %void% 8 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 9 1
+leave most_goto_rc: %void% 9 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 10 1
+leave most_goto_rc: %void% 10 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 11 1
+leave most_goto_rc: %void% 11 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 12 1
+leave most_goto_rc: %void% 12 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 13 1
+leave most_goto_rc: %void% 13 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 14 1
+leave most_goto_rc: %void% 14 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 15 1
+leave most_goto_rc: %void% 15 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 16 1
+leave most_goto_rc: %void% 16 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 17 1
+leave most_goto_rc: %void% 17 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 18 1
+leave most_goto_rc: %void% 18 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 19 1
+leave most_goto_rc: %void% 19 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 20 1
+leave most_goto_rc: %void% 20 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 21 1
+leave most_goto_rc: %void% 21 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 22 1
+leave most_goto_rc: %void% 22 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 23 1
+leave most_goto_rc: %void% 23 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 24 1
+leave most_goto_rc: %void% 24 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 25 1
+leave most_goto_rc: %void% 25 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 26 1
+leave most_goto_rc: %void% 26 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 27 1
+leave most_goto_rc: %void% 27 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 28 1
+leave most_goto_rc: %void% 28 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 29 1
+leave most_goto_rc: %void% 29 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 30 1
+leave most_goto_rc: %void% 30 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 31 1
+leave most_goto_rc: %void% 31 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 32 1
+leave most_goto_rc: %void% 32 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 33 1
+leave most_goto_rc: %void% 33 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 34 1
+leave most_goto_rc: %void% 34 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 35 1
+leave most_goto_rc: %void% 35 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 36 1
+leave most_goto_rc: %void% 36 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 37 1
+leave most_goto_rc: %void% 37 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 38 1
+leave most_goto_rc: %void% 38 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 39 1
+leave most_goto_rc: %void% 39 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 40 1
+leave most_goto_rc: %void% 40 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 41 1
+leave most_goto_rc: %void% 41 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 42 1
+leave most_goto_rc: %void% 42 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 43 1
+leave most_goto_rc: %void% 43 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 44 1
+leave most_goto_rc: %void% 44 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 45 1
+leave most_goto_rc: %void% 45 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 46 1
+leave most_goto_rc: %void% 46 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 47 1
+leave most_goto_rc: %void% 47 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 48 1
+leave most_goto_rc: %void% 48 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 49 1
+leave most_goto_rc: %void% 49 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 50 1
+leave most_goto_rc: %void% 50 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 51 1
+leave most_goto_rc: %void% 51 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 52 1
+leave most_goto_rc: %void% 52 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 53 1
+leave most_goto_rc: %void% 53 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 54 1
+leave most_goto_rc: %void% 54 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 55 1
+leave most_goto_rc: %void% 55 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 56 1
+leave most_goto_rc: %void% 56 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 57 1
+leave most_goto_rc: %void% 57 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 58 1
+leave most_goto_rc: %void% 58 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 59 1
+leave most_goto_rc: %void% 59 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 60 1
+leave most_goto_rc: %void% 60 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 61 1
+leave most_goto_rc: %void% 61 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 62 1
+leave most_goto_rc: %void% 62 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 63 1
+leave most_goto_rc: %void% 63 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 64 1
+leave most_goto_rc: %void% 64 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+enter most_goto_rc: 65 1
+leave most_goto_rc: %void% 65 1
+enter most_forward_line: 1
+enter end_of_line: (nil)
+enter end_of_line1:
+leave end_of_line1: 0x7f1253e6c022
+leave end_of_line: 0x7f1253e6c022 (nil)
+leave most_forward_line: 0 1
+leave most_redraw_window: %void%
+enter most_update_status:
+enter update_status1:
+enter most_goto_rc: 66 1
+leave most_goto_rc: %void% 66 1
+enter most_tt_reverse_video:
+leave most_tt_reverse_video: %void%
+enter most_goto_rc: 66 69
+leave most_goto_rc: %void% 66 69
+enter most_tt_normal_video:
+leave most_tt_normal_video: %void%
+leave update_status1: %void%
+leave most_update_status: %void%
+enter most_execute_key:
+enter most_check_minibuffer:
+enter most_put_message:
+leave most_put_message: %void%
+leave most_check_minibuffer: %void%
+enter most_point_cursor:
+enter most_goto_rc: 1 1
+leave most_goto_rc: %void% 1 1
+leave most_point_cursor: %void%
+enter most_getkey:
+leave most_getkey: 113
+enter most_clear_minibuffer:
+enter most_put_message:
+leave most_put_message: %void%
+leave most_clear_minibuffer: %void%
+enter most_reset_tty:
+leave most_reset_tty: %void%
+enter most_reset_display:
+leave most_reset_display: %void%
+enter most_free_windows:
+enter most_close_buffer_file: 0xb868c0
+leave most_close_buffer_file: 0 0xb868c0
+leave most_free_windows: %void%
+leave most_execute_key: %void%
+leave most: 0 3 0x7ffdc779af08
+leave main: 0 3 0x7ffdc779af08

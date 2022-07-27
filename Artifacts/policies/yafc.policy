@@ -1,0 +1,1017 @@
+strategy: callout
+
+logging: stderr_printf
+
+functions:
+- callee: [entry, exit]
+  name: print_syntax_and_exit
+- callee: [entry, exit]
+  name: tstp_sighandler
+- callee: [entry, exit]
+  name: init_ftp
+- callee: [entry, exit]
+  name: init_yafc
+- callee: [entry, exit]
+  name: check_if_first_time
+- callee: [entry, exit]
+  name: main
+- callee: [entry, exit]
+  name: alias_create
+- callee: [entry, exit]
+  name: alias_destroy
+- callee: [entry, exit]
+  name: alias_clear
+- callee: [entry, exit]
+  name: alias_search
+- callee: [entry, exit]
+  name: alias_define
+- callee: [entry, exit]
+  name: alias_searchfunc
+- callee: [entry, exit]
+  name: cmd_alias
+- callee: [entry, exit]
+  name: cmd_unalias
+- callee: [entry, exit]
+  name: exit_yafc
+- callee: [entry, exit]
+  name: cmd_exit
+- callee: [entry, exit]
+  name: cmd_quit
+- callee: [entry, exit]
+  name: command_loop
+- callee: [entry, exit]
+  name: exe_cmdline
+- callee: [entry, exit]
+  name: cmd_cache
+- callee: [entry, exit]
+  name: show_help
+- callee: [entry, exit]
+  name: cmd_cat
+- callee: [entry, exit]
+  name: cmd_cd
+- callee: [entry, exit]
+  name: cmd_cdup
+- callee: [entry, exit]
+  name: cmd_chmod
+- callee: [entry, exit]
+  name: cmd_close
+- callee: [entry, exit]
+  name: cmd_filetime
+- callee: [entry, exit]
+  name: cmd_list
+- callee: [entry, exit]
+  name: cmd_mkdir
+- callee: [entry, exit]
+  name: cmd_nlist
+- callee: [entry, exit]
+  name: cmd_nop
+- callee: [entry, exit]
+  name: cmd_idle
+- callee: [entry, exit]
+  name: cmd_pwd
+- callee: [entry, exit]
+  name: cmd_quote
+- callee: [entry, exit]
+  name: cmd_mv
+- callee: [entry, exit]
+  name: cmd_rhelp
+- callee: [entry, exit]
+  name: cmd_rmdir
+- callee: [entry, exit]
+  name: cmd_rstatus
+- callee: [entry, exit]
+  name: cmd_site
+- callee: [entry, exit]
+  name: cmd_source
+- callee: [entry, exit]
+  name: cmd_status
+- callee: [entry, exit]
+  name: cmd_switch
+- callee: [entry, exit]
+  name: cmd_system
+- callee: [entry, exit]
+  name: cmd_url
+- callee: [entry, exit]
+  name: find_cmd
+- callee: [entry, exit]
+  name: rearrange_args
+- callee: [entry, exit]
+  name: rearrange_redirections
+- callee: [entry, exit]
+  name: expand_alias_parameters
+- callee: [entry, exit]
+  name: find_func
+- callee: [entry, exit]
+  name: opt_help
+- callee: [entry, exit]
+  name: no_completion_function
+- callee: [entry, exit]
+  name: the_complete_function
+- callee: [entry, exit]
+  name: command_completion_function
+- callee: [entry, exit]
+  name: remote_completion_function
+- callee: [entry, exit]
+  name: hostname_completion_function
+- callee: [entry, exit]
+  name: bookmark_complete_internal
+- callee: [entry, exit]
+  name: bookmark_completion_function
+- callee: [entry, exit]
+  name: alias_completion_function
+- callee: [entry, exit]
+  name: variable_completion_function
+- callee: [entry, exit]
+  name: ftplist_completion_function
+- callee: [entry, exit]
+  name: taglist_completion_function
+- callee: [entry, exit]
+  name: local_taglist_completion_function
+- callee: [entry, exit]
+  name: get_sort_func
+- callee: [entry, exit]
+  name: cmd_get
+- callee: [entry, exit]
+  name: get_exclude_func
+- callee: [entry, exit]
+  name: getfiles
+- callee: [entry, exit]
+  name: getfile
+- callee: [entry, exit]
+  name: get_preserve_attribs
+- callee: [entry, exit]
+  name: cmd_fxp
+- callee: [entry, exit]
+  name: fxp_exclude_func
+- callee: [entry, exit]
+  name: fxpfiles
+- callee: [entry, exit]
+  name: fxpfile
+- callee: [entry, exit]
+  name: gvars_destroy
+- callee: [entry, exit]
+  name: lglob_create
+- callee: [entry, exit]
+  name: lglob_destroy
+- callee: [entry, exit]
+  name: lglob_exclude_dotdirs
+- callee: [entry, exit]
+  name: lglob_glob
+- callee: [entry, exit]
+  name: cmd_help
+- callee: [entry, exit]
+  name: cmd_version
+- callee: [entry, exit]
+  name: cmd_warranty
+- callee: [entry, exit]
+  name: cmd_copyright
+- callee: [entry, exit]
+  name: input_read_string
+- callee: [entry, exit]
+  name: getpass_hook
+- callee: [entry, exit]
+  name: getuser_hook
+- callee: [entry, exit]
+  name: input_read_args
+- callee: [entry, exit]
+  name: input_save_history
+- callee: [entry, exit]
+  name: input_init
+- callee: [entry, exit]
+  name: input_redisplay_prompt
+- callee: [entry, exit]
+  name: ask
+- callee: [entry, exit]
+  name: cmd_lpwd
+- callee: [entry, exit]
+  name: cmd_lcd
+- callee: [entry, exit]
+  name: shell_replace
+- callee: [entry, exit]
+  name: shell_replace_len
+- callee: [entry, exit]
+  name: cmd_shell
+- callee: [entry, exit]
+  name: cmd_user
+- callee: [entry, exit]
+  name: yafc_open
+- callee: [entry, exit]
+  name: cmd_open
+- callee: [entry, exit]
+  name: cmd_reopen
+- callee: [entry, exit]
+  name: cmd_ls
+- callee: [entry, exit]
+  name: dontlist
+- callee: [entry, exit]
+  name: ls_all
+- callee: [entry, exit]
+  name: ls_sort_name
+- callee: [entry, exit]
+  name: ls_sort_dirs
+- callee: [entry, exit]
+  name: ls_sort_size
+- callee: [entry, exit]
+  name: ls_sort_ext
+- callee: [entry, exit]
+  name: ls_sort_mtime
+- callee: [entry, exit]
+  name: print_filename
+- callee: [entry, exit]
+  name: ls_recursive
+- callee: [entry, exit]
+  name: cmd_put
+- callee: [entry, exit]
+  name: put_exclude_func
+- callee: [entry, exit]
+  name: putfiles
+- callee: [entry, exit]
+  name: put_sort_func
+- callee: [entry, exit]
+  name: cmd_rm
+- callee: [entry, exit]
+  name: remove_files
+- callee: [entry, exit]
+  name: save_taglist
+- callee: [entry, exit]
+  name: load_taglist
+- callee: [entry, exit]
+  name: cmd_tag
+- callee: [entry, exit]
+  name: cmd_untag
+- callee: [entry, exit]
+  name: reject_ampersand
+- callee: [entry, exit]
+  name: open_redirection
+- callee: [entry, exit]
+  name: close_redirection
+- callee: [entry, exit]
+  name: expand_prompt
+- callee: [entry, exit]
+  name: transfer
+- callee: [entry, exit]
+  name: print_transfer_string
+- callee: [entry, exit]
+  name: max_printf
+- callee: [entry, exit]
+  name: transfer_init_nohup
+- callee: [entry, exit]
+  name: transfer_begin_nohup
+- callee: [entry, exit]
+  name: term_handler
+- callee: [entry, exit]
+  name: transfer_mail_msg
+- callee: [entry, exit]
+  name: transfer_end_nohup
+- callee: [entry, exit]
+  name: ascii_transfer
+- callee: [entry, exit]
+  name: transfer_first
+- callee: [entry, exit]
+  name: ignore
+- callee: [entry, exit]
+  name: transfer_nextfile
+- callee: [entry, exit]
+  name: parse_rc
+- callee: [entry, exit]
+  name: errp
+- callee: [entry, exit]
+  name: nextstr
+- callee: [entry, exit]
+  name: nextbool
+- callee: [entry, exit]
+  name: parse_host
+- callee: [entry, exit]
+  name: get_autologin_url
+- callee: [entry, exit]
+  name: set_autologin
+- callee: [entry, exit]
+  name: set_debug
+- callee: [entry, exit]
+  name: set_verbose
+- callee: [entry, exit]
+  name: set_pasvmode
+- callee: [entry, exit]
+  name: set_type
+- callee: [entry, exit]
+  name: set_anonpass
+- callee: [entry, exit]
+  name: cmd_set
+- callee: [entry, exit]
+  name: stats_create
+- callee: [entry, exit]
+  name: stats_reset
+- callee: [entry, exit]
+  name: stats_destroy
+- callee: [entry, exit]
+  name: stats_file
+- callee: [entry, exit]
+  name: stats_display
+- callee: [entry, exit]
+  name: save_ltaglist
+- callee: [entry, exit]
+  name: load_ltaglist
+- callee: [entry, exit]
+  name: cmd_ltag
+- callee: [entry, exit]
+  name: cmd_luntag
+- callee: [entry, exit]
+  name: ltagcmp
+- callee: [entry, exit]
+  name: auto_create_bookmark
+- callee: [entry, exit]
+  name: create_bookmark
+- callee: [entry, exit]
+  name: guess_alias
+- callee: [entry, exit]
+  name: create_the_bookmark
+- callee: [entry, exit]
+  name: bookmark_save
+- callee: [entry, exit]
+  name: bookmark_save_one
+- callee: [entry, exit]
+  name: cmd_bookmark
+- callee: [entry, exit]
+  name: listify_string
+- callee: [entry, exit]
+  name: stringify_list
+- callee: [entry, exit]
+  name: make_unique_filename
+- callee: [entry, exit]
+  name: human_size
+- callee: [entry, exit]
+  name: human_time
+- callee: [entry, exit]
+  name: print_xterm_title
+- callee: [entry, exit]
+  name: reset_xterm_title
+- callee: [entry, exit]
+  name: get_mode_string
+- callee: [entry, exit]
+  name: ftplist_search
+- callee: [entry, exit]
+  name: switch_search
+- callee: [entry, exit]
+  name: invoke_shell
+- callee: [entry, exit]
+  name: list_new
+- callee: [entry, exit]
+  name: list_free
+- callee: [entry, exit]
+  name: list_clear
+- callee: [entry, exit]
+  name: list_delitem
+- callee: [entry, exit]
+  name: list_search
+- callee: [entry, exit]
+  name: list_removeitem
+- callee: [entry, exit]
+  name: list_additem
+- callee: [entry, exit]
+  name: list_numitem
+- callee: [entry, exit]
+  name: list_sort
+- callee: [entry, exit]
+  name: list_clone
+- callee: [entry, exit]
+  name: list_equal
+- callee: [entry, exit]
+  name: strip_blanks
+- callee: [entry, exit]
+  name: fix_unprintable
+- callee: [entry, exit]
+  name: stripslash
+- callee: [entry, exit]
+  name: base_name_ptr
+- callee: [entry, exit]
+  name: base_name_xptr
+- callee: [entry, exit]
+  name: base_dir_xptr
+- callee: [entry, exit]
+  name: strpush
+- callee: [entry, exit]
+  name: strpull
+- callee: [entry, exit]
+  name: strqnchr
+- callee: [entry, exit]
+  name: strqchr
+- callee: [entry, exit]
+  name: strqsep
+- callee: [entry, exit]
+  name: unquote_escapes
+- callee: [entry, exit]
+  name: unquote
+- callee: [entry, exit]
+  name: dequote_filename
+- callee: [entry, exit]
+  name: path_absolute
+- callee: [entry, exit]
+  name: tilde_expand_home
+- callee: [entry, exit]
+  name: path_collapse
+- callee: [entry, exit]
+  name: path_dos2unix
+- callee: [entry, exit]
+  name: str2bool
+- callee: [entry, exit]
+  name: encode_rfc1738
+- callee: [entry, exit]
+  name: decode_rfc1738
+- callee: [entry, exit]
+  name: encode_url_directory
+- callee: [entry, exit]
+  name: strip_trailing_chars
+- callee: [entry, exit]
+  name: quote_filename
+- callee: [entry, exit]
+  name: backslash_quote_impl
+- callee: [entry, exit]
+  name: backslash_quote
+- callee: [entry, exit]
+  name: char_is_quoted
+- callee: [entry, exit]
+  name: shortpath
+- callee: [entry, exit]
+  name: args_create
+- callee: [entry, exit]
+  name: args_destroy
+- callee: [entry, exit]
+  name: args_clear
+- callee: [entry, exit]
+  name: args_del
+- callee: [entry, exit]
+  name: args_init3
+- callee: [entry, exit]
+  name: args_init2
+- callee: [entry, exit]
+  name: args_init
+- callee: [entry, exit]
+  name: args_cat
+- callee: [entry, exit]
+  name: args_cat2
+- callee: [entry, exit]
+  name: args_add_args3
+- callee: [entry, exit]
+  name: args_add_args2
+- callee: [entry, exit]
+  name: args_add_args
+- callee: [entry, exit]
+  name: args_add_null
+- callee: [entry, exit]
+  name: args_push_back
+- callee: [entry, exit]
+  name: split_args
+- callee: [entry, exit]
+  name: args_push_back_nosplit
+- callee: [entry, exit]
+  name: args_push_front
+- callee: [entry, exit]
+  name: args_remove_empty
+- callee: [entry, exit]
+  name: args_unquote
+- callee: [entry, exit]
+  name: args_insert_string
+- callee: [entry, exit]
+  name: args_insert_args
+- callee: [entry, exit]
+  name: xmalloc
+- callee: [entry, exit]
+  name: xrealloc
+- callee: [entry, exit]
+  name: xstrdup
+- callee: [entry, exit]
+  name: xstrndup
+- callee: [entry, exit]
+  name: xstrcmp
+- callee: [entry, exit]
+  name: ftp_create
+- callee: [entry, exit]
+  name: ftp_set_trace
+- callee: [entry, exit]
+  name: ftp_vtrace
+- callee: [entry, exit]
+  name: ftp_trace
+- callee: [entry, exit]
+  name: ftp_err
+- callee: [entry, exit]
+  name: ftp_use
+- callee: [entry, exit]
+  name: ftp_destroy
+- callee: [entry, exit]
+  name: ftp_reset_vars
+- callee: [entry, exit]
+  name: ftp_close
+- callee: [entry, exit]
+  name: ftp_quit_all
+- callee: [entry, exit]
+  name: ftp_quit
+- callee: [entry, exit]
+  name: ftp_cmd
+- callee: [entry, exit]
+  name: ftp_read_reply
+- callee: [entry, exit]
+  name: reply_ALRM_handler
+- callee: [entry, exit]
+  name: ftp_gets
+- callee: [entry, exit]
+  name: ftp_print_reply
+- callee: [entry, exit]
+  name: ftp_reopen
+- callee: [entry, exit]
+  name: ftp_open_url
+- callee: [entry, exit]
+  name: ftp_open_handler
+- callee: [entry, exit]
+  name: proxy_type
+- callee: [entry, exit]
+  name: ftp_login
+- callee: [entry, exit]
+  name: get_username
+- callee: [entry, exit]
+  name: get_password
+- callee: [entry, exit]
+  name: ftp_getcurdir
+- callee: [entry, exit]
+  name: ftp_chdir
+- callee: [entry, exit]
+  name: ftp_set_tmp_verbosity
+- callee: [entry, exit]
+  name: ftp_getreply
+- callee: [entry, exit]
+  name: ftp_loggedin
+- callee: [entry, exit]
+  name: ftp_connected
+- callee: [entry, exit]
+  name: ftp_reply_timeout
+- callee: [entry, exit]
+  name: ftp_get_verbosity
+- callee: [entry, exit]
+  name: ftp_set_verbosity
+- callee: [entry, exit]
+  name: ftp_get_feat
+- callee: [entry, exit]
+  name: ftp_update_curdir_x
+- callee: [entry, exit]
+  name: ftp_cdup
+- callee: [entry, exit]
+  name: ftp_mkdir
+- callee: [entry, exit]
+  name: ftp_mkdir_verb
+- callee: [entry, exit]
+  name: ftp_rmdir
+- callee: [entry, exit]
+  name: ftp_unlink
+- callee: [entry, exit]
+  name: ftp_chmod
+- callee: [entry, exit]
+  name: ftp_idle
+- callee: [entry, exit]
+  name: ftp_noop
+- callee: [entry, exit]
+  name: ftp_help
+- callee: [entry, exit]
+  name: ftp_filesize
+- callee: [entry, exit]
+  name: ftp_read_directory
+- callee: [entry, exit]
+  name: ftp_path_absolute
+- callee: [entry, exit]
+  name: ftp_get_directory
+- callee: [entry, exit]
+  name: ftp_get_file
+- callee: [entry, exit]
+  name: ftp_mkpath
+- callee: [entry, exit]
+  name: ftp_flush_reply
+- callee: [entry, exit]
+  name: ftp_rename
+- callee: [entry, exit]
+  name: gmt_mktime
+- callee: [entry, exit]
+  name: ftp_filetime
+- callee: [entry, exit]
+  name: ftp_maybe_isdir
+- callee: [entry, exit]
+  name: ftp_pwd
+- callee: [entry, exit]
+  name: perm2string
+- callee: [entry, exit]
+  name: ftp_connected_user
+- callee: [entry, exit]
+  name: sock_destroy
+- callee: [entry, exit]
+  name: sock_connect_addr
+- callee: [entry, exit]
+  name: sock_connect_host
+- callee: [entry, exit]
+  name: sock_dup
+- callee: [entry, exit]
+  name: sock_connected
+- callee: [entry, exit]
+  name: sock_accept
+- callee: [entry, exit]
+  name: sock_listen
+- callee: [entry, exit]
+  name: sock_throughput
+- callee: [entry, exit]
+  name: sock_lowdelay
+- callee: [entry, exit]
+  name: sock_local_addr
+- callee: [entry, exit]
+  name: sock_remote_addr
+- callee: [entry, exit]
+  name: sock_read
+- callee: [entry, exit]
+  name: sock_write
+- callee: [entry, exit]
+  name: sock_get
+- callee: [entry, exit]
+  name: sock_put
+- callee: [entry, exit]
+  name: sock_vprintf
+- callee: [entry, exit]
+  name: sock_krb_vprintf
+- callee: [entry, exit]
+  name: sock_printf
+- callee: [entry, exit]
+  name: sock_krb_printf
+- callee: [entry, exit]
+  name: sock_flush
+- callee: [entry, exit]
+  name: sock_telnet_interrupt
+- callee: [entry, exit]
+  name: sock_clearerr_in
+- callee: [entry, exit]
+  name: sock_clearerr_out
+- callee: [entry, exit]
+  name: sock_error_in
+- callee: [entry, exit]
+  name: sock_error_out
+- callee: [entry, exit]
+  name: sock_eof
+- callee: [entry, exit]
+  name: sock_check_pending
+- callee: [entry, exit]
+  name: sock_create
+- callee: [entry, exit]
+  name: ps_destroy
+- callee: [entry, exit]
+  name: ps_connect_addr
+- callee: [entry, exit]
+  name: create_streams
+- callee: [entry, exit]
+  name: ps_dup
+- callee: [entry, exit]
+  name: ps_accept
+- callee: [entry, exit]
+  name: ps_listen
+- callee: [entry, exit]
+  name: ps_throughput
+- callee: [entry, exit]
+  name: ps_lowdelay
+- callee: [entry, exit]
+  name: ps_read
+- callee: [entry, exit]
+  name: ps_write
+- callee: [entry, exit]
+  name: ps_get
+- callee: [entry, exit]
+  name: ps_put
+- callee: [entry, exit]
+  name: ps_vprintf
+- callee: [entry, exit]
+  name: ps_krb_vprintf
+- callee: [entry, exit]
+  name: ps_flush
+- callee: [entry, exit]
+  name: ps_eof
+- callee: [entry, exit]
+  name: ps_telnet_interrupt
+- callee: [entry, exit]
+  name: ps_check_pending
+- callee: [entry, exit]
+  name: ps_clearerr
+- callee: [entry, exit]
+  name: ps_error
+- callee: [entry, exit]
+  name: host_create
+- callee: [entry, exit]
+  name: host_destroy
+- callee: [entry, exit]
+  name: host_lookup
+- callee: [entry, exit]
+  name: host_getport
+- callee: [entry, exit]
+  name: host_gethport
+- callee: [entry, exit]
+  name: host_getname
+- callee: [entry, exit]
+  name: host_geterror
+- callee: [entry, exit]
+  name: host_getoname
+- callee: [entry, exit]
+  name: host_getaddrinfo
+- callee: [entry, exit]
+  name: host_getip
+- callee: [entry, exit]
+  name: printable_address
+- callee: [entry, exit]
+  name: host_connect_addr
+- callee: [entry, exit]
+  name: rglob_create
+- callee: [entry, exit]
+  name: rglob_destroy
+- callee: [entry, exit]
+  name: rglob_exclude_dotdirs
+- callee: [entry, exit]
+  name: rglob_glob
+- callee: [entry, exit]
+  name: rglob_size
+- callee: [entry, exit]
+  name: rglob_numdirs
+- callee: [entry, exit]
+  name: rfile_create
+- callee: [entry, exit]
+  name: rfile_clone
+- callee: [entry, exit]
+  name: rfile_clear
+- callee: [entry, exit]
+  name: rfile_destroy
+- callee: [entry, exit]
+  name: risdir
+- callee: [entry, exit]
+  name: risdotdir
+- callee: [entry, exit]
+  name: risreg
+- callee: [entry, exit]
+  name: rispipe
+- callee: [entry, exit]
+  name: rischardev
+- callee: [entry, exit]
+  name: risblockdev
+- callee: [entry, exit]
+  name: risexec
+- callee: [entry, exit]
+  name: rissock
+- callee: [entry, exit]
+  name: rislink
+- callee: [entry, exit]
+  name: rfile_fake
+- callee: [entry, exit]
+  name: rfile_classchar
+- callee: [entry, exit]
+  name: str2mode_t
+- callee: [entry, exit]
+  name: rfile_getmode
+- callee: [entry, exit]
+  name: month_number
+- callee: [entry, exit]
+  name: rfile_parse_time
+- callee: [entry, exit]
+  name: time_to_string
+- callee: [entry, exit]
+  name: rfile_parse
+- callee: [entry, exit]
+  name: rfile_search_filename
+- callee: [entry, exit]
+  name: rfile_search_path
+- callee: [entry, exit]
+  name: rdir_create
+- callee: [entry, exit]
+  name: rdir_destroy
+- callee: [entry, exit]
+  name: rdir_size
+- callee: [entry, exit]
+  name: rdir_parse
+- callee: [entry, exit]
+  name: rdir_get_file
+- callee: [entry, exit]
+  name: rdir_sort
+- callee: [entry, exit]
+  name: compare_files
+- callee: [entry, exit]
+  name: endcolor
+- callee: [entry, exit]
+  name: init_colors
+- callee: [entry, exit]
+  name: free_colors
+- callee: [entry, exit]
+  name: rfile_parse_colors
+- callee: [entry, exit]
+  name: url_create
+- callee: [entry, exit]
+  name: url_init
+- callee: [entry, exit]
+  name: url_parse
+- callee: [entry, exit]
+  name: url_setpassword
+- callee: [entry, exit]
+  name: url_clone
+- callee: [entry, exit]
+  name: url_destroy
+- callee: [entry, exit]
+  name: url_setprotocol
+- callee: [entry, exit]
+  name: url_setusername
+- callee: [entry, exit]
+  name: url_setdirectory
+- callee: [entry, exit]
+  name: url_setport
+- callee: [entry, exit]
+  name: url_sethostname
+- callee: [entry, exit]
+  name: url_setalias
+- callee: [entry, exit]
+  name: url_setprotlevel
+- callee: [entry, exit]
+  name: url_setpassive
+- callee: [entry, exit]
+  name: url_setsftp
+- callee: [entry, exit]
+  name: url_setmech
+- callee: [entry, exit]
+  name: url_isanon
+- callee: [entry, exit]
+  name: urlcmp
+- callee: [entry, exit]
+  name: urlcmp_name
+- callee: [entry, exit]
+  name: ftp_cache_list_contents
+- callee: [entry, exit]
+  name: ftp_cache_flush
+- callee: [entry, exit]
+  name: cache_search
+- callee: [entry, exit]
+  name: ftp_cache_flush_mark
+- callee: [entry, exit]
+  name: ftp_cache_flush_mark_for
+- callee: [entry, exit]
+  name: ftp_cache_clear
+- callee: [entry, exit]
+  name: ftp_cache_get_directory
+- callee: [entry, exit]
+  name: ftp_cache_get_file
+- callee: [entry, exit]
+  name: ftp_type
+- callee: [entry, exit]
+  name: ftp_abort
+- callee: [entry, exit]
+  name: reset_transfer_info
+- callee: [entry, exit]
+  name: ftp_list
+- callee: [entry, exit]
+  name: ftp_init_transfer
+- callee: [entry, exit]
+  name: ftp_pasv
+- callee: [entry, exit]
+  name: FILE_recv_ascii
+- callee: [entry, exit]
+  name: maybe_abort_in
+- callee: [entry, exit]
+  name: transfer_finished
+- callee: [entry, exit]
+  name: ftp_receive
+- callee: [entry, exit]
+  name: ftp_init_receive
+- callee: [entry, exit]
+  name: ftp_do_receive
+- callee: [entry, exit]
+  name: ftp_fxpfile
+- callee: [entry, exit]
+  name: ftp_getfile
+- callee: [entry, exit]
+  name: ftp_putfile
+- callee: [entry, exit]
+  name: wait_for_output
+- callee: [entry, exit]
+  name: maybe_abort_out
+- callee: [entry, exit]
+  name: ftp_set_signal_with_mask
+- callee: [entry, exit]
+  name: ftp_set_signal
+- callee: [entry, exit]
+  name: sigint_close_handler
+- callee: [entry, exit]
+  name: ftp_longjmp
+- callee: [entry, exit]
+  name: sigint_abort_handler
+- callee: [entry, exit]
+  name: sigint_jmp_handler
+- callee: [entry, exit]
+  name: sighup_handler
+- callee: [entry, exit]
+  name: ftp_initsigs
+- callee: [entry, exit]
+  name: ftp_sigint_close_reset
+- callee: [entry, exit]
+  name: ftp_set_close_handler
+- callee: [entry, exit]
+  name: ftp_set_abort_handler
+- callee: [entry, exit]
+  name: ftp_sigints
+- callee: [entry, exit]
+  name: mode_compile
+- callee: [entry, exit]
+  name: mode_free
+- callee: [entry, exit]
+  name: mode_adjust
+- callee: [entry, exit]
+  name: ssh_open_url
+- callee: [entry, exit]
+  name: ssh_getcurdir
+- callee: [entry, exit]
+  name: ssh_chdir
+- callee: [entry, exit]
+  name: ssh_cdup
+- callee: [entry, exit]
+  name: ssh_mkdir_verb
+- callee: [entry, exit]
+  name: ssh_rmdir
+- callee: [entry, exit]
+  name: ssh_unlink
+- callee: [entry, exit]
+  name: ssh_chmod
+- callee: [entry, exit]
+  name: ssh_idle
+- callee: [entry, exit]
+  name: ssh_noop
+- callee: [entry, exit]
+  name: ssh_help
+- callee: [entry, exit]
+  name: ssh_filesize
+- callee: [entry, exit]
+  name: ssh_read_directory
+- callee: [entry, exit]
+  name: ssh_rename
+- callee: [entry, exit]
+  name: ssh_filetime
+- callee: [entry, exit]
+  name: ssh_list
+- callee: [entry, exit]
+  name: ssh_pwd
+- callee: [entry, exit]
+  name: ssh_do_receive
+- callee: [entry, exit]
+  name: ssh_send
+- callee: [entry, exit]
+  name: ssh_connected_user
+- callee: [entry, exit]
+  name: make_path
+- callee: [entry, exit]
+  name: b64_encode
+- callee: [entry, exit]
+  name: b64_decode
+- callee: [entry, exit]
+  name: gss_init
+- callee: [entry, exit]
+  name: gss_auth
+- callee: [entry, exit]
+  name: gss_check_prot
+- callee: [entry, exit]
+  name: gss_overhead
+- callee: [entry, exit]
+  name: gss_encode
+- callee: [entry, exit]
+  name: gss_decode
+- callee: [entry, exit]
+  name: level_to_name
+- callee: [entry, exit]
+  name: name_to_level
+- callee: [entry, exit]
+  name: sec_getc
+- callee: [entry, exit]
+  name: sec_read
+- callee: [entry, exit]
+  name: sec_fflush
+- callee: [entry, exit]
+  name: sec_send
+- callee: [entry, exit]
+  name: sec_write
+- callee: [entry, exit]
+  name: sec_vfprintf2
+- callee: [entry, exit]
+  name: sec_fprintf2
+- callee: [entry, exit]
+  name: sec_putc
+- callee: [entry, exit]
+  name: sec_read_msg
+- callee: [entry, exit]
+  name: sec_vfprintf
+- callee: [entry, exit]
+  name: sec_fprintf
+- callee: [entry, exit]
+  name: sec_status
+- callee: [entry, exit]
+  name: set_command_prot
+- callee: [entry, exit]
+  name: cmd_prot
+- callee: [entry, exit]
+  name: sec_prot_internal
+- callee: [entry, exit]
+  name: sec_set_protection_level
+- callee: [entry, exit]
+  name: sec_request_prot
+- callee: [entry, exit]
+  name: sec_login
+- callee: [entry, exit]
+  name: sec_end

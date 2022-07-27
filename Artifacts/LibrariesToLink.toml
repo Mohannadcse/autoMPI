@@ -1,0 +1,22 @@
+mc = '-lgmodule-2.0  -lslang -lglib-2.0 ../MPItests/mc-4.8.18/src/.libs/libinternal.a ../MPItests/mc-4.8.18/lib/.libs/libmc.a'
+
+w3m = '-L../MPItests/w3m-0.5.3/libwc/ -lwc -lssl -lcrypto -ltermcap -lm -lgc'
+
+yafc = '-lbsd -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err   -lreadline -lssl -lcrypto -lssh'
+
+evince = '-pthread  -DGDK_MULTIHEAD_SAFE -DGTK_MULTIHEAD_SAFE  -lxml2 -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lgmodule-2.0 -pthread -lgthread-2.0 -pthread -lglib-2.0 -lsecret-1 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lz -lm  -lSM -lICE -L../MPItests/evince-3.10.3/cut-n-paste/gimpcellrenderertoggle/.libs/ -L../MPItests/evince-3.10.3/cut-n-paste/smclient/.libs/ -L../MPItests/evince-3.10.3/properties/.libs/ -L../MPItests/evince-3.10.3/libdocument/.libs/ -L../MPItests/evince-3.10.3/libview/.libs/ -L../MPItests/evince-3.10.3/libmisc/.libs/ -L../MPItests/evince-3.10.3/smclient/.libs/ -lgimpcellrenderertoggle  -levproperties -levdocument3 -levview3 -lsmclient -Wl,-rpath -Wl,/afs/cs.wisc.edu/u/s/n/snlee/Documents/Jesuit/MPItests/evince-3.10.3/install/lib'
+
+gedit = '-Wl,--export-dynamic -Wl,--export-dynamic -lm -lxml2 -lgtksourceview-3.0 -lpeas-gtk-1.0 -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lpeas-1.0 -lgmodule-2.0 -lgio-2.0 -lX11 -lgirepository-1.0 -lgobject-2.0 -lglib-2.0'
+
+leafpad =  '-pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype'
+
+bash = '-rdynamic -L/afs/cs.wisc.edu/u/s/n/snlee/Documents/Jesuit/MPItests/bash-4.4.18/builtins -L/afs/cs.wisc.edu/u/s/n/snlee/Documents/Jesuit/MPItests/bash-4.4.18/lib/readline -L/afs/cs.wisc.edu/u/s/n/snlee/Documents/Jesuit/MPItests/bash-4.4.18/lib/readline -L/afs/cs.wisc.edu/u/s/n/snlee/Documents/Jesuit/MPItests/bash-4.4.18/lib/glob -L/afs/cs.wisc.edu/u/s/n/snlee/Documents/Jesuit/MPItests/bash-4.4.18/lib/tilde -L/afs/cs.wisc.edu/u/s/n/snlee/Documents/Jesuit/MPItests/bash-4.4.18/lib/malloc -L/afs/cs.wisc.edu/u/s/n/snlee/Documents/Jesuit/MPItests/bash-4.4.18/lib/sh -lbuiltins -lglob -lsh -lreadline -lhistory -ltermcap -ltilde -lmalloc -ldl'
+
+mutt = '-lncurses -lidn'
+
+# NOTE: this needed to go AFTER alpine.bc
+alpine = '-lcom_err -L/usr/lib ../MPItests/alpine-2.20+dfsg1/pico/libpico.a ../MPItests/alpine-2.20+dfsg1/pico/osdep/libpicoosd.a ../MPItests/alpine-2.20+dfsg1/pith/libpith.a ../MPItests/alpine-2.20+dfsg1/pith/osdep/libpithosd.a ../MPItests/alpine-2.20+dfsg1/pith/charconv/libpithcc.a ../MPItests/alpine-2.20+dfsg1/alpine/osdep/libpineosd.a ../MPItests/alpine-2.20+dfsg1/c-client/c-client.a -ltcl8.6 -lgssapi_krb5 -lldap -lcrypto -lssl -ldl -ltinfo -llber -lpam -lkrb5'
+
+nano = '-lz -lncurses'
+
+vim = '-lm -ltinfo -lnsl -ldl'

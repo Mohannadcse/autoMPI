@@ -1,0 +1,142 @@
+enter main: 1 0x7ffe43f91df8
+enter create_main_window:
+enter create_menu_bar: 0x146e070
+enter menu_translate: 0x41e29e (nil)
+leave menu_translate: 0x41e29e 0x41e29e (nil)
+enter menu_translate: 0x41e2ae (nil)
+leave menu_translate: 0x41e2ae 0x41e2ae (nil)
+enter menu_translate: 0x41e2d8 (nil)
+leave menu_translate: 0x41e2d8 0x41e2d8 (nil)
+enter menu_translate: 0x41e2f2 (nil)
+leave menu_translate: 0x41e2f2 0x41e2f2 (nil)
+enter menu_translate: 0x41e2fe (nil)
+leave menu_translate: 0x41e2fe 0x41e2fe (nil)
+enter menu_translate: 0x41e32e (nil)
+leave menu_translate: 0x41e32e 0x41e32e (nil)
+enter menu_translate: 0x41e344 (nil)
+leave menu_translate: 0x41e344 0x41e344 (nil)
+enter menu_translate: 0x41e37d (nil)
+leave menu_translate: 0x41e37d 0x41e37d (nil)
+enter menu_translate: 0x41e32e (nil)
+leave menu_translate: 0x41e32e 0x41e32e (nil)
+enter menu_translate: 0x41e397 (nil)
+leave menu_translate: 0x41e397 0x41e397 (nil)
+enter menu_translate: 0x41e3b7 (nil)
+leave menu_translate: 0x41e3b7 0x41e3b7 (nil)
+enter menu_translate: 0x41e3be (nil)
+leave menu_translate: 0x41e3be 0x41e3be (nil)
+enter menu_translate: 0x41e3d3 (nil)
+leave menu_translate: 0x41e3d3 0x41e3d3 (nil)
+enter menu_translate: 0x41e3fa (nil)
+leave menu_translate: 0x41e3fa 0x41e3fa (nil)
+enter menu_translate: 0x41e404 (nil)
+leave menu_translate: 0x41e404 0x41e404 (nil)
+enter menu_translate: 0x41e422 (nil)
+leave menu_translate: 0x41e422 0x41e422 (nil)
+enter menu_translate: 0x41e442 (nil)
+leave menu_translate: 0x41e442 0x41e442 (nil)
+enter menu_translate: 0x41e464 (nil)
+leave menu_translate: 0x41e464 0x41e464 (nil)
+enter menu_translate: 0x41e3fa (nil)
+leave menu_translate: 0x41e3fa 0x41e3fa (nil)
+enter menu_translate: 0x41e47d (nil)
+leave menu_translate: 0x41e47d 0x41e47d (nil)
+enter menu_translate: 0x41e49a (nil)
+leave menu_translate: 0x41e49a 0x41e49a (nil)
+enter menu_translate: 0x41e4a3 (nil)
+leave menu_translate: 0x41e4a3 0x41e4a3 (nil)
+enter menu_translate: 0x41e4c8 (nil)
+leave menu_translate: 0x41e4c8 0x41e4c8 (nil)
+enter menu_translate: 0x41e4db (nil)
+leave menu_translate: 0x41e4db 0x41e4db (nil)
+enter menu_translate: 0x41e504 (nil)
+leave menu_translate: 0x41e504 0x41e504 (nil)
+enter menu_translate: 0x41e538 (nil)
+leave menu_translate: 0x41e538 0x41e538 (nil)
+enter menu_translate: 0x41e544 (nil)
+leave menu_translate: 0x41e544 0x41e544 (nil)
+enter menu_translate: 0x41e56f (nil)
+leave menu_translate: 0x41e56f 0x41e56f (nil)
+enter menu_translate: 0x41e579 (nil)
+leave menu_translate: 0x41e579 0x41e579 (nil)
+enter menu_translate: 0x41e59b (nil)
+leave menu_translate: 0x41e59b 0x41e59b (nil)
+enter menu_translate: 0x41e5bb (nil)
+leave menu_translate: 0x41e5bb 0x41e5bb (nil)
+enter menu_translate: 0x41e5d2 (nil)
+leave menu_translate: 0x41e5d2 0x41e5d2 (nil)
+enter menu_translate: 0x41e5df (nil)
+leave menu_translate: 0x41e5df 0x41e5df (nil)
+enter menu_translate: 0x41e5f5 (nil)
+leave menu_translate: 0x41e5f5 0x41e5f5 (nil)
+enter menu_translate: 0x41e5fc (nil)
+leave menu_translate: 0x41e5fc 0x41e5fc (nil)
+leave create_menu_bar: 0x13f7100 0x146e070
+enter create_text_view:
+enter linenum_init: 0x1499360
+leave linenum_init: %void% 0x1499360
+leave create_text_view: 0x1499360
+leave create_main_window: 0x146a5e0
+enter set_text_font_by_name: 0x1499360 0x1504710
+leave set_text_font_by_name: %void% 0x1499360 0x1504710
+enter indent_refresh_tab_width: 0x1499360
+leave indent_refresh_tab_width: %void% 0x1499360
+enter hlight_init: 0x1495750
+leave hlight_init: %void% 0x1495750
+enter undo_init: 0x1499360 0x7efecc0036d0 0x147e050
+enter undo_clear_all: (nil)
+enter undo_reset_modified_step: (nil)
+leave undo_reset_modified_step: %void% (nil)
+leave undo_clear_all: %void% (nil)
+leave undo_init: %void% 0x1499360 0x7efecc0036d0 0x147e050
+enter dnd_init: 0x1499360
+leave dnd_init: %void% 0x1499360
+enter gedit_utils_get_stdin:
+leave gedit_utils_get_stdin: (nil)
+enter set_main_window_title:
+enter get_file_basename: (nil) 1
+leave get_file_basename: 0x154fad0 (nil) 1
+leave set_main_window_title: %void%
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter cb_focus_event: 0x1499360 0x15a0980
+enter menu_sensitivity_from_clipboard:
+leave menu_sensitivity_from_clipboard: %void%
+leave cb_focus_event: %void% 0x1499360 0x15a0980
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter cb_focus_event: 0x1499360 0x15a0980
+leave cb_focus_event: %void% 0x1499360 0x15a0980
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter cb_focus_event: 0x1499360 0x7efecc00bf10
+enter menu_sensitivity_from_clipboard:
+leave menu_sensitivity_from_clipboard: %void%
+leave cb_focus_event: %void% 0x1499360 0x7efecc00bf10
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter line_numbers_expose: 0x1499360 0x7ffe43f8f340
+leave line_numbers_expose: 0 0x1499360 0x7ffe43f8f340
+enter cb_key_press_event: 0x1499360 0x7efecc00c0f0
+leave cb_key_press_event: 0 0x1499360 0x7efecc00c0f0
+enter cb_focus_event: 0x1499360 0x7efecc00c010
+leave cb_focus_event: %void% 0x1499360 0x7efecc00c010
+enter on_file_quit:
+enter check_text_modification:
+leave check_text_modification: 0
+enter save_config_file:
+enter get_font_name_from_widget: 0x1499360
+leave get_font_name_from_widget: 0x16663e0 0x1499360
+leave save_config_file: %void%
+leave on_file_quit: %void%
+leave main: 0 1 0x7ffe43f91df8

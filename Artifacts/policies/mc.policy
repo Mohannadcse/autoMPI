@@ -1,0 +1,3749 @@
+strategy: callout
+
+logging: stderr_printf
+
+functions:
+- callee: [entry, exit]
+  name: main
+- callee: [entry, exit]
+  name: sigchld_handler_no_subshell
+- callee: [entry, exit]
+  name: show_console_contents
+- callee: [entry, exit]
+  name: handle_console
+- callee: [entry, exit]
+  name: mc_args_parse
+- callee: [entry, exit]
+  name: parse_mc_v_argument
+- callee: [entry, exit]
+  name: parse_mc_e_argument
+- callee: [entry, exit]
+  name: mc_args_show_info
+- callee: [entry, exit]
+  name: mc_setup_by_args
+- callee: [entry, exit]
+  name: mcedit_arg_free
+- callee: [entry, exit]
+  name: events_init
+- callee: [entry, exit]
+  name: execute_get_external_cmd_opts_from_config
+- callee: [entry, exit]
+  name: do_executev
+- callee: [entry, exit]
+  name: pre_exec
+- callee: [entry, exit]
+  name: edition_post_exec
+- callee: [entry, exit]
+  name: do_execute
+- callee: [entry, exit]
+  name: post_exec
+- callee: [entry, exit]
+  name: shell_execute
+- callee: [entry, exit]
+  name: toggle_panels
+- callee: [entry, exit]
+  name: execute_suspend
+- callee: [entry, exit]
+  name: execute_with_vfs_arg
+- callee: [entry, exit]
+  name: execute_prepare_with_vfs_arg
+- callee: [entry, exit]
+  name: execute_external_editor_or_viewer
+- callee: [entry, exit]
+  name: help_interactive_display
+- callee: [entry, exit]
+  name: help_callback
+- callee: [entry, exit]
+  name: help_print_word
+- callee: [entry, exit]
+  name: help_execute_cmd
+- callee: [entry, exit]
+  name: help_follow_link
+- callee: [entry, exit]
+  name: md_callback
+- callee: [entry, exit]
+  name: help_mouse_callback
+- callee: [entry, exit]
+  name: create_default_keymap
+- callee: [entry, exit]
+  name: setup_init
+- callee: [entry, exit]
+  name: load_setup
+- callee: [entry, exit]
+  name: setup__is_cfg_group_must_panel_config
+- callee: [entry, exit]
+  name: setup__load_panel_state
+- callee: [entry, exit]
+  name: save_setup
+- callee: [entry, exit]
+  name: panel_save_setup
+- callee: [entry, exit]
+  name: done_setup
+- callee: [entry, exit]
+  name: setup_save_config_show_error
+- callee: [entry, exit]
+  name: load_key_defs
+- callee: [entry, exit]
+  name: load_keys_from_section
+- callee: [entry, exit]
+  name: load_anon_passwd
+- callee: [entry, exit]
+  name: load_keymap_defs
+- callee: [entry, exit]
+  name: load_setup_get_full_config_name
+- callee: [entry, exit]
+  name: load_keymap_from_section
+- callee: [entry, exit]
+  name: free_keymap_defs
+- callee: [entry, exit]
+  name: panel_load_setup
+- callee: [entry, exit]
+  name: show_version
+- callee: [entry, exit]
+  name: show_datadirs_extended
+- callee: [entry, exit]
+  name: show_configure_options
+- callee: [entry, exit]
+  name: unregister_task_running
+- callee: [entry, exit]
+  name: unregister_task_with_pid
+- callee: [entry, exit]
+  name: do_background
+- callee: [entry, exit]
+  name: background_attention
+- callee: [entry, exit]
+  name: parent_call
+- callee: [entry, exit]
+  name: parent_va_call
+- callee: [entry, exit]
+  name: parent_call_header
+- callee: [entry, exit]
+  name: parent_call_string
+- callee: [entry, exit]
+  name: parent_va_call_string
+- callee: [entry, exit]
+  name: background_parent_call
+- callee: [entry, exit]
+  name: background_parent_call_string
+- callee: [entry, exit]
+  name: buttonbar_new
+- callee: [entry, exit]
+  name: buttonbar_callback
+- callee: [entry, exit]
+  name: buttonbar_mouse_callback
+- callee: [entry, exit]
+  name: buttonbar_set_label
+- callee: [entry, exit]
+  name: find_buttonbar
+- callee: [entry, exit]
+  name: load_codepages_list
+- callee: [entry, exit]
+  name: load_codepages_list_from_file
+- callee: [entry, exit]
+  name: free_codepages_list
+- callee: [entry, exit]
+  name: free_codepage_desc
+- callee: [entry, exit]
+  name: get_codepage_id
+- callee: [entry, exit]
+  name: get_codepage_index
+- callee: [entry, exit]
+  name: is_supported_encoding
+- callee: [entry, exit]
+  name: init_translation_table
+- callee: [entry, exit]
+  name: convert_to_display
+- callee: [entry, exit]
+  name: str_convert_to_display
+- callee: [entry, exit]
+  name: str_nconvert_to_display
+- callee: [entry, exit]
+  name: convert_from_input
+- callee: [entry, exit]
+  name: str_convert_to_input
+- callee: [entry, exit]
+  name: str_nconvert_to_input
+- callee: [entry, exit]
+  name: convert_from_utf_to_current
+- callee: [entry, exit]
+  name: convert_from_utf_to_current_c
+- callee: [entry, exit]
+  name: convert_from_8bit_to_utf_c
+- callee: [entry, exit]
+  name: convert_from_8bit_to_utf_c2
+- callee: [entry, exit]
+  name: tty_color_init_lib
+- callee: [entry, exit]
+  name: tty_color_deinit_lib
+- callee: [entry, exit]
+  name: tty_color_try_alloc_pair_lib
+- callee: [entry, exit]
+  name: tty_setcolor
+- callee: [entry, exit]
+  name: tty_lowlevel_setcolor
+- callee: [entry, exit]
+  name: tty_set_normal_attrs
+- callee: [entry, exit]
+  name: tty_use_256colors
+- callee: [entry, exit]
+  name: tty_init_colors
+- callee: [entry, exit]
+  name: tty_colors_done
+- callee: [entry, exit]
+  name: tty_use_colors
+- callee: [entry, exit]
+  name: tty_try_alloc_color_pair2
+- callee: [entry, exit]
+  name: tty_color_get_next_cpn_cb
+- callee: [entry, exit]
+  name: tty_try_alloc_color_pair
+- callee: [entry, exit]
+  name: tty_color_free_all_tmp
+- callee: [entry, exit]
+  name: tty_color_free_condition_cb
+- callee: [entry, exit]
+  name: tty_color_free_all_non_tmp
+- callee: [entry, exit]
+  name: tty_color_set_defaults
+- callee: [entry, exit]
+  name: mc_skin_color_parse_ini_file
+- callee: [entry, exit]
+  name: mc_skin_color_get_from_ini_file
+- callee: [entry, exit]
+  name: mc_skin_color_get
+- callee: [entry, exit]
+  name: do_cd_command
+- callee: [entry, exit]
+  name: command_new
+- callee: [entry, exit]
+  name: command_callback
+- callee: [entry, exit]
+  name: command_set_default_colors
+- callee: [entry, exit]
+  name: command_insert
+- callee: [entry, exit]
+  name: dialog_switch_add
+- callee: [entry, exit]
+  name: dialog_switch_suspend
+- callee: [entry, exit]
+  name: dialog_switch_remove
+- callee: [entry, exit]
+  name: dialog_switch_num
+- callee: [entry, exit]
+  name: dialog_switch_next
+- callee: [entry, exit]
+  name: dialog_switch_process_pending
+- callee: [entry, exit]
+  name: dialog_switch_prev
+- callee: [entry, exit]
+  name: dialog_switch_list
+- callee: [entry, exit]
+  name: repaint_screen
+- callee: [entry, exit]
+  name: dialog_switch_got_winch
+- callee: [entry, exit]
+  name: dialog_switch_shutdown
+- callee: [entry, exit]
+  name: clr_scr
+- callee: [entry, exit]
+  name: mc_refresh
+- callee: [entry, exit]
+  name: dialog_change_screen_size
+- callee: [entry, exit]
+  name: dlg_resize_cb
+- callee: [entry, exit]
+  name: dlg_default_repaint
+- callee: [entry, exit]
+  name: dlg_erase
+- callee: [entry, exit]
+  name: dlg_set_position
+- callee: [entry, exit]
+  name: dlg_widget_set_position
+- callee: [entry, exit]
+  name: dlg_set_size
+- callee: [entry, exit]
+  name: dlg_default_callback
+- callee: [entry, exit]
+  name: dlg_create
+- callee: [entry, exit]
+  name: dlg_set_default_colors
+- callee: [entry, exit]
+  name: add_widget_autopos
+- callee: [entry, exit]
+  name: add_widget
+- callee: [entry, exit]
+  name: add_widget_before
+- callee: [entry, exit]
+  name: del_widget
+- callee: [entry, exit]
+  name: dlg_redraw
+- callee: [entry, exit]
+  name: update_cursor
+- callee: [entry, exit]
+  name: dlg_set_current_widget_next
+- callee: [entry, exit]
+  name: do_refresh
+- callee: [entry, exit]
+  name: dlg_broadcast_msg
+- callee: [entry, exit]
+  name: find_widget_type
+- callee: [entry, exit]
+  name: dlg_find_widget_callback
+- callee: [entry, exit]
+  name: dlg_find
+- callee: [entry, exit]
+  name: dlg_find_by_id
+- callee: [entry, exit]
+  name: dlg_find_widget_by_id
+- callee: [entry, exit]
+  name: dlg_select_by_id
+- callee: [entry, exit]
+  name: dlg_select_prev_widget
+- callee: [entry, exit]
+  name: dlg_select_next_widget
+- callee: [entry, exit]
+  name: dlg_get_widget_next_of
+- callee: [entry, exit]
+  name: dlg_stop
+- callee: [entry, exit]
+  name: dlg_init
+- callee: [entry, exit]
+  name: dlg_process_event
+- callee: [entry, exit]
+  name: dlg_run_done
+- callee: [entry, exit]
+  name: dlg_run
+- callee: [entry, exit]
+  name: dlg_destroy
+- callee: [entry, exit]
+  name: dlg_save_history
+- callee: [entry, exit]
+  name: dlg_get_title
+- callee: [entry, exit]
+  name: dlg_set_current_widget_prev
+- callee: [entry, exit]
+  name: dlg_get_widget_prev_of
+- callee: [entry, exit]
+  name: mc_event_init
+- callee: [entry, exit]
+  name: mc_event_deinit
+- callee: [entry, exit]
+  name: mc_event_mass_add
+- callee: [entry, exit]
+  name: mc_event_present
+- callee: [entry, exit]
+  name: flush_extension_file
+- callee: [entry, exit]
+  name: regex_command_for
+- callee: [entry, exit]
+  name: exec_get_file_name
+- callee: [entry, exit]
+  name: check_progress_buttons
+- callee: [entry, exit]
+  name: file_op_context_create_ui
+- callee: [entry, exit]
+  name: progress_button_callback
+- callee: [entry, exit]
+  name: file_op_context_destroy_ui
+- callee: [entry, exit]
+  name: file_progress_show
+- callee: [entry, exit]
+  name: file_bps_prepare_for_show
+- callee: [entry, exit]
+  name: file_progress_show_count
+- callee: [entry, exit]
+  name: file_progress_show_total
+- callee: [entry, exit]
+  name: file_progress_show_source
+- callee: [entry, exit]
+  name: file_progress_show_target
+- callee: [entry, exit]
+  name: file_progress_show_deleting
+- callee: [entry, exit]
+  name: file_progress_real_query_replace
+- callee: [entry, exit]
+  name: file_mask_dialog
+- callee: [entry, exit]
+  name: gauge_new
+- callee: [entry, exit]
+  name: gauge_callback
+- callee: [entry, exit]
+  name: gauge_set_value
+- callee: [entry, exit]
+  name: gauge_show
+- callee: [entry, exit]
+  name: vfs_stamp
+- callee: [entry, exit]
+  name: vfs_rmstamp
+- callee: [entry, exit]
+  name: vfs_stamp_path
+- callee: [entry, exit]
+  name: vfs_addstamp
+- callee: [entry, exit]
+  name: vfs_stamp_create
+- callee: [entry, exit]
+  name: vfs_expire
+- callee: [entry, exit]
+  name: vfs_timeouts
+- callee: [entry, exit]
+  name: vfs_timeout_handler
+- callee: [entry, exit]
+  name: vfs_release_path
+- callee: [entry, exit]
+  name: vfs_gc_done
+- callee: [entry, exit]
+  name: mc_config_get_groups
+- callee: [entry, exit]
+  name: mc_config_get_keys
+- callee: [entry, exit]
+  name: mc_config_get_string
+- callee: [entry, exit]
+  name: mc_config_get_string_raw
+- callee: [entry, exit]
+  name: mc_config_get_bool
+- callee: [entry, exit]
+  name: mc_config_get_int
+- callee: [entry, exit]
+  name: mc_config_get_string_list
+- callee: [entry, exit]
+  name: mc_config_get_bool_list
+- callee: [entry, exit]
+  name: mc_config_get_int_list
+- callee: [entry, exit]
+  name: mc_skin_hardcoded_blackwhite_colors
+- callee: [entry, exit]
+  name: mc_skin_hardcoded_space_lines
+- callee: [entry, exit]
+  name: mc_skin_hardcoded_ugly_lines
+- callee: [entry, exit]
+  name: history_get
+- callee: [entry, exit]
+  name: history_load
+- callee: [entry, exit]
+  name: history_save
+- callee: [entry, exit]
+  name: history_show
+- callee: [entry, exit]
+  name: history_dlg_callback
+- callee: [entry, exit]
+  name: hline_new
+- callee: [entry, exit]
+  name: hline_callback
+- callee: [entry, exit]
+  name: hline_set_text
+- callee: [entry, exit]
+  name: add_hook
+- callee: [entry, exit]
+  name: execute_hooks
+- callee: [entry, exit]
+  name: delete_hook
+- callee: [entry, exit]
+  name: hook_present
+- callee: [entry, exit]
+  name: add2hotlist_cmd
+- callee: [entry, exit]
+  name: add2hotlist
+- callee: [entry, exit]
+  name: load_hotlist
+- callee: [entry, exit]
+  name: done_hotlist
+- callee: [entry, exit]
+  name: remove_group
+- callee: [entry, exit]
+  name: load_group
+- callee: [entry, exit]
+  name: save_hotlist
+- callee: [entry, exit]
+  name: hot_save_group
+- callee: [entry, exit]
+  name: hot_next_token
+- callee: [entry, exit]
+  name: hot_load_group
+- callee: [entry, exit]
+  name: clean_up_hotlist_groups
+- callee: [entry, exit]
+  name: hotlist_show
+- callee: [entry, exit]
+  name: init_i18n_stuff
+- callee: [entry, exit]
+  name: hotlist_callback
+- callee: [entry, exit]
+  name: update_path_name
+- callee: [entry, exit]
+  name: hotlist_button_callback
+- callee: [entry, exit]
+  name: hotlist_listbox_callback
+- callee: [entry, exit]
+  name: fill_listbox
+- callee: [entry, exit]
+  name: add_name_to_list
+- callee: [entry, exit]
+  name: input_new
+- callee: [entry, exit]
+  name: input_callback
+- callee: [entry, exit]
+  name: input_load_history
+- callee: [entry, exit]
+  name: input_assign_text
+- callee: [entry, exit]
+  name: input_update
+- callee: [entry, exit]
+  name: input_save_history
+- callee: [entry, exit]
+  name: push_history
+- callee: [entry, exit]
+  name: input_handle_char
+- callee: [entry, exit]
+  name: insert_char
+- callee: [entry, exit]
+  name: input_execute_cmd
+- callee: [entry, exit]
+  name: backward_word
+- callee: [entry, exit]
+  name: forward_word
+- callee: [entry, exit]
+  name: move_buffer_backward
+- callee: [entry, exit]
+  name: copy_region
+- callee: [entry, exit]
+  name: do_show_hist
+- callee: [entry, exit]
+  name: input_mouse_callback
+- callee: [entry, exit]
+  name: input_set_default_colors
+- callee: [entry, exit]
+  name: input_free_completions
+- callee: [entry, exit]
+  name: input_key_is_in_map
+- callee: [entry, exit]
+  name: input_is_empty
+- callee: [entry, exit]
+  name: input_insert
+- callee: [entry, exit]
+  name: input_disable_update
+- callee: [entry, exit]
+  name: input_enable_update
+- callee: [entry, exit]
+  name: input_set_point
+- callee: [entry, exit]
+  name: input_clean
+- callee: [entry, exit]
+  name: try_complete
+- callee: [entry, exit]
+  name: command_completion_function
+- callee: [entry, exit]
+  name: filename_completion_function
+- callee: [entry, exit]
+  name: completion_matches
+- callee: [entry, exit]
+  name: match_compare
+- callee: [entry, exit]
+  name: variable_completion_function
+- callee: [entry, exit]
+  name: hostname_completion_function
+- callee: [entry, exit]
+  name: fetch_hosts
+- callee: [entry, exit]
+  name: username_completion_function
+- callee: [entry, exit]
+  name: try_complete_all_possible
+- callee: [entry, exit]
+  name: complete_engine_fill_completions
+- callee: [entry, exit]
+  name: complete
+- callee: [entry, exit]
+  name: insert_text
+- callee: [entry, exit]
+  name: query_callback
+- callee: [entry, exit]
+  name: mc_open
+- callee: [entry, exit]
+  name: mc_chmod
+- callee: [entry, exit]
+  name: mc_chown
+- callee: [entry, exit]
+  name: mc_utime
+- callee: [entry, exit]
+  name: mc_readlink
+- callee: [entry, exit]
+  name: mc_unlink
+- callee: [entry, exit]
+  name: mc_mkdir
+- callee: [entry, exit]
+  name: mc_rmdir
+- callee: [entry, exit]
+  name: mc_mknod
+- callee: [entry, exit]
+  name: mc_symlink
+- callee: [entry, exit]
+  name: mc_read
+- callee: [entry, exit]
+  name: mc_write
+- callee: [entry, exit]
+  name: mc_link
+- callee: [entry, exit]
+  name: mc_rename
+- callee: [entry, exit]
+  name: mc_ctl
+- callee: [entry, exit]
+  name: mc_setctl
+- callee: [entry, exit]
+  name: mc_close
+- callee: [entry, exit]
+  name: mc_opendir
+- callee: [entry, exit]
+  name: mc_readdir
+- callee: [entry, exit]
+  name: mc_closedir
+- callee: [entry, exit]
+  name: mc_stat
+- callee: [entry, exit]
+  name: mc_lstat
+- callee: [entry, exit]
+  name: mc_fstat
+- callee: [entry, exit]
+  name: mc_getlocalcopy
+- callee: [entry, exit]
+  name: mc_ungetlocalcopy
+- callee: [entry, exit]
+  name: mc_chdir
+- callee: [entry, exit]
+  name: mc_lseek
+- callee: [entry, exit]
+  name: mc_mkstemps
+- callee: [entry, exit]
+  name: mc_tmpdir
+- callee: [entry, exit]
+  name: init_key
+- callee: [entry, exit]
+  name: define_sequence
+- callee: [entry, exit]
+  name: init_key_input_fd
+- callee: [entry, exit]
+  name: done_key
+- callee: [entry, exit]
+  name: k_dispose
+- callee: [entry, exit]
+  name: s_dispose
+- callee: [entry, exit]
+  name: add_select_channel
+- callee: [entry, exit]
+  name: delete_select_channel
+- callee: [entry, exit]
+  name: channels_up
+- callee: [entry, exit]
+  name: channels_down
+- callee: [entry, exit]
+  name: lookup_key
+- callee: [entry, exit]
+  name: key_code_comparator_by_name
+- callee: [entry, exit]
+  name: lookup_key_by_code
+- callee: [entry, exit]
+  name: key_code_comparator_by_code
+- callee: [entry, exit]
+  name: is_idle
+- callee: [entry, exit]
+  name: get_key_code
+- callee: [entry, exit]
+  name: correct_key_code
+- callee: [entry, exit]
+  name: tty_get_event
+- callee: [entry, exit]
+  name: try_channels
+- callee: [entry, exit]
+  name: tty_getch
+- callee: [entry, exit]
+  name: learn_key
+- callee: [entry, exit]
+  name: numeric_keypad_mode
+- callee: [entry, exit]
+  name: application_keypad_mode
+- callee: [entry, exit]
+  name: enable_bracketed_paste
+- callee: [entry, exit]
+  name: disable_bracketed_paste
+- callee: [entry, exit]
+  name: keybind_cmd_bind
+- callee: [entry, exit]
+  name: keybind_lookup_action
+- callee: [entry, exit]
+  name: name_keymap_comparator
+- callee: [entry, exit]
+  name: keybind_lookup_actionname
+- callee: [entry, exit]
+  name: keybind_lookup_keymap_shortcut
+- callee: [entry, exit]
+  name: keybind_lookup_keymap_command
+- callee: [entry, exit]
+  name: load_xtra_key_defines
+- callee: [entry, exit]
+  name: label_new
+- callee: [entry, exit]
+  name: label_callback
+- callee: [entry, exit]
+  name: label_set_text
+- callee: [entry, exit]
+  name: label_set_textv
+- callee: [entry, exit]
+  name: layout_change
+- callee: [entry, exit]
+  name: setup_panels
+- callee: [entry, exit]
+  name: setup_cmdline
+- callee: [entry, exit]
+  name: update_xterm_title_path
+- callee: [entry, exit]
+  name: title_path_prepare
+- callee: [entry, exit]
+  name: layout_box
+- callee: [entry, exit]
+  name: layout_callback
+- callee: [entry, exit]
+  name: update_split
+- callee: [entry, exit]
+  name: b_left_right_cback
+- callee: [entry, exit]
+  name: bplus_cback
+- callee: [entry, exit]
+  name: bminus_cback
+- callee: [entry, exit]
+  name: panel_update_cols
+- callee: [entry, exit]
+  name: get_panel_widget
+- callee: [entry, exit]
+  name: do_load_prompt
+- callee: [entry, exit]
+  name: panels_split_equal
+- callee: [entry, exit]
+  name: panels_split_more
+- callee: [entry, exit]
+  name: panels_split_less
+- callee: [entry, exit]
+  name: use_dash
+- callee: [entry, exit]
+  name: set_hintbar
+- callee: [entry, exit]
+  name: rotate_dash
+- callee: [entry, exit]
+  name: get_nth_panel_name
+- callee: [entry, exit]
+  name: set_display_type
+- callee: [entry, exit]
+  name: save_panel_dir
+- callee: [entry, exit]
+  name: swap_panels
+- callee: [entry, exit]
+  name: get_other_panel
+- callee: [entry, exit]
+  name: get_display_type
+- callee: [entry, exit]
+  name: get_current_index
+- callee: [entry, exit]
+  name: get_other_index
+- callee: [entry, exit]
+  name: get_current_type
+- callee: [entry, exit]
+  name: get_other_type
+- callee: [entry, exit]
+  name: get_panel_dir_for
+- callee: [entry, exit]
+  name: load_prompt
+- callee: [entry, exit]
+  name: create_listbox_window_centered
+- callee: [entry, exit]
+  name: create_listbox_window
+- callee: [entry, exit]
+  name: run_listbox
+- callee: [entry, exit]
+  name: listbox_new
+- callee: [entry, exit]
+  name: listbox_callback
+- callee: [entry, exit]
+  name: listbox_select_entry
+- callee: [entry, exit]
+  name: listbox_draw
+- callee: [entry, exit]
+  name: listbox_execute_cmd
+- callee: [entry, exit]
+  name: listbox_remove_current
+- callee: [entry, exit]
+  name: listbox_entry_free
+- callee: [entry, exit]
+  name: listbox_mouse_callback
+- callee: [entry, exit]
+  name: listbox_search_text
+- callee: [entry, exit]
+  name: listbox_is_empty
+- callee: [entry, exit]
+  name: listbox_select_first
+- callee: [entry, exit]
+  name: listbox_select_last
+- callee: [entry, exit]
+  name: listbox_get_current
+- callee: [entry, exit]
+  name: listbox_get_nth_item
+- callee: [entry, exit]
+  name: listbox_get_first_link
+- callee: [entry, exit]
+  name: listbox_set_list
+- callee: [entry, exit]
+  name: listbox_remove_list
+- callee: [entry, exit]
+  name: listbox_add_item
+- callee: [entry, exit]
+  name: listbox_entry_cmp
+- callee: [entry, exit]
+  name: mc_config_init
+- callee: [entry, exit]
+  name: mc_config_deinit
+- callee: [entry, exit]
+  name: mc_config_has_param
+- callee: [entry, exit]
+  name: mc_config_has_group
+- callee: [entry, exit]
+  name: mc_config_del_key
+- callee: [entry, exit]
+  name: mc_config_del_group
+- callee: [entry, exit]
+  name: mc_config_read_file
+- callee: [entry, exit]
+  name: mc_config_save_file
+- callee: [entry, exit]
+  name: mc_config_new_or_override_file
+- callee: [entry, exit]
+  name: mc_config_save_to_file
+- callee: [entry, exit]
+  name: mc_skin_init
+- callee: [entry, exit]
+  name: mc_skin_hash_destroy_value
+- callee: [entry, exit]
+  name: mc_skin_deinit
+- callee: [entry, exit]
+  name: mc_skin_get
+- callee: [entry, exit]
+  name: mouse_translate_event
+- callee: [entry, exit]
+  name: mouse_process_event
+- callee: [entry, exit]
+  name: mc_event_add
+- callee: [entry, exit]
+  name: mc_event_get_event_group_by_name
+- callee: [entry, exit]
+  name: mc_event_group_destroy_value
+- callee: [entry, exit]
+  name: mc_event_get_event_by_name
+- callee: [entry, exit]
+  name: mc_event_is_callback_in_array
+- callee: [entry, exit]
+  name: mc_event_del
+- callee: [entry, exit]
+  name: mc_event_destroy
+- callee: [entry, exit]
+  name: mc_event_group_del
+- callee: [entry, exit]
+  name: update_menu
+- callee: [entry, exit]
+  name: midnight_set_buttonbar
+- callee: [entry, exit]
+  name: get_random_hint
+- callee: [entry, exit]
+  name: load_hint
+- callee: [entry, exit]
+  name: change_panel
+- callee: [entry, exit]
+  name: save_cwds_stat
+- callee: [entry, exit]
+  name: quiet_quit_cmd
+- callee: [entry, exit]
+  name: quit_cmd_internal
+- callee: [entry, exit]
+  name: do_nc
+- callee: [entry, exit]
+  name: midnight_callback
+- callee: [entry, exit]
+  name: midnight_execute_cmd
+- callee: [entry, exit]
+  name: midnight_put_panel_path
+- callee: [entry, exit]
+  name: put_current_selected
+- callee: [entry, exit]
+  name: put_link
+- callee: [entry, exit]
+  name: put_tagged
+- callee: [entry, exit]
+  name: update_dirty_panels
+- callee: [entry, exit]
+  name: midnight_get_shortcut
+- callee: [entry, exit]
+  name: midnight_get_title
+- callee: [entry, exit]
+  name: check_other_panel_timestamp
+- callee: [entry, exit]
+  name: check_current_panel_timestamp
+- callee: [entry, exit]
+  name: print_vfs_message
+- callee: [entry, exit]
+  name: create_panel_menu
+- callee: [entry, exit]
+  name: show_mouse_pointer
+- callee: [entry, exit]
+  name: init_mouse
+- callee: [entry, exit]
+  name: enable_mouse
+- callee: [entry, exit]
+  name: disable_mouse
+- callee: [entry, exit]
+  name: try_to_select
+- callee: [entry, exit]
+  name: select_item
+- callee: [entry, exit]
+  name: panel_clean_dir
+- callee: [entry, exit]
+  name: panel_set_cwd
+- callee: [entry, exit]
+  name: panel_set_lwd
+- callee: [entry, exit]
+  name: panel_new_with_dir
+- callee: [entry, exit]
+  name: panel_callback
+- callee: [entry, exit]
+  name: panel_load_history
+- callee: [entry, exit]
+  name: panel_save_history
+- callee: [entry, exit]
+  name: show_dir
+- callee: [entry, exit]
+  name: display_total_marked_size
+- callee: [entry, exit]
+  name: paint_dir
+- callee: [entry, exit]
+  name: repaint_file
+- callee: [entry, exit]
+  name: display_mini_info
+- callee: [entry, exit]
+  name: do_search
+- callee: [entry, exit]
+  name: panel_execute_cmd
+- callee: [entry, exit]
+  name: do_cd
+- callee: [entry, exit]
+  name: _do_panel_cd
+- callee: [entry, exit]
+  name: move_down
+- callee: [entry, exit]
+  name: do_enter
+- callee: [entry, exit]
+  name: do_file_mark
+- callee: [entry, exit]
+  name: panel_select_unselect_files
+- callee: [entry, exit]
+  name: next_page
+- callee: [entry, exit]
+  name: directory_history_list
+- callee: [entry, exit]
+  name: move_up
+- callee: [entry, exit]
+  name: move_selection
+- callee: [entry, exit]
+  name: panel_change_encoding
+- callee: [entry, exit]
+  name: remove_encoding_from_path
+- callee: [entry, exit]
+  name: start_search
+- callee: [entry, exit]
+  name: panel_reload
+- callee: [entry, exit]
+  name: panel_re_sort
+- callee: [entry, exit]
+  name: panel_get_field_by_title
+- callee: [entry, exit]
+  name: string_file_name
+- callee: [entry, exit]
+  name: string_file_size
+- callee: [entry, exit]
+  name: string_file_size_brief
+- callee: [entry, exit]
+  name: string_file_type
+- callee: [entry, exit]
+  name: string_file_mtime
+- callee: [entry, exit]
+  name: string_file_atime
+- callee: [entry, exit]
+  name: string_file_ctime
+- callee: [entry, exit]
+  name: string_file_permission
+- callee: [entry, exit]
+  name: string_file_perm_octal
+- callee: [entry, exit]
+  name: string_file_nlinks
+- callee: [entry, exit]
+  name: string_inode
+- callee: [entry, exit]
+  name: string_file_nuid
+- callee: [entry, exit]
+  name: string_file_ngid
+- callee: [entry, exit]
+  name: string_file_owner
+- callee: [entry, exit]
+  name: string_file_group
+- callee: [entry, exit]
+  name: string_marked
+- callee: [entry, exit]
+  name: string_space
+- callee: [entry, exit]
+  name: string_dot
+- callee: [entry, exit]
+  name: panel_set_sort_type_by_id
+- callee: [entry, exit]
+  name: panel_mouse_callback
+- callee: [entry, exit]
+  name: set_panel_formats
+- callee: [entry, exit]
+  name: use_display_format
+- callee: [entry, exit]
+  name: recalculate_panel_summary
+- callee: [entry, exit]
+  name: unmark_files
+- callee: [entry, exit]
+  name: file_mark
+- callee: [entry, exit]
+  name: do_panel_cd
+- callee: [entry, exit]
+  name: panel_set_sort_order
+- callee: [entry, exit]
+  name: update_panels
+- callee: [entry, exit]
+  name: update_one_panel
+- callee: [entry, exit]
+  name: panel_get_num_of_sortable_fields
+- callee: [entry, exit]
+  name: panel_get_sortable_fields
+- callee: [entry, exit]
+  name: panel_get_field_by_id
+- callee: [entry, exit]
+  name: panel_get_field_by_title_hotkey
+- callee: [entry, exit]
+  name: panel_get_num_of_user_possible_fields
+- callee: [entry, exit]
+  name: panel_get_user_possible_fields
+- callee: [entry, exit]
+  name: panel_init
+- callee: [entry, exit]
+  name: event_update_panels
+- callee: [entry, exit]
+  name: panel_save_current_file_to_clip_file
+- callee: [entry, exit]
+  name: panel_deinit
+- callee: [entry, exit]
+  name: panelize_change_root
+- callee: [entry, exit]
+  name: panelize_save_panel
+- callee: [entry, exit]
+  name: cd_panelize_cmd
+- callee: [entry, exit]
+  name: external_panelize
+- callee: [entry, exit]
+  name: panelize_callback
+- callee: [entry, exit]
+  name: add2panelize
+- callee: [entry, exit]
+  name: load_panelize
+- callee: [entry, exit]
+  name: save_panelize
+- callee: [entry, exit]
+  name: done_panelize
+- callee: [entry, exit]
+  name: vfs_path_to_str_flags
+- callee: [entry, exit]
+  name: vfs_path_build_url_params_str
+- callee: [entry, exit]
+  name: vfs_path_elements_count
+- callee: [entry, exit]
+  name: vfs_path_get_by_index
+- callee: [entry, exit]
+  name: vfs_path_element_need_cleanup_converter
+- callee: [entry, exit]
+  name: vfs_path_to_str_elements_count
+- callee: [entry, exit]
+  name: vfs_path_from_str_flags
+- callee: [entry, exit]
+  name: vfs_canon
+- callee: [entry, exit]
+  name: _vfs_split_with_semi_skip_count
+- callee: [entry, exit]
+  name: vfs_get_encoding
+- callee: [entry, exit]
+  name: vfs_path_url_split
+- callee: [entry, exit]
+  name: vfs_path_from_str
+- callee: [entry, exit]
+  name: vfs_path_new
+- callee: [entry, exit]
+  name: vfs_path_add_element
+- callee: [entry, exit]
+  name: vfs_path_element_clone
+- callee: [entry, exit]
+  name: vfs_path_element_free
+- callee: [entry, exit]
+  name: vfs_path_clone
+- callee: [entry, exit]
+  name: vfs_path_free
+- callee: [entry, exit]
+  name: vfs_path_remove_element_by_index
+- callee: [entry, exit]
+  name: vfs_prefix_to_class
+- callee: [entry, exit]
+  name: vfs_path_change_encoding
+- callee: [entry, exit]
+  name: vfs_path_serialize
+- callee: [entry, exit]
+  name: vfs_path_deserialize
+- callee: [entry, exit]
+  name: vfs_path_build_filename
+- callee: [entry, exit]
+  name: vfs_path_append_new
+- callee: [entry, exit]
+  name: vfs_path_append_vpath_new
+- callee: [entry, exit]
+  name: vfs_path_tokens_count
+- callee: [entry, exit]
+  name: vfs_path_tokens_get
+- callee: [entry, exit]
+  name: vfs_path_tokens_add_class_info
+- callee: [entry, exit]
+  name: vfs_path_vtokens_get
+- callee: [entry, exit]
+  name: vfs_path_element_build_pretty_path_str
+- callee: [entry, exit]
+  name: vfs_path_equal
+- callee: [entry, exit]
+  name: vfs_path_equal_len
+- callee: [entry, exit]
+  name: vfs_path_len
+- callee: [entry, exit]
+  name: vfs_path_to_absolute
+- callee: [entry, exit]
+  name: mc_config_init_config_paths
+- callee: [entry, exit]
+  name: mc_config_init_one_config_path
+- callee: [entry, exit]
+  name: mc_config_get_home_dir
+- callee: [entry, exit]
+  name: mc_config_deinit_config_paths
+- callee: [entry, exit]
+  name: mc_config_get_data_path
+- callee: [entry, exit]
+  name: mc_config_get_cache_path
+- callee: [entry, exit]
+  name: mc_config_get_path
+- callee: [entry, exit]
+  name: mc_config_migrate_from_old_place
+- callee: [entry, exit]
+  name: mc_config_get_deprecated_path
+- callee: [entry, exit]
+  name: mc_config_copy
+- callee: [entry, exit]
+  name: mc_config_get_full_path
+- callee: [entry, exit]
+  name: mc_config_get_full_vpath
+- callee: [entry, exit]
+  name: quick_dialog_skip
+- callee: [entry, exit]
+  name: radio_new
+- callee: [entry, exit]
+  name: radio_callback
+- callee: [entry, exit]
+  name: radio_mouse_callback
+- callee: [entry, exit]
+  name: mc_event_raise
+- callee: [entry, exit]
+  name: str_replace_all
+- callee: [entry, exit]
+  name: mc_search_new
+- callee: [entry, exit]
+  name: mc_search_new_len
+- callee: [entry, exit]
+  name: mc_search_free
+- callee: [entry, exit]
+  name: mc_search__cond_struct_free
+- callee: [entry, exit]
+  name: mc_search_prepare
+- callee: [entry, exit]
+  name: mc_search__cond_struct_new
+- callee: [entry, exit]
+  name: mc_search_run
+- callee: [entry, exit]
+  name: mc_search_set_error
+- callee: [entry, exit]
+  name: mc_search_is_type_avail
+- callee: [entry, exit]
+  name: mc_search_types_list_get
+- callee: [entry, exit]
+  name: mc_search_prepare_replace_str
+- callee: [entry, exit]
+  name: mc_search_prepare_replace_str2
+- callee: [entry, exit]
+  name: mc_search_is_fixed_search_str
+- callee: [entry, exit]
+  name: mc_search
+- callee: [entry, exit]
+  name: mc_search_getstart_result_by_num
+- callee: [entry, exit]
+  name: mc_search_getend_result_by_num
+- callee: [entry, exit]
+  name: mc_serialize_str
+- callee: [entry, exit]
+  name: mc_deserialize_str
+- callee: [entry, exit]
+  name: mc_serialize_config
+- callee: [entry, exit]
+  name: mc_deserialize_config
+- callee: [entry, exit]
+  name: prepend_error_message
+- callee: [entry, exit]
+  name: mc_config_set_string_raw
+- callee: [entry, exit]
+  name: mc_config_set_string_raw_value
+- callee: [entry, exit]
+  name: mc_config_set_string
+- callee: [entry, exit]
+  name: mc_config_set_bool
+- callee: [entry, exit]
+  name: mc_config_set_int
+- callee: [entry, exit]
+  name: mc_config_set_string_list
+- callee: [entry, exit]
+  name: mc_config_set_bool_list
+- callee: [entry, exit]
+  name: mc_config_set_int_list
+- callee: [entry, exit]
+  name: mc_shell_init
+- callee: [entry, exit]
+  name: mc_shell_deinit
+- callee: [entry, exit]
+  name: strutils_escape
+- callee: [entry, exit]
+  name: strutils_unescape
+- callee: [entry, exit]
+  name: strutils_shell_escape
+- callee: [entry, exit]
+  name: strutils_glob_escape
+- callee: [entry, exit]
+  name: strutils_regex_escape
+- callee: [entry, exit]
+  name: strutils_shell_unescape
+- callee: [entry, exit]
+  name: strutils_glob_unescape
+- callee: [entry, exit]
+  name: strutils_regex_unescape
+- callee: [entry, exit]
+  name: strutils_is_char_escaped
+- callee: [entry, exit]
+  name: str_crt_conv_to
+- callee: [entry, exit]
+  name: str_crt_conv_from
+- callee: [entry, exit]
+  name: str_close_conv
+- callee: [entry, exit]
+  name: str_convert
+- callee: [entry, exit]
+  name: _str_convert
+- callee: [entry, exit]
+  name: str_nconvert
+- callee: [entry, exit]
+  name: str_conv_gerror_message
+- callee: [entry, exit]
+  name: str_vfs_convert_from
+- callee: [entry, exit]
+  name: str_vfs_convert_to
+- callee: [entry, exit]
+  name: str_printf
+- callee: [entry, exit]
+  name: str_insert_replace_char
+- callee: [entry, exit]
+  name: str_translate_char
+- callee: [entry, exit]
+  name: str_detect_termencoding
+- callee: [entry, exit]
+  name: str_isutf8
+- callee: [entry, exit]
+  name: str_init_strings
+- callee: [entry, exit]
+  name: str_uninit_strings
+- callee: [entry, exit]
+  name: str_term_form
+- callee: [entry, exit]
+  name: str_fit_to_term
+- callee: [entry, exit]
+  name: str_term_trim
+- callee: [entry, exit]
+  name: str_term_substring
+- callee: [entry, exit]
+  name: str_get_next_char
+- callee: [entry, exit]
+  name: str_cget_next_char
+- callee: [entry, exit]
+  name: str_next_char
+- callee: [entry, exit]
+  name: str_cnext_char
+- callee: [entry, exit]
+  name: str_get_prev_char
+- callee: [entry, exit]
+  name: str_cget_prev_char
+- callee: [entry, exit]
+  name: str_prev_char
+- callee: [entry, exit]
+  name: str_cprev_char
+- callee: [entry, exit]
+  name: str_get_next_char_safe
+- callee: [entry, exit]
+  name: str_cget_next_char_safe
+- callee: [entry, exit]
+  name: str_next_char_safe
+- callee: [entry, exit]
+  name: str_cnext_char_safe
+- callee: [entry, exit]
+  name: str_get_prev_char_safe
+- callee: [entry, exit]
+  name: str_cget_prev_char_safe
+- callee: [entry, exit]
+  name: str_prev_char_safe
+- callee: [entry, exit]
+  name: str_cprev_char_safe
+- callee: [entry, exit]
+  name: str_next_noncomb_char
+- callee: [entry, exit]
+  name: str_cnext_noncomb_char
+- callee: [entry, exit]
+  name: str_prev_noncomb_char
+- callee: [entry, exit]
+  name: str_cprev_noncomb_char
+- callee: [entry, exit]
+  name: str_is_valid_char
+- callee: [entry, exit]
+  name: str_term_width1
+- callee: [entry, exit]
+  name: str_term_width2
+- callee: [entry, exit]
+  name: str_term_char_width
+- callee: [entry, exit]
+  name: str_offset_to_pos
+- callee: [entry, exit]
+  name: str_length
+- callee: [entry, exit]
+  name: str_length_char
+- callee: [entry, exit]
+  name: str_length2
+- callee: [entry, exit]
+  name: str_length_noncomb
+- callee: [entry, exit]
+  name: str_column_to_pos
+- callee: [entry, exit]
+  name: str_isspace
+- callee: [entry, exit]
+  name: str_ispunct
+- callee: [entry, exit]
+  name: str_isalnum
+- callee: [entry, exit]
+  name: str_isdigit
+- callee: [entry, exit]
+  name: str_toupper
+- callee: [entry, exit]
+  name: str_tolower
+- callee: [entry, exit]
+  name: str_isprint
+- callee: [entry, exit]
+  name: str_iscombiningmark
+- callee: [entry, exit]
+  name: str_trunc
+- callee: [entry, exit]
+  name: str_create_search_needle
+- callee: [entry, exit]
+  name: str_release_search_needle
+- callee: [entry, exit]
+  name: str_search_first
+- callee: [entry, exit]
+  name: str_search_last
+- callee: [entry, exit]
+  name: str_is_valid_string
+- callee: [entry, exit]
+  name: str_compare
+- callee: [entry, exit]
+  name: str_ncompare
+- callee: [entry, exit]
+  name: str_casecmp
+- callee: [entry, exit]
+  name: str_ncasecmp
+- callee: [entry, exit]
+  name: str_prefix
+- callee: [entry, exit]
+  name: str_caseprefix
+- callee: [entry, exit]
+  name: str_fix_string
+- callee: [entry, exit]
+  name: str_create_key
+- callee: [entry, exit]
+  name: str_create_key_for_filename
+- callee: [entry, exit]
+  name: str_key_collate
+- callee: [entry, exit]
+  name: str_release_key
+- callee: [entry, exit]
+  name: str_msg_term_size
+- callee: [entry, exit]
+  name: strrstr_skip_count
+- callee: [entry, exit]
+  name: parse_integer
+- callee: [entry, exit]
+  name: str_8bit_init
+- callee: [entry, exit]
+  name: str_8bit_conv_gerror_message
+- callee: [entry, exit]
+  name: str_8bit_vfs_convert_to
+- callee: [entry, exit]
+  name: str_8bit_insert_replace_char
+- callee: [entry, exit]
+  name: str_8bit_is_valid_string
+- callee: [entry, exit]
+  name: str_8bit_is_valid_char
+- callee: [entry, exit]
+  name: str_8bit_cnext_char
+- callee: [entry, exit]
+  name: str_8bit_cprev_char
+- callee: [entry, exit]
+  name: str_8bit_cnext_noncomb_char
+- callee: [entry, exit]
+  name: str_8bit_cprev_noncomb_char
+- callee: [entry, exit]
+  name: str_8bit_isspace
+- callee: [entry, exit]
+  name: str_8bit_ispunct
+- callee: [entry, exit]
+  name: str_8bit_isalnum
+- callee: [entry, exit]
+  name: str_8bit_isdigit
+- callee: [entry, exit]
+  name: str_8bit_isprint
+- callee: [entry, exit]
+  name: str_8bit_iscombiningmark
+- callee: [entry, exit]
+  name: str_8bit_toupper
+- callee: [entry, exit]
+  name: str_8bit_tolower
+- callee: [entry, exit]
+  name: str_8bit_length
+- callee: [entry, exit]
+  name: str_8bit_length2
+- callee: [entry, exit]
+  name: str_8bit_fix_string
+- callee: [entry, exit]
+  name: str_8bit_term_form
+- callee: [entry, exit]
+  name: str_8bit_fit_to_term
+- callee: [entry, exit]
+  name: str_8bit_term_trim
+- callee: [entry, exit]
+  name: str_8bit_term_width2
+- callee: [entry, exit]
+  name: str_8bit_term_width1
+- callee: [entry, exit]
+  name: str_8bit_term_char_width
+- callee: [entry, exit]
+  name: str_8bit_term_substring
+- callee: [entry, exit]
+  name: str_8bit_trunc
+- callee: [entry, exit]
+  name: str_8bit_offset_to_pos
+- callee: [entry, exit]
+  name: str_8bit_column_to_pos
+- callee: [entry, exit]
+  name: str_8bit_create_search_needle
+- callee: [entry, exit]
+  name: str_8bit_release_search_needle
+- callee: [entry, exit]
+  name: str_8bit_search_first
+- callee: [entry, exit]
+  name: str_8bit_search_last
+- callee: [entry, exit]
+  name: str_8bit_compare
+- callee: [entry, exit]
+  name: str_8bit_ncompare
+- callee: [entry, exit]
+  name: str_8bit_casecmp
+- callee: [entry, exit]
+  name: str_8bit_ncasecmp
+- callee: [entry, exit]
+  name: str_8bit_prefix
+- callee: [entry, exit]
+  name: str_8bit_caseprefix
+- callee: [entry, exit]
+  name: str_8bit_create_key
+- callee: [entry, exit]
+  name: str_8bit_key_collate
+- callee: [entry, exit]
+  name: str_8bit_release_key
+- callee: [entry, exit]
+  name: str_ascii_init
+- callee: [entry, exit]
+  name: str_ascii_conv_gerror_message
+- callee: [entry, exit]
+  name: str_ascii_vfs_convert_to
+- callee: [entry, exit]
+  name: str_ascii_insert_replace_char
+- callee: [entry, exit]
+  name: str_ascii_is_valid_string
+- callee: [entry, exit]
+  name: str_ascii_is_valid_char
+- callee: [entry, exit]
+  name: str_ascii_cnext_char
+- callee: [entry, exit]
+  name: str_ascii_cprev_char
+- callee: [entry, exit]
+  name: str_ascii_cnext_noncomb_char
+- callee: [entry, exit]
+  name: str_ascii_cprev_noncomb_char
+- callee: [entry, exit]
+  name: str_ascii_isspace
+- callee: [entry, exit]
+  name: str_ascii_ispunct
+- callee: [entry, exit]
+  name: str_ascii_isalnum
+- callee: [entry, exit]
+  name: str_ascii_isdigit
+- callee: [entry, exit]
+  name: str_ascii_isprint
+- callee: [entry, exit]
+  name: str_ascii_iscombiningmark
+- callee: [entry, exit]
+  name: str_ascii_toupper
+- callee: [entry, exit]
+  name: str_ascii_tolower
+- callee: [entry, exit]
+  name: str_ascii_length
+- callee: [entry, exit]
+  name: str_ascii_length2
+- callee: [entry, exit]
+  name: str_ascii_fix_string
+- callee: [entry, exit]
+  name: str_ascii_term_form
+- callee: [entry, exit]
+  name: str_ascii_fit_to_term
+- callee: [entry, exit]
+  name: str_ascii_term_trim
+- callee: [entry, exit]
+  name: str_ascii_term_width2
+- callee: [entry, exit]
+  name: str_ascii_term_width1
+- callee: [entry, exit]
+  name: str_ascii_term_char_width
+- callee: [entry, exit]
+  name: str_ascii_term_substring
+- callee: [entry, exit]
+  name: str_ascii_trunc
+- callee: [entry, exit]
+  name: str_ascii_offset_to_pos
+- callee: [entry, exit]
+  name: str_ascii_column_to_pos
+- callee: [entry, exit]
+  name: str_ascii_create_search_needle
+- callee: [entry, exit]
+  name: str_ascii_release_search_needle
+- callee: [entry, exit]
+  name: str_ascii_search_first
+- callee: [entry, exit]
+  name: str_ascii_search_last
+- callee: [entry, exit]
+  name: str_ascii_compare
+- callee: [entry, exit]
+  name: str_ascii_ncompare
+- callee: [entry, exit]
+  name: str_ascii_casecmp
+- callee: [entry, exit]
+  name: str_ascii_ncasecmp
+- callee: [entry, exit]
+  name: str_ascii_prefix
+- callee: [entry, exit]
+  name: str_ascii_caseprefix
+- callee: [entry, exit]
+  name: str_ascii_create_key
+- callee: [entry, exit]
+  name: str_ascii_key_collate
+- callee: [entry, exit]
+  name: str_ascii_release_key
+- callee: [entry, exit]
+  name: str_utf8_init
+- callee: [entry, exit]
+  name: str_utf8_conv_gerror_message
+- callee: [entry, exit]
+  name: str_utf8_vfs_convert_to
+- callee: [entry, exit]
+  name: str_utf8_insert_replace_char
+- callee: [entry, exit]
+  name: str_utf8_is_valid_string
+- callee: [entry, exit]
+  name: str_utf8_is_valid_char
+- callee: [entry, exit]
+  name: str_utf8_cnext_char
+- callee: [entry, exit]
+  name: str_utf8_cprev_char
+- callee: [entry, exit]
+  name: str_utf8_cnext_char_safe
+- callee: [entry, exit]
+  name: str_utf8_cprev_char_safe
+- callee: [entry, exit]
+  name: str_utf8_cnext_noncomb_char
+- callee: [entry, exit]
+  name: str_utf8_cprev_noncomb_char
+- callee: [entry, exit]
+  name: str_utf8_isspace
+- callee: [entry, exit]
+  name: str_utf8_ispunct
+- callee: [entry, exit]
+  name: str_utf8_isalnum
+- callee: [entry, exit]
+  name: str_utf8_isdigit
+- callee: [entry, exit]
+  name: str_utf8_isprint
+- callee: [entry, exit]
+  name: str_utf8_iscombiningmark
+- callee: [entry, exit]
+  name: str_utf8_toupper
+- callee: [entry, exit]
+  name: str_utf8_tolower
+- callee: [entry, exit]
+  name: str_utf8_length
+- callee: [entry, exit]
+  name: str_utf8_length2
+- callee: [entry, exit]
+  name: str_utf8_length_noncomb
+- callee: [entry, exit]
+  name: str_utf8_fix_string
+- callee: [entry, exit]
+  name: str_utf8_term_form
+- callee: [entry, exit]
+  name: str_utf8_make_make_term_form
+- callee: [entry, exit]
+  name: str_utf8_fit_to_term
+- callee: [entry, exit]
+  name: utf8_tool_copy_chars_to_end
+- callee: [entry, exit]
+  name: utf8_tool_copy_chars_to
+- callee: [entry, exit]
+  name: utf8_tool_skip_chars_to
+- callee: [entry, exit]
+  name: str_utf8_term_trim
+- callee: [entry, exit]
+  name: str_utf8_term_width2
+- callee: [entry, exit]
+  name: str_utf8_term_width1
+- callee: [entry, exit]
+  name: str_utf8_term_char_width
+- callee: [entry, exit]
+  name: str_utf8_term_substring
+- callee: [entry, exit]
+  name: str_utf8_trunc
+- callee: [entry, exit]
+  name: str_utf8_offset_to_pos
+- callee: [entry, exit]
+  name: str_utf8_column_to_pos
+- callee: [entry, exit]
+  name: str_utf8_create_search_needle
+- callee: [entry, exit]
+  name: str_utf8_release_search_needle
+- callee: [entry, exit]
+  name: str_utf8_search_first
+- callee: [entry, exit]
+  name: str_utf8_search_last
+- callee: [entry, exit]
+  name: str_utf8_compare
+- callee: [entry, exit]
+  name: str_utf8_normalize
+- callee: [entry, exit]
+  name: str_utf8_ncompare
+- callee: [entry, exit]
+  name: str_utf8_casecmp
+- callee: [entry, exit]
+  name: str_utf8_casefold_normalize
+- callee: [entry, exit]
+  name: str_utf8_ncasecmp
+- callee: [entry, exit]
+  name: str_utf8_prefix
+- callee: [entry, exit]
+  name: str_utf8_caseprefix
+- callee: [entry, exit]
+  name: str_utf8_create_key
+- callee: [entry, exit]
+  name: str_utf8_key_collate
+- callee: [entry, exit]
+  name: str_utf8_release_key
+- callee: [entry, exit]
+  name: str_verscmp
+- callee: [entry, exit]
+  name: i18n_checktimelength
+- callee: [entry, exit]
+  name: file_date
+- callee: [entry, exit]
+  name: mc_timer_new
+- callee: [entry, exit]
+  name: mc_timer_destroy
+- callee: [entry, exit]
+  name: mc_timer_elapsed
+- callee: [entry, exit]
+  name: tree_new
+- callee: [entry, exit]
+  name: tree_callback
+- callee: [entry, exit]
+  name: show_tree
+- callee: [entry, exit]
+  name: tree_do_search
+- callee: [entry, exit]
+  name: tree_chdir_sel
+- callee: [entry, exit]
+  name: tree_rescan
+- callee: [entry, exit]
+  name: tree_execute_cmd
+- callee: [entry, exit]
+  name: remove_callback
+- callee: [entry, exit]
+  name: tree_mouse_callback
+- callee: [entry, exit]
+  name: tree_chdir
+- callee: [entry, exit]
+  name: tree_selected_name
+- callee: [entry, exit]
+  name: sync_tree
+- callee: [entry, exit]
+  name: find_tree
+- callee: [entry, exit]
+  name: tree_store_whereis
+- callee: [entry, exit]
+  name: tree_store_get
+- callee: [entry, exit]
+  name: tree_store_load
+- callee: [entry, exit]
+  name: tree_store_add_entry
+- callee: [entry, exit]
+  name: tree_store_rescan
+- callee: [entry, exit]
+  name: process_special_dirs
+- callee: [entry, exit]
+  name: tree_store_start_check
+- callee: [entry, exit]
+  name: tree_store_mark_checked
+- callee: [entry, exit]
+  name: tree_store_end_check
+- callee: [entry, exit]
+  name: remove_entry
+- callee: [entry, exit]
+  name: tree_store_save
+- callee: [entry, exit]
+  name: tree_store_add_entry_remove_hook
+- callee: [entry, exit]
+  name: tree_store_remove_entry_remove_hook
+- callee: [entry, exit]
+  name: tree_store_remove_entry
+- callee: [entry, exit]
+  name: mc_tty_normalize_lines_char
+- callee: [entry, exit]
+  name: tty_init
+- callee: [entry, exit]
+  name: tty_keypad
+- callee: [entry, exit]
+  name: sigwinch_handler
+- callee: [entry, exit]
+  name: tty_reset_prog_mode
+- callee: [entry, exit]
+  name: tty_display_8bit
+- callee: [entry, exit]
+  name: tty_enter_ca_mode
+- callee: [entry, exit]
+  name: tty_nodelay
+- callee: [entry, exit]
+  name: tty_shutdown
+- callee: [entry, exit]
+  name: tty_reset_shell_mode
+- callee: [entry, exit]
+  name: tty_noraw_mode
+- callee: [entry, exit]
+  name: tty_reset_screen
+- callee: [entry, exit]
+  name: tty_exit_ca_mode
+- callee: [entry, exit]
+  name: tty_change_screen_size
+- callee: [entry, exit]
+  name: tty_raw_mode
+- callee: [entry, exit]
+  name: tty_noecho
+- callee: [entry, exit]
+  name: tty_flush_input
+- callee: [entry, exit]
+  name: tty_baudrate
+- callee: [entry, exit]
+  name: tty_lowlevel_getch
+- callee: [entry, exit]
+  name: tty_touch_screen
+- callee: [entry, exit]
+  name: tty_gotoyx
+- callee: [entry, exit]
+  name: tty_getyx
+- callee: [entry, exit]
+  name: tty_draw_hline
+- callee: [entry, exit]
+  name: tty_print_char
+- callee: [entry, exit]
+  name: tty_draw_vline
+- callee: [entry, exit]
+  name: tty_fill_region
+- callee: [entry, exit]
+  name: tty_set_alt_charset
+- callee: [entry, exit]
+  name: tty_print_alt_char
+- callee: [entry, exit]
+  name: tty_print_anychar
+- callee: [entry, exit]
+  name: tty_print_string
+- callee: [entry, exit]
+  name: tty_printf
+- callee: [entry, exit]
+  name: tty_tgetstr
+- callee: [entry, exit]
+  name: tty_refresh
+- callee: [entry, exit]
+  name: tty_beep
+- callee: [entry, exit]
+  name: tty_check_term
+- callee: [entry, exit]
+  name: tty_start_interrupt_key
+- callee: [entry, exit]
+  name: sigintr_handler
+- callee: [entry, exit]
+  name: tty_enable_interrupt_key
+- callee: [entry, exit]
+  name: tty_disable_interrupt_key
+- callee: [entry, exit]
+  name: tty_got_interrupt
+- callee: [entry, exit]
+  name: tty_print_one_hline
+- callee: [entry, exit]
+  name: tty_print_one_vline
+- callee: [entry, exit]
+  name: tty_draw_box
+- callee: [entry, exit]
+  name: mc_tty_normalize_from_utf8
+- callee: [entry, exit]
+  name: tty_resize
+- callee: [entry, exit]
+  name: tty_init_xterm_support
+- callee: [entry, exit]
+  name: check_format_view
+- callee: [entry, exit]
+  name: check_format_cd
+- callee: [entry, exit]
+  name: check_format_var
+- callee: [entry, exit]
+  name: expand_format
+- callee: [entry, exit]
+  name: user_menu_cmd
+- callee: [entry, exit]
+  name: test_line
+- callee: [entry, exit]
+  name: test_condition
+- callee: [entry, exit]
+  name: debug_out
+- callee: [entry, exit]
+  name: is_printable
+- callee: [entry, exit]
+  name: name_quote
+- callee: [entry, exit]
+  name: fake_name_quote
+- callee: [entry, exit]
+  name: path_trunc
+- callee: [entry, exit]
+  name: size_trunc
+- callee: [entry, exit]
+  name: size_trunc_sep
+- callee: [entry, exit]
+  name: size_trunc_len
+- callee: [entry, exit]
+  name: string_perm
+- callee: [entry, exit]
+  name: extension
+- callee: [entry, exit]
+  name: load_mc_home_file
+- callee: [entry, exit]
+  name: guess_message_value
+- callee: [entry, exit]
+  name: extract_line
+- callee: [entry, exit]
+  name: x_basename
+- callee: [entry, exit]
+  name: unix_error_string
+- callee: [entry, exit]
+  name: skip_separators
+- callee: [entry, exit]
+  name: skip_numbers
+- callee: [entry, exit]
+  name: strip_ctrl_codes
+- callee: [entry, exit]
+  name: get_compression_type
+- callee: [entry, exit]
+  name: decompress_extension
+- callee: [entry, exit]
+  name: wipe_password
+- callee: [entry, exit]
+  name: convert_controls
+- callee: [entry, exit]
+  name: diff_two_paths
+- callee: [entry, exit]
+  name: resolve_symlinks
+- callee: [entry, exit]
+  name: list_append_unique
+- callee: [entry, exit]
+  name: load_file_position
+- callee: [entry, exit]
+  name: save_file_position
+- callee: [entry, exit]
+  name: mc_util_make_backup_if_possible
+- callee: [entry, exit]
+  name: mc_util_write_backup_content
+- callee: [entry, exit]
+  name: mc_util_unlink_backup_if_possible
+- callee: [entry, exit]
+  name: mc_util_restore_from_backup_if_possible
+- callee: [entry, exit]
+  name: ascii_alpha_to_cntrl
+- callee: [entry, exit]
+  name: Q_
+- callee: [entry, exit]
+  name: mc_propagate_error
+- callee: [entry, exit]
+  name: mc_replace_error
+- callee: [entry, exit]
+  name: mc_time_elapsed
+- callee: [entry, exit]
+  name: get_owner
+- callee: [entry, exit]
+  name: get_group
+- callee: [entry, exit]
+  name: save_stop_handler
+- callee: [entry, exit]
+  name: my_exit
+- callee: [entry, exit]
+  name: my_system
+- callee: [entry, exit]
+  name: my_systeml
+- callee: [entry, exit]
+  name: my_systemv_flags
+- callee: [entry, exit]
+  name: my_systemv
+- callee: [entry, exit]
+  name: mc_popen
+- callee: [entry, exit]
+  name: mc_pread
+- callee: [entry, exit]
+  name: mc_pread_stream
+- callee: [entry, exit]
+  name: mc_pclose
+- callee: [entry, exit]
+  name: tilde_expand
+- callee: [entry, exit]
+  name: open_error_pipe
+- callee: [entry, exit]
+  name: close_error_pipe
+- callee: [entry, exit]
+  name: custom_canonicalize_pathname
+- callee: [entry, exit]
+  name: canonicalize_pathname
+- callee: [entry, exit]
+  name: get_user_permissions
+- callee: [entry, exit]
+  name: mc_build_filenamev
+- callee: [entry, exit]
+  name: mc_build_filename
+- callee: [entry, exit]
+  name: vfs_get_local_username
+- callee: [entry, exit]
+  name: vfs_finduid
+- callee: [entry, exit]
+  name: vfs_findgid
+- callee: [entry, exit]
+  name: vfs_mkstemps
+- callee: [entry, exit]
+  name: vfs_url_split
+- callee: [entry, exit]
+  name: vfs_die
+- callee: [entry, exit]
+  name: vfs_get_password
+- callee: [entry, exit]
+  name: vfs_free_handle
+- callee: [entry, exit]
+  name: vfs_class_find_by_handle
+- callee: [entry, exit]
+  name: vfs_new_handle
+- callee: [entry, exit]
+  name: vfs_ferrno
+- callee: [entry, exit]
+  name: vfs_register_class
+- callee: [entry, exit]
+  name: vfs_strip_suffix_from_filename
+- callee: [entry, exit]
+  name: vfs_translate_path
+- callee: [entry, exit]
+  name: _vfs_translate_path
+- callee: [entry, exit]
+  name: vfs_translate_path_n
+- callee: [entry, exit]
+  name: vfs_get_current_dir
+- callee: [entry, exit]
+  name: vfs_get_current_dir_n
+- callee: [entry, exit]
+  name: vfs_get_raw_current_dir
+- callee: [entry, exit]
+  name: vfs_set_raw_current_dir
+- callee: [entry, exit]
+  name: vfs_current_is_local
+- callee: [entry, exit]
+  name: vfs_file_class_flags
+- callee: [entry, exit]
+  name: vfs_init
+- callee: [entry, exit]
+  name: vfs_setup_work_dir
+- callee: [entry, exit]
+  name: vfs_setup_cwd
+- callee: [entry, exit]
+  name: vfs_shut
+- callee: [entry, exit]
+  name: vfs_fill_names
+- callee: [entry, exit]
+  name: vfs_file_is_local
+- callee: [entry, exit]
+  name: vfs_print_message
+- callee: [entry, exit]
+  name: _vfs_get_cwd
+- callee: [entry, exit]
+  name: vfs_preallocate
+- callee: [entry, exit]
+  name: parse_hotkey
+- callee: [entry, exit]
+  name: release_hotkey
+- callee: [entry, exit]
+  name: hotkey_width
+- callee: [entry, exit]
+  name: hotkey_draw
+- callee: [entry, exit]
+  name: widget_selectcolor
+- callee: [entry, exit]
+  name: widget_init
+- callee: [entry, exit]
+  name: widget_default_callback
+- callee: [entry, exit]
+  name: widget_set_options
+- callee: [entry, exit]
+  name: widget_set_state
+- callee: [entry, exit]
+  name: widget_set_size
+- callee: [entry, exit]
+  name: widget_erase
+- callee: [entry, exit]
+  name: widget_is_active
+- callee: [entry, exit]
+  name: widget_redraw
+- callee: [entry, exit]
+  name: widget_replace
+- callee: [entry, exit]
+  name: widget_select
+- callee: [entry, exit]
+  name: widget_set_bottom
+- callee: [entry, exit]
+  name: widget_overlapped
+- callee: [entry, exit]
+  name: mouse_get_local
+- callee: [entry, exit]
+  name: mouse_global_in_widget
+- callee: [entry, exit]
+  name: show_rxvt_contents
+- callee: [entry, exit]
+  name: look_for_rxvt_extensions
+- callee: [entry, exit]
+  name: query_dialog
+- callee: [entry, exit]
+  name: query_default_callback
+- callee: [entry, exit]
+  name: query_set_sel
+- callee: [entry, exit]
+  name: create_message
+- callee: [entry, exit]
+  name: message
+- callee: [entry, exit]
+  name: bg_message
+- callee: [entry, exit]
+  name: fg_message
+- callee: [entry, exit]
+  name: wtools_parent_call
+- callee: [entry, exit]
+  name: mc_error_message
+- callee: [entry, exit]
+  name: input_dialog_help
+- callee: [entry, exit]
+  name: fg_input_dialog_help
+- callee: [entry, exit]
+  name: wtools_parent_call_string
+- callee: [entry, exit]
+  name: input_dialog
+- callee: [entry, exit]
+  name: input_expand_dialog
+- callee: [entry, exit]
+  name: status_msg_create
+- callee: [entry, exit]
+  name: status_msg_init
+- callee: [entry, exit]
+  name: status_msg_destroy
+- callee: [entry, exit]
+  name: status_msg_deinit
+- callee: [entry, exit]
+  name: status_msg_common_update
+- callee: [entry, exit]
+  name: simple_status_msg_init_cb
+- callee: [entry, exit]
+  name: mc_XOpenDisplay
+- callee: [entry, exit]
+  name: x11_available
+- callee: [entry, exit]
+  name: x_error_handler
+- callee: [entry, exit]
+  name: x_io_error_handler
+- callee: [entry, exit]
+  name: mc_XCloseDisplay
+- callee: [entry, exit]
+  name: mc_XQueryPointer
+- callee: [entry, exit]
+  name: xstrtoumax
+- callee: [entry, exit]
+  name: init_fish
+- callee: [entry, exit]
+  name: fish_archive_same
+- callee: [entry, exit]
+  name: fish_open_archive
+- callee: [entry, exit]
+  name: fish_load_script_from_file
+- callee: [entry, exit]
+  name: fish_command
+- callee: [entry, exit]
+  name: fish_get_reply
+- callee: [entry, exit]
+  name: fish_decode_reply
+- callee: [entry, exit]
+  name: fish_free_archive
+- callee: [entry, exit]
+  name: fish_fh_open
+- callee: [entry, exit]
+  name: fish_fh_free_data
+- callee: [entry, exit]
+  name: fish_dir_load
+- callee: [entry, exit]
+  name: fish_file_store
+- callee: [entry, exit]
+  name: fish_linear_start
+- callee: [entry, exit]
+  name: fish_linear_read
+- callee: [entry, exit]
+  name: fish_linear_abort
+- callee: [entry, exit]
+  name: fish_linear_close
+- callee: [entry, exit]
+  name: fish_fill_names
+- callee: [entry, exit]
+  name: fish_chmod
+- callee: [entry, exit]
+  name: fish_chown
+- callee: [entry, exit]
+  name: fish_utime
+- callee: [entry, exit]
+  name: fish_open
+- callee: [entry, exit]
+  name: fish_symlink
+- callee: [entry, exit]
+  name: fish_link
+- callee: [entry, exit]
+  name: fish_unlink
+- callee: [entry, exit]
+  name: fish_rename
+- callee: [entry, exit]
+  name: fish_mkdir
+- callee: [entry, exit]
+  name: fish_rmdir
+- callee: [entry, exit]
+  name: fish_ctl
+- callee: [entry, exit]
+  name: ftpfs_init_passwd
+- callee: [entry, exit]
+  name: init_ftpfs
+- callee: [entry, exit]
+  name: ftpfs_archive_same
+- callee: [entry, exit]
+  name: ftpfs_correct_url_parameters
+- callee: [entry, exit]
+  name: ftpfs_netrc_lookup
+- callee: [entry, exit]
+  name: ftpfs_netrc_next
+- callee: [entry, exit]
+  name: ftpfs_open_archive
+- callee: [entry, exit]
+  name: ftpfs_open_socket
+- callee: [entry, exit]
+  name: ftpfs_login_server
+- callee: [entry, exit]
+  name: ftpfs_get_reply
+- callee: [entry, exit]
+  name: ftpfs_command
+- callee: [entry, exit]
+  name: ftpfs_reconnect
+- callee: [entry, exit]
+  name: ftpfs_chdir_internal
+- callee: [entry, exit]
+  name: ftpfs_translate_path
+- callee: [entry, exit]
+  name: ftpfs_free_archive
+- callee: [entry, exit]
+  name: ftpfs_fh_open
+- callee: [entry, exit]
+  name: ftpfs_open_data_connection
+- callee: [entry, exit]
+  name: ftpfs_init_data_socket
+- callee: [entry, exit]
+  name: ftpfs_setup_passive_epsv
+- callee: [entry, exit]
+  name: ftpfs_fh_close
+- callee: [entry, exit]
+  name: ftpfs_fh_free_data
+- callee: [entry, exit]
+  name: ftpfs_dir_load
+- callee: [entry, exit]
+  name: ftpfs_file_store
+- callee: [entry, exit]
+  name: ftpfs_linear_start
+- callee: [entry, exit]
+  name: ftpfs_linear_read
+- callee: [entry, exit]
+  name: ftpfs_linear_abort
+- callee: [entry, exit]
+  name: ftpfs_linear_close
+- callee: [entry, exit]
+  name: ftpfs_done
+- callee: [entry, exit]
+  name: ftpfs_fill_names
+- callee: [entry, exit]
+  name: ftpfs_chmod
+- callee: [entry, exit]
+  name: ftpfs_send_command
+- callee: [entry, exit]
+  name: ftpfs_chown
+- callee: [entry, exit]
+  name: ftpfs_unlink
+- callee: [entry, exit]
+  name: ftpfs_rename
+- callee: [entry, exit]
+  name: ftpfs_mkdir
+- callee: [entry, exit]
+  name: ftpfs_rmdir
+- callee: [entry, exit]
+  name: ftpfs_ctl
+- callee: [entry, exit]
+  name: vfs_plugins_init
+- callee: [entry, exit]
+  name: init_sfs
+- callee: [entry, exit]
+  name: sfs_init
+- callee: [entry, exit]
+  name: sfs_done
+- callee: [entry, exit]
+  name: sfs_fill_names
+- callee: [entry, exit]
+  name: sfs_which
+- callee: [entry, exit]
+  name: sfs_open
+- callee: [entry, exit]
+  name: sfs_redirect
+- callee: [entry, exit]
+  name: cachedfile_compare
+- callee: [entry, exit]
+  name: sfs_stat
+- callee: [entry, exit]
+  name: sfs_lstat
+- callee: [entry, exit]
+  name: sfs_chmod
+- callee: [entry, exit]
+  name: sfs_chown
+- callee: [entry, exit]
+  name: sfs_utime
+- callee: [entry, exit]
+  name: sfs_readlink
+- callee: [entry, exit]
+  name: sfs_getid
+- callee: [entry, exit]
+  name: sfs_nothingisopen
+- callee: [entry, exit]
+  name: sfs_free
+- callee: [entry, exit]
+  name: sfs_getlocalcopy
+- callee: [entry, exit]
+  name: sfs_ungetlocalcopy
+- callee: [entry, exit]
+  name: init_tarfs
+- callee: [entry, exit]
+  name: tar_super_check
+- callee: [entry, exit]
+  name: tar_super_same
+- callee: [entry, exit]
+  name: tar_open_archive
+- callee: [entry, exit]
+  name: tar_free_archive
+- callee: [entry, exit]
+  name: tar_fh_open
+- callee: [entry, exit]
+  name: tar_read
+- callee: [entry, exit]
+  name: button_new
+- callee: [entry, exit]
+  name: button_callback
+- callee: [entry, exit]
+  name: button_mouse_callback
+- callee: [entry, exit]
+  name: button_get_len
+- callee: [entry, exit]
+  name: button_get_text
+- callee: [entry, exit]
+  name: button_set_text
+- callee: [entry, exit]
+  name: check_new
+- callee: [entry, exit]
+  name: check_callback
+- callee: [entry, exit]
+  name: check_mouse_callback
+- callee: [entry, exit]
+  name: tty_color_get_name_by_index
+- callee: [entry, exit]
+  name: tty_color_get_index_by_name
+- callee: [entry, exit]
+  name: tty_attr_get_bits
+- callee: [entry, exit]
+  name: mc_skin_colors_old_configure
+- callee: [entry, exit]
+  name: mc_skin_colors_old_configure_one
+- callee: [entry, exit]
+  name: mc_fhl_array_free
+- callee: [entry, exit]
+  name: mc_fhl_filter_free
+- callee: [entry, exit]
+  name: mc_fhl_new
+- callee: [entry, exit]
+  name: mc_fhl_free
+- callee: [entry, exit]
+  name: mc_fhl_clear
+- callee: [entry, exit]
+  name: vfs_s_new_inode
+- callee: [entry, exit]
+  name: vfs_s_free_inode
+- callee: [entry, exit]
+  name: vfs_s_free_entry
+- callee: [entry, exit]
+  name: vfs_s_new_entry
+- callee: [entry, exit]
+  name: vfs_s_insert_entry
+- callee: [entry, exit]
+  name: vfs_s_default_stat
+- callee: [entry, exit]
+  name: vfs_s_generate_entry
+- callee: [entry, exit]
+  name: vfs_s_find_inode
+- callee: [entry, exit]
+  name: vfs_get_super_by_vpath
+- callee: [entry, exit]
+  name: vfs_s_get_path
+- callee: [entry, exit]
+  name: vfs_s_free_super
+- callee: [entry, exit]
+  name: vfs_s_invalidate
+- callee: [entry, exit]
+  name: vfs_s_fullpath
+- callee: [entry, exit]
+  name: vfs_s_open
+- callee: [entry, exit]
+  name: vfs_s_retrieve_file
+- callee: [entry, exit]
+  name: vfs_s_init_class
+- callee: [entry, exit]
+  name: vfs_s_fill_names
+- callee: [entry, exit]
+  name: vfs_s_close
+- callee: [entry, exit]
+  name: vfs_s_read
+- callee: [entry, exit]
+  name: vfs_s_write
+- callee: [entry, exit]
+  name: vfs_s_opendir
+- callee: [entry, exit]
+  name: vfs_s_inode_from_path
+- callee: [entry, exit]
+  name: vfs_s_readdir
+- callee: [entry, exit]
+  name: vfs_s_closedir
+- callee: [entry, exit]
+  name: vfs_s_stat
+- callee: [entry, exit]
+  name: vfs_s_lstat
+- callee: [entry, exit]
+  name: vfs_s_fstat
+- callee: [entry, exit]
+  name: vfs_s_readlink
+- callee: [entry, exit]
+  name: vfs_s_chdir
+- callee: [entry, exit]
+  name: vfs_s_ferrno
+- callee: [entry, exit]
+  name: vfs_s_lseek
+- callee: [entry, exit]
+  name: vfs_s_getid
+- callee: [entry, exit]
+  name: vfs_s_nothingisopen
+- callee: [entry, exit]
+  name: vfs_s_free
+- callee: [entry, exit]
+  name: vfs_s_getlocalcopy
+- callee: [entry, exit]
+  name: vfs_s_ungetlocalcopy
+- callee: [entry, exit]
+  name: vfs_s_find_entry_linear
+- callee: [entry, exit]
+  name: vfs_s_find_entry_tree
+- callee: [entry, exit]
+  name: vfs_s_entry_compare
+- callee: [entry, exit]
+  name: vfs_s_setctl
+- callee: [entry, exit]
+  name: vfs_s_dir_uptodate
+- callee: [entry, exit]
+  name: vfs_getid
+- callee: [entry, exit]
+  name: vfs_s_select_on_two
+- callee: [entry, exit]
+  name: vfs_s_get_line
+- callee: [entry, exit]
+  name: vfs_s_get_line_interruptible
+- callee: [entry, exit]
+  name: vfs_s_normalize_filename_leading_spaces
+- callee: [entry, exit]
+  name: mc_fhl_get_color
+- callee: [entry, exit]
+  name: mc_search__cond_struct_new_init_glob
+- callee: [entry, exit]
+  name: mc_search__run_glob
+- callee: [entry, exit]
+  name: mc_search_glob_prepare_replace_str
+- callee: [entry, exit]
+  name: groupbox_new
+- callee: [entry, exit]
+  name: groupbox_callback
+- callee: [entry, exit]
+  name: groupbox_set_title
+- callee: [entry, exit]
+  name: mc_fhl_read_ini_file
+- callee: [entry, exit]
+  name: mc_fhl_init_from_standard_files
+- callee: [entry, exit]
+  name: mc_fhl_parse_ini_file
+- callee: [entry, exit]
+  name: mc_skin_list
+- callee: [entry, exit]
+  name: mc_skin_get_list_from_dir
+- callee: [entry, exit]
+  name: string_array_comparator
+- callee: [entry, exit]
+  name: mc_skin_ini_file_load
+- callee: [entry, exit]
+  name: mc_skin_ini_file_load_search_in_dir
+- callee: [entry, exit]
+  name: mc_skin_ini_file_parse
+- callee: [entry, exit]
+  name: mc_skin_set_hardcoded_skin
+- callee: [entry, exit]
+  name: mc_skin_lines_parse_ini_file
+- callee: [entry, exit]
+  name: mc_search__cond_struct_new_init_hex
+- callee: [entry, exit]
+  name: mc_search__run_hex
+- callee: [entry, exit]
+  name: mc_search_hex_prepare_replace_str
+- callee: [entry, exit]
+  name: mc_search__recode_str
+- callee: [entry, exit]
+  name: mc_search__get_one_symbol
+- callee: [entry, exit]
+  name: mc_search__tolower_case_str
+- callee: [entry, exit]
+  name: mc_search__toupper_case_str
+- callee: [entry, exit]
+  name: mc_search_get_types_strings_array
+- callee: [entry, exit]
+  name: mcview_new
+- callee: [entry, exit]
+  name: mcview_mouse_callback
+- callee: [entry, exit]
+  name: mcview_viewer
+- callee: [entry, exit]
+  name: mcview_load
+- callee: [entry, exit]
+  name: menu_entry_create
+- callee: [entry, exit]
+  name: menu_entry_free
+- callee: [entry, exit]
+  name: create_menu
+- callee: [entry, exit]
+  name: menu_set_name
+- callee: [entry, exit]
+  name: destroy_menu
+- callee: [entry, exit]
+  name: menubar_new
+- callee: [entry, exit]
+  name: menubar_callback
+- callee: [entry, exit]
+  name: menubar_draw
+- callee: [entry, exit]
+  name: menubar_paint_idx
+- callee: [entry, exit]
+  name: menubar_right
+- callee: [entry, exit]
+  name: menubar_execute
+- callee: [entry, exit]
+  name: menubar_down
+- callee: [entry, exit]
+  name: menubar_up
+- callee: [entry, exit]
+  name: menubar_mouse_callback
+- callee: [entry, exit]
+  name: menubar_arrange
+- callee: [entry, exit]
+  name: menubar_set_menu
+- callee: [entry, exit]
+  name: menubar_add_menu
+- callee: [entry, exit]
+  name: find_menubar
+- callee: [entry, exit]
+  name: menubar_activate
+- callee: [entry, exit]
+  name: mcview_move_up
+- callee: [entry, exit]
+  name: mcview_move_down
+- callee: [entry, exit]
+  name: mcview_move_left
+- callee: [entry, exit]
+  name: mcview_move_right
+- callee: [entry, exit]
+  name: mcview_moveto_top
+- callee: [entry, exit]
+  name: mcview_moveto_bottom
+- callee: [entry, exit]
+  name: mcview_moveto_bol
+- callee: [entry, exit]
+  name: mcview_moveto_eol
+- callee: [entry, exit]
+  name: mcview_moveto_offset
+- callee: [entry, exit]
+  name: mcview_moveto
+- callee: [entry, exit]
+  name: mcview_coord_to_offset
+- callee: [entry, exit]
+  name: mcview_offset_to_coord
+- callee: [entry, exit]
+  name: mcview_place_cursor
+- callee: [entry, exit]
+  name: mcview_moveto_match
+- callee: [entry, exit]
+  name: tcp_init
+- callee: [entry, exit]
+  name: sig_pipe
+- callee: [entry, exit]
+  name: mc_search__cond_struct_new_init_normal
+- callee: [entry, exit]
+  name: mc_search__run_normal
+- callee: [entry, exit]
+  name: mc_search_normal_prepare_replace_str
+- callee: [entry, exit]
+  name: vfs_parse_filetype
+- callee: [entry, exit]
+  name: vfs_parse_fileperms
+- callee: [entry, exit]
+  name: vfs_parse_filemode
+- callee: [entry, exit]
+  name: vfs_parse_raw_filemode
+- callee: [entry, exit]
+  name: vfs_parse_filedate
+- callee: [entry, exit]
+  name: vfs_split_text
+- callee: [entry, exit]
+  name: vfs_parse_ls_lga_init
+- callee: [entry, exit]
+  name: vfs_parse_ls_lga_get_final_spaces
+- callee: [entry, exit]
+  name: vfs_parse_ls_lga
+- callee: [entry, exit]
+  name: mc_search__cond_struct_new_init_regex
+- callee: [entry, exit]
+  name: mc_search__cond_struct_new_regex_accum_append
+- callee: [entry, exit]
+  name: mc_search__run_regex
+- callee: [entry, exit]
+  name: mc_search_regex_prepare_replace_str
+- callee: [entry, exit]
+  name: mc_search_regex__process_append_str
+- callee: [entry, exit]
+  name: dview_diff_cmd
+- callee: [entry, exit]
+  name: dview_dialog_callback
+- callee: [entry, exit]
+  name: dview_callback
+- callee: [entry, exit]
+  name: dview_update
+- callee: [entry, exit]
+  name: dview_status
+- callee: [entry, exit]
+  name: dview_display_file
+- callee: [entry, exit]
+  name: dview_str_utf8_offset_to_pos
+- callee: [entry, exit]
+  name: dview_execute_cmd
+- callee: [entry, exit]
+  name: dview_reread
+- callee: [entry, exit]
+  name: destroy_hdiff
+- callee: [entry, exit]
+  name: redo_diff
+- callee: [entry, exit]
+  name: dff_reparse
+- callee: [entry, exit]
+  name: printer
+- callee: [entry, exit]
+  name: hdiff_multi
+- callee: [entry, exit]
+  name: dview_edit
+- callee: [entry, exit]
+  name: do_merge_hunk
+- callee: [entry, exit]
+  name: get_current_hunk
+- callee: [entry, exit]
+  name: dview_add_hunk
+- callee: [entry, exit]
+  name: dview_remove_hunk
+- callee: [entry, exit]
+  name: dview_mouse_callback
+- callee: [entry, exit]
+  name: dview_get_title
+- callee: [entry, exit]
+  name: user_menu
+- callee: [entry, exit]
+  name: edit_insert_file
+- callee: [entry, exit]
+  name: edit_find_filter
+- callee: [entry, exit]
+  name: edit_insert
+- callee: [entry, exit]
+  name: edit_push_undo_action
+- callee: [entry, exit]
+  name: edit_push_redo_action
+- callee: [entry, exit]
+  name: edit_cursor_move
+- callee: [entry, exit]
+  name: edit_move_forward3
+- callee: [entry, exit]
+  name: edit_insert_ahead
+- callee: [entry, exit]
+  name: edit_set_markers
+- callee: [entry, exit]
+  name: edit_get_write_filter
+- callee: [entry, exit]
+  name: edit_write_stream
+- callee: [entry, exit]
+  name: is_break_char
+- callee: [entry, exit]
+  name: edit_init
+- callee: [entry, exit]
+  name: edit_clean
+- callee: [entry, exit]
+  name: edit_load_status_update_cb
+- callee: [entry, exit]
+  name: edit_move_updown
+- callee: [entry, exit]
+  name: edit_move_to_prev_col
+- callee: [entry, exit]
+  name: edit_left_char_move_cmd
+- callee: [entry, exit]
+  name: edit_move_display
+- callee: [entry, exit]
+  name: edit_set_codeset
+- callee: [entry, exit]
+  name: edit_move_to_line
+- callee: [entry, exit]
+  name: edit_reload_line
+- callee: [entry, exit]
+  name: edit_insert_over
+- callee: [entry, exit]
+  name: edit_delete
+- callee: [entry, exit]
+  name: edit_push_markers
+- callee: [entry, exit]
+  name: edit_backspace
+- callee: [entry, exit]
+  name: edit_get_col
+- callee: [entry, exit]
+  name: edit_update_curs_row
+- callee: [entry, exit]
+  name: edit_update_curs_col
+- callee: [entry, exit]
+  name: edit_get_curs_col
+- callee: [entry, exit]
+  name: edit_scroll_upward
+- callee: [entry, exit]
+  name: edit_scroll_downward
+- callee: [entry, exit]
+  name: edit_scroll_right
+- callee: [entry, exit]
+  name: edit_scroll_left
+- callee: [entry, exit]
+  name: edit_line_is_blank
+- callee: [entry, exit]
+  name: edit_move_up
+- callee: [entry, exit]
+  name: edit_move_down
+- callee: [entry, exit]
+  name: edit_mark_cmd
+- callee: [entry, exit]
+  name: edit_mark_current_word_cmd
+- callee: [entry, exit]
+  name: my_type_of
+- callee: [entry, exit]
+  name: edit_mark_current_line_cmd
+- callee: [entry, exit]
+  name: edit_delete_line
+- callee: [entry, exit]
+  name: edit_push_key_press
+- callee: [entry, exit]
+  name: edit_find_bracket
+- callee: [entry, exit]
+  name: edit_get_bracket
+- callee: [entry, exit]
+  name: edit_execute_key_command
+- callee: [entry, exit]
+  name: edit_execute_cmd
+- callee: [entry, exit]
+  name: check_and_wrap_line
+- callee: [entry, exit]
+  name: edit_move_block_to_right
+- callee: [entry, exit]
+  name: edit_move_block_to_left
+- callee: [entry, exit]
+  name: edit_stack_init
+- callee: [entry, exit]
+  name: edit_stack_free
+- callee: [entry, exit]
+  name: edit_buffer_init
+- callee: [entry, exit]
+  name: edit_buffer_clean
+- callee: [entry, exit]
+  name: edit_buffer_get_byte
+- callee: [entry, exit]
+  name: edit_buffer_get_utf
+- callee: [entry, exit]
+  name: edit_buffer_get_prev_utf
+- callee: [entry, exit]
+  name: edit_buffer_count_lines
+- callee: [entry, exit]
+  name: edit_buffer_get_bol
+- callee: [entry, exit]
+  name: edit_buffer_get_eol
+- callee: [entry, exit]
+  name: edit_buffer_get_word_from_pos
+- callee: [entry, exit]
+  name: edit_buffer_insert
+- callee: [entry, exit]
+  name: edit_buffer_insert_ahead
+- callee: [entry, exit]
+  name: edit_buffer_delete
+- callee: [entry, exit]
+  name: edit_buffer_backspace
+- callee: [entry, exit]
+  name: edit_buffer_get_forward_offset
+- callee: [entry, exit]
+  name: edit_buffer_get_backward_offset
+- callee: [entry, exit]
+  name: edit_buffer_read_file
+- callee: [entry, exit]
+  name: edit_buffer_write_file
+- callee: [entry, exit]
+  name: edit_buffer_calc_percent
+- callee: [entry, exit]
+  name: edit_refresh_cmd
+- callee: [entry, exit]
+  name: edit_syntax_onoff_cmd
+- callee: [entry, exit]
+  name: edit_syntax_onoff_cb
+- callee: [entry, exit]
+  name: edit_show_tabs_tws_cmd
+- callee: [entry, exit]
+  name: edit_redraw_page_cb
+- callee: [entry, exit]
+  name: edit_show_margin_cmd
+- callee: [entry, exit]
+  name: edit_show_numbers_cmd
+- callee: [entry, exit]
+  name: edit_save_mode_cmd
+- callee: [entry, exit]
+  name: edit_save_mode_callback
+- callee: [entry, exit]
+  name: edit_set_filename
+- callee: [entry, exit]
+  name: edit_save_as_cmd
+- callee: [entry, exit]
+  name: edit_check_newline
+- callee: [entry, exit]
+  name: edit_save_file
+- callee: [entry, exit]
+  name: edit_delete_macro_cmd
+- callee: [entry, exit]
+  name: edit_delete_macro
+- callee: [entry, exit]
+  name: edit_macro_comparator
+- callee: [entry, exit]
+  name: edit_execute_macro
+- callee: [entry, exit]
+  name: edit_store_macro_cmd
+- callee: [entry, exit]
+  name: edit_repeat_macro_cmd
+- callee: [entry, exit]
+  name: edit_load_macro_cmd
+- callee: [entry, exit]
+  name: edit_save_confirm_cmd
+- callee: [entry, exit]
+  name: edit_save_cmd
+- callee: [entry, exit]
+  name: edit_load_cmd
+- callee: [entry, exit]
+  name: edit_load_syntax_file
+- callee: [entry, exit]
+  name: edit_load_menu_file
+- callee: [entry, exit]
+  name: edit_close_cmd
+- callee: [entry, exit]
+  name: edit_ok_to_exit
+- callee: [entry, exit]
+  name: eval_marks
+- callee: [entry, exit]
+  name: edit_block_copy_cmd
+- callee: [entry, exit]
+  name: edit_get_block
+- callee: [entry, exit]
+  name: edit_insert_column_of_text
+- callee: [entry, exit]
+  name: edit_block_move_cmd
+- callee: [entry, exit]
+  name: edit_block_delete_cmd
+- callee: [entry, exit]
+  name: edit_replace_cmd
+- callee: [entry, exit]
+  name: edit_search_cmd_callback
+- callee: [entry, exit]
+  name: edit_search_update_callback
+- callee: [entry, exit]
+  name: edit_search_status_update_cb
+- callee: [entry, exit]
+  name: editcmd_find
+- callee: [entry, exit]
+  name: edit_show_search_error
+- callee: [entry, exit]
+  name: edit_search_cmd
+- callee: [entry, exit]
+  name: edit_search
+- callee: [entry, exit]
+  name: edit_do_search
+- callee: [entry, exit]
+  name: edit_save_block
+- callee: [entry, exit]
+  name: edit_paste_from_history
+- callee: [entry, exit]
+  name: edit_copy_to_X_buf_cmd
+- callee: [entry, exit]
+  name: edit_cut_to_X_buf_cmd
+- callee: [entry, exit]
+  name: edit_paste_from_X_buf_cmd
+- callee: [entry, exit]
+  name: edit_goto_cmd
+- callee: [entry, exit]
+  name: edit_save_block_cmd
+- callee: [entry, exit]
+  name: edit_insert_file_cmd
+- callee: [entry, exit]
+  name: edit_sort_cmd
+- callee: [entry, exit]
+  name: edit_ext_cmd
+- callee: [entry, exit]
+  name: edit_block_process_cmd
+- callee: [entry, exit]
+  name: edit_mail_dialog
+- callee: [entry, exit]
+  name: edit_complete_word_cmd
+- callee: [entry, exit]
+  name: edit_find_word_start
+- callee: [entry, exit]
+  name: edit_select_codepage_cmd
+- callee: [entry, exit]
+  name: edit_insert_literal_cmd
+- callee: [entry, exit]
+  name: edit_begin_end_macro_cmd
+- callee: [entry, exit]
+  name: edit_begin_end_repeat_cmd
+- callee: [entry, exit]
+  name: edit_load_forward_cmd
+- callee: [entry, exit]
+  name: edit_load_back_cmd
+- callee: [entry, exit]
+  name: edit_get_match_keyword_cmd
+- callee: [entry, exit]
+  name: editcmd_dialog_search_show
+- callee: [entry, exit]
+  name: editcmd_dialog_replace_show
+- callee: [entry, exit]
+  name: editcmd_dialog_replace_prompt_show
+- callee: [entry, exit]
+  name: editcmd_dialog_raw_key_query
+- callee: [entry, exit]
+  name: editcmd_dialog_raw_key_query_cb
+- callee: [entry, exit]
+  name: editcmd_dialog_completion_show
+- callee: [entry, exit]
+  name: editcmd_dialog_select_definition_show
+- callee: [entry, exit]
+  name: edit_status
+- callee: [entry, exit]
+  name: edit_scroll_screen_over_cursor
+- callee: [entry, exit]
+  name: edit_render_keypress
+- callee: [entry, exit]
+  name: edit_draw_this_line
+- callee: [entry, exit]
+  name: edit_file
+- callee: [entry, exit]
+  name: edit_files
+- callee: [entry, exit]
+  name: edit_dialog_callback
+- callee: [entry, exit]
+  name: edit_dialog_resize_cb
+- callee: [entry, exit]
+  name: edit_callback
+- callee: [entry, exit]
+  name: edit_set_buttonbar
+- callee: [entry, exit]
+  name: edit_update_screen
+- callee: [entry, exit]
+  name: edit_dialog_command_execute
+- callee: [entry, exit]
+  name: edit_mouse_callback
+- callee: [entry, exit]
+  name: edit_update_cursor
+- callee: [entry, exit]
+  name: edit_toggle_fullscreen
+- callee: [entry, exit]
+  name: edit_handle_move_resize
+- callee: [entry, exit]
+  name: edit_dialog_mouse_callback
+- callee: [entry, exit]
+  name: edit_get_shortcut
+- callee: [entry, exit]
+  name: edit_get_title
+- callee: [entry, exit]
+  name: edit_add_window
+- callee: [entry, exit]
+  name: edit_get_file_name
+- callee: [entry, exit]
+  name: find_editor
+- callee: [entry, exit]
+  name: edit_widget_is_editor
+- callee: [entry, exit]
+  name: edit_save_size
+- callee: [entry, exit]
+  name: etags_set_definition_hash
+- callee: [entry, exit]
+  name: format_paragraph
+- callee: [entry, exit]
+  name: line_start
+- callee: [entry, exit]
+  name: bad_line_start
+- callee: [entry, exit]
+  name: end_paragraph
+- callee: [entry, exit]
+  name: edit_get_syntax_color
+- callee: [entry, exit]
+  name: edit_get_rule
+- callee: [entry, exit]
+  name: apply_rules_going_right
+- callee: [entry, exit]
+  name: compare_word_to_right
+- callee: [entry, exit]
+  name: edit_free_syntax_rules
+- callee: [entry, exit]
+  name: mc_defines_destroy
+- callee: [entry, exit]
+  name: context_rule_free
+- callee: [entry, exit]
+  name: syntax_keyword_free
+- callee: [entry, exit]
+  name: edit_load_syntax
+- callee: [entry, exit]
+  name: edit_read_syntax_file
+- callee: [entry, exit]
+  name: read_one_line
+- callee: [entry, exit]
+  name: get_args
+- callee: [entry, exit]
+  name: open_include_file
+- callee: [entry, exit]
+  name: subst_defines
+- callee: [entry, exit]
+  name: this_try_alloc_color_pair
+- callee: [entry, exit]
+  name: edit_get_syntax_type
+- callee: [entry, exit]
+  name: init_subshell
+- callee: [entry, exit]
+  name: feed_subshell
+- callee: [entry, exit]
+  name: invoke_subshell
+- callee: [entry, exit]
+  name: do_subshell_chdir
+- callee: [entry, exit]
+  name: read_subshell_prompt
+- callee: [entry, exit]
+  name: do_update_prompt
+- callee: [entry, exit]
+  name: exit_subshell
+- callee: [entry, exit]
+  name: subshell_get_console_attributes
+- callee: [entry, exit]
+  name: sigchld_handler
+- callee: [entry, exit]
+  name: subshell_get_cwd_from_current_panel
+- callee: [entry, exit]
+  name: subshell_handle_cons_saver
+- callee: [entry, exit]
+  name: subshell_get_mainloop_quit
+- callee: [entry, exit]
+  name: subshell_set_mainloop_quit
+- callee: [entry, exit]
+  name: clipboard_file_to_ext_clip
+- callee: [entry, exit]
+  name: clipboard_file_from_ext_clip
+- callee: [entry, exit]
+  name: clipboard_text_to_file
+- callee: [entry, exit]
+  name: clipboard_text_from_file
+- callee: [entry, exit]
+  name: learn_keys
+- callee: [entry, exit]
+  name: learn_callback
+- callee: [entry, exit]
+  name: learn_button
+- callee: [entry, exit]
+  name: check_for_default
+- callee: [entry, exit]
+  name: select_charset
+- callee: [entry, exit]
+  name: do_set_codepage
+- callee: [entry, exit]
+  name: do_select_codepage
+- callee: [entry, exit]
+  name: chown_advanced_cmd
+- callee: [entry, exit]
+  name: advanced_chown_callback
+- callee: [entry, exit]
+  name: chown_refresh
+- callee: [entry, exit]
+  name: print_flags
+- callee: [entry, exit]
+  name: update_permissions
+- callee: [entry, exit]
+  name: chown_info_update
+- callee: [entry, exit]
+  name: chl_callback
+- callee: [entry, exit]
+  name: configure_box
+- callee: [entry, exit]
+  name: configure_callback
+- callee: [entry, exit]
+  name: appearance_box
+- callee: [entry, exit]
+  name: sel_skin_button
+- callee: [entry, exit]
+  name: skin_apply
+- callee: [entry, exit]
+  name: panel_options_box
+- callee: [entry, exit]
+  name: panel_listing_box
+- callee: [entry, exit]
+  name: panel_listing_callback
+- callee: [entry, exit]
+  name: sort_box
+- callee: [entry, exit]
+  name: confirm_box
+- callee: [entry, exit]
+  name: display_bits_box
+- callee: [entry, exit]
+  name: sel_charset_button
+- callee: [entry, exit]
+  name: tree_box
+- callee: [entry, exit]
+  name: tree_callback.5033
+- callee: [entry, exit]
+  name: configure_vfs
+- callee: [entry, exit]
+  name: confvfs_callback
+- callee: [entry, exit]
+  name: cd_dialog
+- callee: [entry, exit]
+  name: symlink_dialog
+- callee: [entry, exit]
+  name: jobs_cmd
+- callee: [entry, exit]
+  name: task_cb
+- callee: [entry, exit]
+  name: jobs_fill_listbox
+- callee: [entry, exit]
+  name: chmod_cmd
+- callee: [entry, exit]
+  name: chmod_callback
+- callee: [entry, exit]
+  name: apply_mask
+- callee: [entry, exit]
+  name: do_chmod
+- callee: [entry, exit]
+  name: chown_cmd
+- callee: [entry, exit]
+  name: chown_callback
+- callee: [entry, exit]
+  name: do_chown
+- callee: [entry, exit]
+  name: view_file_at_line
+- callee: [entry, exit]
+  name: view_file
+- callee: [entry, exit]
+  name: view_cmd
+- callee: [entry, exit]
+  name: do_view_cmd
+- callee: [entry, exit]
+  name: view_file_cmd
+- callee: [entry, exit]
+  name: view_raw_cmd
+- callee: [entry, exit]
+  name: view_filtered_cmd
+- callee: [entry, exit]
+  name: edit_file_at_line
+- callee: [entry, exit]
+  name: edit_cmd
+- callee: [entry, exit]
+  name: edit_cmd_force_internal
+- callee: [entry, exit]
+  name: edit_cmd_new
+- callee: [entry, exit]
+  name: copy_cmd
+- callee: [entry, exit]
+  name: rename_cmd
+- callee: [entry, exit]
+  name: copy_cmd_local
+- callee: [entry, exit]
+  name: rename_cmd_local
+- callee: [entry, exit]
+  name: mkdir_cmd
+- callee: [entry, exit]
+  name: delete_cmd
+- callee: [entry, exit]
+  name: delete_cmd_local
+- callee: [entry, exit]
+  name: find_cmd
+- callee: [entry, exit]
+  name: filter_cmd
+- callee: [entry, exit]
+  name: reread_cmd
+- callee: [entry, exit]
+  name: ext_cmd
+- callee: [entry, exit]
+  name: edit_mc_menu_cmd
+- callee: [entry, exit]
+  name: edit_fhl_cmd
+- callee: [entry, exit]
+  name: hotlist_cmd
+- callee: [entry, exit]
+  name: vfs_list
+- callee: [entry, exit]
+  name: compare_dirs_cmd
+- callee: [entry, exit]
+  name: compare_dir
+- callee: [entry, exit]
+  name: diff_view_cmd
+- callee: [entry, exit]
+  name: swap_cmd
+- callee: [entry, exit]
+  name: view_other_cmd
+- callee: [entry, exit]
+  name: link_cmd
+- callee: [entry, exit]
+  name: edit_symlink_cmd
+- callee: [entry, exit]
+  name: help_cmd
+- callee: [entry, exit]
+  name: user_file_menu_cmd
+- callee: [entry, exit]
+  name: ftplink_cmd
+- callee: [entry, exit]
+  name: nice_cd
+- callee: [entry, exit]
+  name: fishlink_cmd
+- callee: [entry, exit]
+  name: quick_cd_cmd
+- callee: [entry, exit]
+  name: smart_dirsize_cmd
+- callee: [entry, exit]
+  name: dirsizes_cmd
+- callee: [entry, exit]
+  name: single_dirsize_cmd
+- callee: [entry, exit]
+  name: save_setup_cmd
+- callee: [entry, exit]
+  name: info_cmd_no_menu
+- callee: [entry, exit]
+  name: quick_cmd_no_menu
+- callee: [entry, exit]
+  name: listing_cmd
+- callee: [entry, exit]
+  name: change_listing_cmd
+- callee: [entry, exit]
+  name: panel_tree_cmd
+- callee: [entry, exit]
+  name: info_cmd
+- callee: [entry, exit]
+  name: quick_view_cmd
+- callee: [entry, exit]
+  name: toggle_listing_cmd
+- callee: [entry, exit]
+  name: encoding_cmd
+- callee: [entry, exit]
+  name: dir_list_grow
+- callee: [entry, exit]
+  name: dir_list_append
+- callee: [entry, exit]
+  name: unsorted
+- callee: [entry, exit]
+  name: sort_name
+- callee: [entry, exit]
+  name: sort_vers
+- callee: [entry, exit]
+  name: sort_ext
+- callee: [entry, exit]
+  name: sort_time
+- callee: [entry, exit]
+  name: sort_ctime
+- callee: [entry, exit]
+  name: sort_atime
+- callee: [entry, exit]
+  name: sort_inode
+- callee: [entry, exit]
+  name: sort_size
+- callee: [entry, exit]
+  name: dir_list_sort
+- callee: [entry, exit]
+  name: dir_list_clean
+- callee: [entry, exit]
+  name: dir_list_init
+- callee: [entry, exit]
+  name: handle_path
+- callee: [entry, exit]
+  name: dir_list_load
+- callee: [entry, exit]
+  name: handle_dirent
+- callee: [entry, exit]
+  name: if_link_is_exe
+- callee: [entry, exit]
+  name: dir_list_reload
+- callee: [entry, exit]
+  name: copy_file_file
+- callee: [entry, exit]
+  name: file_error
+- callee: [entry, exit]
+  name: real_do_file_error
+- callee: [entry, exit]
+  name: warn_same_file
+- callee: [entry, exit]
+  name: real_warn_same_file
+- callee: [entry, exit]
+  name: check_hardlinks
+- callee: [entry, exit]
+  name: make_symlink
+- callee: [entry, exit]
+  name: progress_update_one
+- callee: [entry, exit]
+  name: copy_dir_dir
+- callee: [entry, exit]
+  name: erase_dir_iff_empty
+- callee: [entry, exit]
+  name: erase_file
+- callee: [entry, exit]
+  name: move_dir_dir
+- callee: [entry, exit]
+  name: free_link
+- callee: [entry, exit]
+  name: erase_dir
+- callee: [entry, exit]
+  name: real_query_recursive
+- callee: [entry, exit]
+  name: recursive_erase
+- callee: [entry, exit]
+  name: dirsize_status_init_cb
+- callee: [entry, exit]
+  name: dirsize_status_locate_buttons
+- callee: [entry, exit]
+  name: dirsize_status_update_cb
+- callee: [entry, exit]
+  name: dirsize_status_deinit_cb
+- callee: [entry, exit]
+  name: compute_dir_size
+- callee: [entry, exit]
+  name: do_compute_dir_size
+- callee: [entry, exit]
+  name: panel_operate
+- callee: [entry, exit]
+  name: panel_operate_generate_prompt
+- callee: [entry, exit]
+  name: panel_operate_init_totals
+- callee: [entry, exit]
+  name: transform_source
+- callee: [entry, exit]
+  name: move_file_file
+- callee: [entry, exit]
+  name: end_bg_process
+- callee: [entry, exit]
+  name: my_mkdir
+- callee: [entry, exit]
+  name: my_mkdir_rec
+- callee: [entry, exit]
+  name: my_rmdir
+- callee: [entry, exit]
+  name: file_op_context_new
+- callee: [entry, exit]
+  name: file_op_context_destroy
+- callee: [entry, exit]
+  name: file_op_total_context_new
+- callee: [entry, exit]
+  name: file_op_total_context_destroy
+- callee: [entry, exit]
+  name: find_file
+- callee: [entry, exit]
+  name: find_parm_callback
+- callee: [entry, exit]
+  name: start_stop
+- callee: [entry, exit]
+  name: find_do_view_file
+- callee: [entry, exit]
+  name: view_edit_currently_selected_file
+- callee: [entry, exit]
+  name: find_do_edit_file
+- callee: [entry, exit]
+  name: find_callback
+- callee: [entry, exit]
+  name: find_relocate_buttons
+- callee: [entry, exit]
+  name: find_ignore_dir_search
+- callee: [entry, exit]
+  name: find_add_match
+- callee: [entry, exit]
+  name: info_new
+- callee: [entry, exit]
+  name: info_callback
+- callee: [entry, exit]
+  name: info_hook
+- callee: [entry, exit]
+  name: lock_file
+- callee: [entry, exit]
+  name: lock_extract_info
+- callee: [entry, exit]
+  name: unlock_file
+- callee: [entry, exit]
+  name: free_my_statfs
+- callee: [entry, exit]
+  name: free_mount_entry
+- callee: [entry, exit]
+  name: init_my_statfs
+- callee: [entry, exit]
+  name: unescape_tab
+- callee: [entry, exit]
+  name: my_statfs
+- callee: [entry, exit]
+  name: init_cpiofs
+- callee: [entry, exit]
+  name: cpio_super_check
+- callee: [entry, exit]
+  name: cpio_super_same
+- callee: [entry, exit]
+  name: cpio_open_archive
+- callee: [entry, exit]
+  name: cpio_skip_padding
+- callee: [entry, exit]
+  name: cpio_create_entry
+- callee: [entry, exit]
+  name: cpio_defer_find
+- callee: [entry, exit]
+  name: cpio_free_archive
+- callee: [entry, exit]
+  name: cpio_fh_open
+- callee: [entry, exit]
+  name: cpio_read
+- callee: [entry, exit]
+  name: init_extfs
+- callee: [entry, exit]
+  name: extfs_init
+- callee: [entry, exit]
+  name: extfs_get_plugins
+- callee: [entry, exit]
+  name: extfs_done
+- callee: [entry, exit]
+  name: extfs_free
+- callee: [entry, exit]
+  name: extfs_free_entry
+- callee: [entry, exit]
+  name: extfs_fill_names
+- callee: [entry, exit]
+  name: extfs_which
+- callee: [entry, exit]
+  name: extfs_open
+- callee: [entry, exit]
+  name: extfs_get_path_int
+- callee: [entry, exit]
+  name: extfs_generate_entry
+- callee: [entry, exit]
+  name: extfs_make_dots
+- callee: [entry, exit]
+  name: extfs_find_entry_int
+- callee: [entry, exit]
+  name: extfs_resolve_symlinks_int
+- callee: [entry, exit]
+  name: extfs_cmd
+- callee: [entry, exit]
+  name: extfs_close
+- callee: [entry, exit]
+  name: extfs_read
+- callee: [entry, exit]
+  name: extfs_write
+- callee: [entry, exit]
+  name: extfs_opendir
+- callee: [entry, exit]
+  name: extfs_readdir
+- callee: [entry, exit]
+  name: extfs_closedir
+- callee: [entry, exit]
+  name: extfs_stat
+- callee: [entry, exit]
+  name: extfs_lstat
+- callee: [entry, exit]
+  name: extfs_fstat
+- callee: [entry, exit]
+  name: extfs_chmod
+- callee: [entry, exit]
+  name: extfs_chown
+- callee: [entry, exit]
+  name: extfs_readlink
+- callee: [entry, exit]
+  name: extfs_unlink
+- callee: [entry, exit]
+  name: extfs_remove_entry
+- callee: [entry, exit]
+  name: extfs_chdir
+- callee: [entry, exit]
+  name: extfs_errno
+- callee: [entry, exit]
+  name: extfs_lseek
+- callee: [entry, exit]
+  name: extfs_getid
+- callee: [entry, exit]
+  name: extfs_nothingisopen
+- callee: [entry, exit]
+  name: extfs_getlocalcopy
+- callee: [entry, exit]
+  name: extfs_ungetlocalcopy
+- callee: [entry, exit]
+  name: extfs_mkdir
+- callee: [entry, exit]
+  name: extfs_rmdir
+- callee: [entry, exit]
+  name: extfs_setctl
+- callee: [entry, exit]
+  name: local_read
+- callee: [entry, exit]
+  name: local_close
+- callee: [entry, exit]
+  name: local_errno
+- callee: [entry, exit]
+  name: local_fstat
+- callee: [entry, exit]
+  name: local_lseek
+- callee: [entry, exit]
+  name: init_localfs
+- callee: [entry, exit]
+  name: local_which
+- callee: [entry, exit]
+  name: local_open
+- callee: [entry, exit]
+  name: local_write
+- callee: [entry, exit]
+  name: local_opendir
+- callee: [entry, exit]
+  name: local_readdir
+- callee: [entry, exit]
+  name: local_closedir
+- callee: [entry, exit]
+  name: local_stat
+- callee: [entry, exit]
+  name: local_lstat
+- callee: [entry, exit]
+  name: local_chmod
+- callee: [entry, exit]
+  name: local_chown
+- callee: [entry, exit]
+  name: local_utime
+- callee: [entry, exit]
+  name: local_readlink
+- callee: [entry, exit]
+  name: local_symlink
+- callee: [entry, exit]
+  name: local_link
+- callee: [entry, exit]
+  name: local_unlink
+- callee: [entry, exit]
+  name: local_rename
+- callee: [entry, exit]
+  name: local_chdir
+- callee: [entry, exit]
+  name: local_mknod
+- callee: [entry, exit]
+  name: local_getlocalcopy
+- callee: [entry, exit]
+  name: local_ungetlocalcopy
+- callee: [entry, exit]
+  name: local_mkdir
+- callee: [entry, exit]
+  name: local_rmdir
+- callee: [entry, exit]
+  name: mcview_callback
+- callee: [entry, exit]
+  name: mcview_hook
+- callee: [entry, exit]
+  name: mcview_execute_cmd
+- callee: [entry, exit]
+  name: mcview_continue_search_cmd
+- callee: [entry, exit]
+  name: mcview_ok_to_quit
+- callee: [entry, exit]
+  name: mcview_dialog_callback
+- callee: [entry, exit]
+  name: mcview_display_text
+- callee: [entry, exit]
+  name: mcview_display_line
+- callee: [entry, exit]
+  name: mcview_get_next_maybe_nroff_char
+- callee: [entry, exit]
+  name: mcview_get_next_char
+- callee: [entry, exit]
+  name: mcview_ascii_move_up
+- callee: [entry, exit]
+  name: mcview_state_machine_init
+- callee: [entry, exit]
+  name: mcview_ascii_move_down
+- callee: [entry, exit]
+  name: mcview_ascii_moveto_bol
+- callee: [entry, exit]
+  name: mcview_ascii_moveto_eol
+- callee: [entry, exit]
+  name: coord_cache_new
+- callee: [entry, exit]
+  name: coord_cache_free
+- callee: [entry, exit]
+  name: mcview_ccache_lookup
+- callee: [entry, exit]
+  name: mcview_coord_cache_entry_less_plain
+- callee: [entry, exit]
+  name: mcview_coord_cache_entry_less_nroff
+- callee: [entry, exit]
+  name: mcview_coord_cache_entry_less_offset
+- callee: [entry, exit]
+  name: mcview_set_datasource_none
+- callee: [entry, exit]
+  name: mcview_get_filesize
+- callee: [entry, exit]
+  name: mcview_update_filesize
+- callee: [entry, exit]
+  name: mcview_get_ptr_file
+- callee: [entry, exit]
+  name: mcview_file_load_data
+- callee: [entry, exit]
+  name: mcview_get_utf
+- callee: [entry, exit]
+  name: mcview_get_ptr_string
+- callee: [entry, exit]
+  name: mcview_get_byte_string
+- callee: [entry, exit]
+  name: mcview_get_byte_none
+- callee: [entry, exit]
+  name: mcview_set_byte
+- callee: [entry, exit]
+  name: mcview_close_datasource
+- callee: [entry, exit]
+  name: mcview_set_datasource_file
+- callee: [entry, exit]
+  name: mcview_load_command_output
+- callee: [entry, exit]
+  name: mcview_set_datasource_vfs_pipe
+- callee: [entry, exit]
+  name: mcview_set_datasource_string
+- callee: [entry, exit]
+  name: mcview_dialog_search
+- callee: [entry, exit]
+  name: mcview_dialog_goto
+- callee: [entry, exit]
+  name: mcview_update
+- callee: [entry, exit]
+  name: mcview_display_status
+- callee: [entry, exit]
+  name: mcview_display
+- callee: [entry, exit]
+  name: mcview_compute_areas
+- callee: [entry, exit]
+  name: mcview_update_bytes_per_line
+- callee: [entry, exit]
+  name: mcview_display_toggle_ruler
+- callee: [entry, exit]
+  name: mcview_display_clean
+- callee: [entry, exit]
+  name: mcview_display_ruler
+- callee: [entry, exit]
+  name: mcview_growbuf_init
+- callee: [entry, exit]
+  name: mcview_growbuf_done
+- callee: [entry, exit]
+  name: mcview_growbuf_free
+- callee: [entry, exit]
+  name: mcview_growbuf_filesize
+- callee: [entry, exit]
+  name: mcview_growbuf_read_until
+- callee: [entry, exit]
+  name: mcview_get_byte_growing_buffer
+- callee: [entry, exit]
+  name: mcview_get_ptr_growing_buffer
+- callee: [entry, exit]
+  name: mcview_display_hex
+- callee: [entry, exit]
+  name: mcview_hexedit_save_changes
+- callee: [entry, exit]
+  name: mcview_toggle_hexedit_mode
+- callee: [entry, exit]
+  name: mcview_hexedit_free_change_list
+- callee: [entry, exit]
+  name: mcview_enqueue_change
+- callee: [entry, exit]
+  name: mcview_toggle_magic_mode
+- callee: [entry, exit]
+  name: mcview_done
+- callee: [entry, exit]
+  name: mcview_init
+- callee: [entry, exit]
+  name: mcview_toggle_wrap_mode
+- callee: [entry, exit]
+  name: mcview_toggle_nroff_mode
+- callee: [entry, exit]
+  name: mcview_toggle_hex_mode
+- callee: [entry, exit]
+  name: mcview_bol
+- callee: [entry, exit]
+  name: mcview_set_codeset
+- callee: [entry, exit]
+  name: mcview_select_encoding
+- callee: [entry, exit]
+  name: mcview_show_error
+- callee: [entry, exit]
+  name: mcview_eol
+- callee: [entry, exit]
+  name: mcview_get_title
+- callee: [entry, exit]
+  name: mcview_calc_percent
+- callee: [entry, exit]
+  name: mcview__get_nroff_real_len
+- callee: [entry, exit]
+  name: mcview_nroff_seq_info
+- callee: [entry, exit]
+  name: mcview_nroff_get_char
+- callee: [entry, exit]
+  name: mcview_nroff_seq_new_num
+- callee: [entry, exit]
+  name: mcview_nroff_seq_next
+- callee: [entry, exit]
+  name: mcview_nroff_seq_free
+- callee: [entry, exit]
+  name: mcview_nroff_seq_new
+- callee: [entry, exit]
+  name: mcview_nroff_seq_prev
+- callee: [entry, exit]
+  name: mcview_search_cmd_callback
+- callee: [entry, exit]
+  name: mcview_search_update_cmd_callback
+- callee: [entry, exit]
+  name: mcview_do_search
+- callee: [entry, exit]
+  name: mcview_search_status_update_cb
+- callee: [entry, exit]
+  name: mcview_find
+- callee: [entry, exit]
+  name: mcview_search_show_result
+- callee: [entry, exit]
+  name: dview_search_cmd
+- callee: [entry, exit]
+  name: mcdiffview_do_search
+- callee: [entry, exit]
+  name: dview_continue_search_cmd
+- callee: [entry, exit]
+  name: book_mark_find
+- callee: [entry, exit]
+  name: book_mark_query_color
+- callee: [entry, exit]
+  name: book_mark_insert
+- callee: [entry, exit]
+  name: book_mark_clear
+- callee: [entry, exit]
+  name: book_mark_flush
+- callee: [entry, exit]
+  name: book_mark_inc
+- callee: [entry, exit]
+  name: book_mark_dec
+- callee: [entry, exit]
+  name: book_mark_serialize
+- callee: [entry, exit]
+  name: book_mark_restore
+- callee: [entry, exit]
+  name: edit_syntax_dialog
+- callee: [entry, exit]
+  name: pstrcmp
+- callee: [entry, exit]
+  name: edit_init_menu
+- callee: [entry, exit]
+  name: edit_menu_cmd
+- callee: [entry, exit]
+  name: edit_drop_hotkey_menu
+- callee: [entry, exit]
+  name: edit_options_dialog
+- callee: [entry, exit]
+  name: edit_reset_over_col
+- callee: [entry, exit]
+  name: edit_reload_syntax

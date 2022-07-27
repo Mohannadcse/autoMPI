@@ -1,0 +1,1607 @@
+strategy: callout
+
+logging: stderr_printf
+
+functions:
+- callee: [entry, exit]
+  name: connect_to_ip
+- callee: [entry, exit]
+  name: sockaddr_set_data
+- callee: [entry, exit]
+  name: resolve_bind_address
+- callee: [entry, exit]
+  name: sockaddr_size
+- callee: [entry, exit]
+  name: connect_with_timeout
+- callee: [entry, exit]
+  name: connect_with_timeout_callback
+- callee: [entry, exit]
+  name: fd_close
+- callee: [entry, exit]
+  name: sock_close
+- callee: [entry, exit]
+  name: connect_to_host
+- callee: [entry, exit]
+  name: bind_local
+- callee: [entry, exit]
+  name: sockaddr_get_data
+- callee: [entry, exit]
+  name: accept_connection
+- callee: [entry, exit]
+  name: select_fd
+- callee: [entry, exit]
+  name: socket_ip_address
+- callee: [entry, exit]
+  name: socket_family
+- callee: [entry, exit]
+  name: retryable_socket_connect_error
+- callee: [entry, exit]
+  name: test_socket_open
+- callee: [entry, exit]
+  name: fd_register_transport
+- callee: [entry, exit]
+  name: fd_transport_context
+- callee: [entry, exit]
+  name: fd_read
+- callee: [entry, exit]
+  name: poll_internal
+- callee: [entry, exit]
+  name: sock_poll
+- callee: [entry, exit]
+  name: sock_read
+- callee: [entry, exit]
+  name: fd_peek
+- callee: [entry, exit]
+  name: sock_peek
+- callee: [entry, exit]
+  name: fd_write
+- callee: [entry, exit]
+  name: sock_write
+- callee: [entry, exit]
+  name: fd_errstr
+- callee: [entry, exit]
+  name: convert_all_links
+- callee: [entry, exit]
+  name: convert_links_in_hashtable
+- callee: [entry, exit]
+  name: convert_links
+- callee: [entry, exit]
+  name: downloaded_file
+- callee: [entry, exit]
+  name: downloaded_mode_to_ptr
+- callee: [entry, exit]
+  name: write_backup_file
+- callee: [entry, exit]
+  name: construct_relative
+- callee: [entry, exit]
+  name: local_quote_string
+- callee: [entry, exit]
+  name: html_quote_string
+- callee: [entry, exit]
+  name: replace_plain
+- callee: [entry, exit]
+  name: replace_attr
+- callee: [entry, exit]
+  name: find_fragment
+- callee: [entry, exit]
+  name: replace_attr_refresh_hack
+- callee: [entry, exit]
+  name: convert_basename
+- callee: [entry, exit]
+  name: register_download
+- callee: [entry, exit]
+  name: match_except_index
+- callee: [entry, exit]
+  name: dissociate_urls_from_file
+- callee: [entry, exit]
+  name: dissociate_urls_from_file_mapper
+- callee: [entry, exit]
+  name: register_redirection
+- callee: [entry, exit]
+  name: register_delete_file
+- callee: [entry, exit]
+  name: register_html
+- callee: [entry, exit]
+  name: register_css
+- callee: [entry, exit]
+  name: convert_cleanup
+- callee: [entry, exit]
+  name: downloaded_files_free
+- callee: [entry, exit]
+  name: cookie_jar_new
+- callee: [entry, exit]
+  name: cookie_handle_set_cookie
+- callee: [entry, exit]
+  name: parse_set_cookie
+- callee: [entry, exit]
+  name: cookie_new
+- callee: [entry, exit]
+  name: delete_cookie
+- callee: [entry, exit]
+  name: check_domain_match
+- callee: [entry, exit]
+  name: check_path_match
+- callee: [entry, exit]
+  name: path_matches
+- callee: [entry, exit]
+  name: discard_matching_cookie
+- callee: [entry, exit]
+  name: find_matching_cookie
+- callee: [entry, exit]
+  name: store_cookie
+- callee: [entry, exit]
+  name: cookie_header
+- callee: [entry, exit]
+  name: count_char
+- callee: [entry, exit]
+  name: find_chains_of_host
+- callee: [entry, exit]
+  name: numeric_address_p
+- callee: [entry, exit]
+  name: cookie_matches_url
+- callee: [entry, exit]
+  name: cookie_expired_p
+- callee: [entry, exit]
+  name: eliminate_dups
+- callee: [entry, exit]
+  name: equality_comparator
+- callee: [entry, exit]
+  name: goodness_comparator
+- callee: [entry, exit]
+  name: cookie_jar_load
+- callee: [entry, exit]
+  name: domain_port
+- callee: [entry, exit]
+  name: cookie_jar_save
+- callee: [entry, exit]
+  name: cookie_jar_delete
+- callee: [entry, exit]
+  name: ftp_loop
+- callee: [entry, exit]
+  name: ftp_get_listing
+- callee: [entry, exit]
+  name: ftp_loop_internal
+- callee: [entry, exit]
+  name: getftp
+- callee: [entry, exit]
+  name: init_control_ssl_connection
+- callee: [entry, exit]
+  name: get_ftp_greeting
+- callee: [entry, exit]
+  name: ftp_do_pasv
+- callee: [entry, exit]
+  name: ftp_do_port
+- callee: [entry, exit]
+  name: print_length
+- callee: [entry, exit]
+  name: ftp_expected_bytes
+- callee: [entry, exit]
+  name: freefileinfo
+- callee: [entry, exit]
+  name: ftp_retrieve_glob
+- callee: [entry, exit]
+  name: delelement
+- callee: [entry, exit]
+  name: has_insecure_name_p
+- callee: [entry, exit]
+  name: is_invalid_entry
+- callee: [entry, exit]
+  name: ftp_retrieve_list
+- callee: [entry, exit]
+  name: ftp_retrieve_dirs
+- callee: [entry, exit]
+  name: yylex
+- callee: [entry, exit]
+  name: yyensure_buffer_stack
+- callee: [entry, exit]
+  name: yyalloc
+- callee: [entry, exit]
+  name: yy_fatal_error
+- callee: [entry, exit]
+  name: yyrealloc
+- callee: [entry, exit]
+  name: yy_create_buffer
+- callee: [entry, exit]
+  name: yy_init_buffer
+- callee: [entry, exit]
+  name: yy_flush_buffer
+- callee: [entry, exit]
+  name: yy_load_buffer_state
+- callee: [entry, exit]
+  name: yy_get_previous_state
+- callee: [entry, exit]
+  name: yy_try_NUL_trans
+- callee: [entry, exit]
+  name: yy_get_next_buffer
+- callee: [entry, exit]
+  name: yyrestart
+- callee: [entry, exit]
+  name: yy_switch_to_buffer
+- callee: [entry, exit]
+  name: yy_delete_buffer
+- callee: [entry, exit]
+  name: yyfree
+- callee: [entry, exit]
+  name: yypush_buffer_state
+- callee: [entry, exit]
+  name: yypop_buffer_state
+- callee: [entry, exit]
+  name: yy_scan_buffer
+- callee: [entry, exit]
+  name: yy_scan_string
+- callee: [entry, exit]
+  name: yy_scan_bytes
+- callee: [entry, exit]
+  name: yyget_lineno
+- callee: [entry, exit]
+  name: yyget_in
+- callee: [entry, exit]
+  name: yyget_out
+- callee: [entry, exit]
+  name: yyget_leng
+- callee: [entry, exit]
+  name: yyget_text
+- callee: [entry, exit]
+  name: yyset_lineno
+- callee: [entry, exit]
+  name: yyset_in
+- callee: [entry, exit]
+  name: yyset_out
+- callee: [entry, exit]
+  name: yyget_debug
+- callee: [entry, exit]
+  name: yyset_debug
+- callee: [entry, exit]
+  name: yylex_destroy
+- callee: [entry, exit]
+  name: yy_init_globals
+- callee: [entry, exit]
+  name: get_urls_css
+- callee: [entry, exit]
+  name: get_uri_string
+- callee: [entry, exit]
+  name: get_urls_css_file
+- callee: [entry, exit]
+  name: ftp_response
+- callee: [entry, exit]
+  name: ftp_greeting
+- callee: [entry, exit]
+  name: ftp_login
+- callee: [entry, exit]
+  name: ftp_request
+- callee: [entry, exit]
+  name: ftp_port
+- callee: [entry, exit]
+  name: ip_address_to_port_repr
+- callee: [entry, exit]
+  name: ftp_lprt
+- callee: [entry, exit]
+  name: ip_address_to_lprt_repr
+- callee: [entry, exit]
+  name: ftp_eprt
+- callee: [entry, exit]
+  name: ip_address_to_eprt_repr
+- callee: [entry, exit]
+  name: ftp_auth
+- callee: [entry, exit]
+  name: ftp_pbsz
+- callee: [entry, exit]
+  name: ftp_prot
+- callee: [entry, exit]
+  name: ftp_pasv
+- callee: [entry, exit]
+  name: ftp_lpsv
+- callee: [entry, exit]
+  name: ftp_epsv
+- callee: [entry, exit]
+  name: ftp_type
+- callee: [entry, exit]
+  name: ftp_cwd
+- callee: [entry, exit]
+  name: ftp_rest
+- callee: [entry, exit]
+  name: ftp_retr
+- callee: [entry, exit]
+  name: ftp_list
+- callee: [entry, exit]
+  name: ftp_syst
+- callee: [entry, exit]
+  name: ftp_pwd
+- callee: [entry, exit]
+  name: ftp_size
+- callee: [entry, exit]
+  name: ftp_process_type
+- callee: [entry, exit]
+  name: ftp_parse_ls
+- callee: [entry, exit]
+  name: ftp_parse_unix_ls
+- callee: [entry, exit]
+  name: clean_line
+- callee: [entry, exit]
+  name: symperms
+- callee: [entry, exit]
+  name: ftp_parse_winnt_ls
+- callee: [entry, exit]
+  name: ftp_parse_vms_ls
+- callee: [entry, exit]
+  name: eat_carets
+- callee: [entry, exit]
+  name: ftp_index
+- callee: [entry, exit]
+  name: hash_table_new
+- callee: [entry, exit]
+  name: hash_pointer
+- callee: [entry, exit]
+  name: cmp_pointer
+- callee: [entry, exit]
+  name: prime_size
+- callee: [entry, exit]
+  name: hash_table_destroy
+- callee: [entry, exit]
+  name: hash_table_get
+- callee: [entry, exit]
+  name: find_cell
+- callee: [entry, exit]
+  name: hash_table_get_pair
+- callee: [entry, exit]
+  name: hash_table_contains
+- callee: [entry, exit]
+  name: hash_table_put
+- callee: [entry, exit]
+  name: grow_hash_table
+- callee: [entry, exit]
+  name: hash_table_remove
+- callee: [entry, exit]
+  name: hash_table_clear
+- callee: [entry, exit]
+  name: hash_table_for_each
+- callee: [entry, exit]
+  name: hash_table_iterate
+- callee: [entry, exit]
+  name: hash_table_iter_next
+- callee: [entry, exit]
+  name: hash_table_count
+- callee: [entry, exit]
+  name: make_string_hash_table
+- callee: [entry, exit]
+  name: hash_string
+- callee: [entry, exit]
+  name: cmp_string
+- callee: [entry, exit]
+  name: make_nocase_string_hash_table
+- callee: [entry, exit]
+  name: hash_string_nocase
+- callee: [entry, exit]
+  name: string_cmp_nocase
+- callee: [entry, exit]
+  name: address_list_get_bounds
+- callee: [entry, exit]
+  name: address_list_address_at
+- callee: [entry, exit]
+  name: address_list_contains
+- callee: [entry, exit]
+  name: address_list_set_faulty
+- callee: [entry, exit]
+  name: address_list_set_connected
+- callee: [entry, exit]
+  name: address_list_connected_p
+- callee: [entry, exit]
+  name: address_list_release
+- callee: [entry, exit]
+  name: address_list_delete
+- callee: [entry, exit]
+  name: print_address
+- callee: [entry, exit]
+  name: is_valid_ipv6_address
+- callee: [entry, exit]
+  name: is_valid_ipv4_address
+- callee: [entry, exit]
+  name: lookup_host
+- callee: [entry, exit]
+  name: cache_query
+- callee: [entry, exit]
+  name: cache_remove
+- callee: [entry, exit]
+  name: getaddrinfo_with_timeout
+- callee: [entry, exit]
+  name: getaddrinfo_with_timeout_callback
+- callee: [entry, exit]
+  name: address_list_from_addrinfo
+- callee: [entry, exit]
+  name: cmp_prefer_ipv4
+- callee: [entry, exit]
+  name: cmp_prefer_ipv6
+- callee: [entry, exit]
+  name: cache_store
+- callee: [entry, exit]
+  name: accept_domain
+- callee: [entry, exit]
+  name: sufmatch
+- callee: [entry, exit]
+  name: host_cleanup
+- callee: [entry, exit]
+  name: is_valid_ip_address
+- callee: [entry, exit]
+  name: hsts_match
+- callee: [entry, exit]
+  name: hsts_find_entry
+- callee: [entry, exit]
+  name: hsts_remove_entry
+- callee: [entry, exit]
+  name: hsts_store_entry
+- callee: [entry, exit]
+  name: hsts_add_entry
+- callee: [entry, exit]
+  name: hsts_new_entry_internal
+- callee: [entry, exit]
+  name: hsts_store_open
+- callee: [entry, exit]
+  name: hsts_hash_func
+- callee: [entry, exit]
+  name: hsts_cmp_func
+- callee: [entry, exit]
+  name: hsts_file_access_valid
+- callee: [entry, exit]
+  name: hsts_read_database
+- callee: [entry, exit]
+  name: hsts_store_merge
+- callee: [entry, exit]
+  name: hsts_new_entry
+- callee: [entry, exit]
+  name: hsts_store_close
+- callee: [entry, exit]
+  name: hsts_store_save
+- callee: [entry, exit]
+  name: hsts_store_dump
+- callee: [entry, exit]
+  name: hsts_store_has_changed
+- callee: [entry, exit]
+  name: map_html_tags
+- callee: [entry, exit]
+  name: find_comment_end
+- callee: [entry, exit]
+  name: advance_declaration
+- callee: [entry, exit]
+  name: tagstack_push
+- callee: [entry, exit]
+  name: name_allowed
+- callee: [entry, exit]
+  name: convert_and_copy
+- callee: [entry, exit]
+  name: decode_entity
+- callee: [entry, exit]
+  name: tagstack_find
+- callee: [entry, exit]
+  name: tagstack_pop
+- callee: [entry, exit]
+  name: append_url
+- callee: [entry, exit]
+  name: get_urls_html
+- callee: [entry, exit]
+  name: init_interesting
+- callee: [entry, exit]
+  name: tag_find_urls
+- callee: [entry, exit]
+  name: tag_handle_base
+- callee: [entry, exit]
+  name: find_attr
+- callee: [entry, exit]
+  name: tag_handle_form
+- callee: [entry, exit]
+  name: tag_handle_img
+- callee: [entry, exit]
+  name: tag_handle_link
+- callee: [entry, exit]
+  name: tag_handle_meta
+- callee: [entry, exit]
+  name: collect_tags_mapper
+- callee: [entry, exit]
+  name: check_style_attr
+- callee: [entry, exit]
+  name: get_urls_file
+- callee: [entry, exit]
+  name: cleanup_html_url
+- callee: [entry, exit]
+  name: extract_param
+- callee: [entry, exit]
+  name: modify_param_name
+- callee: [entry, exit]
+  name: modify_param_value
+- callee: [entry, exit]
+  name: http_loop
+- callee: [entry, exit]
+  name: load_cookies
+- callee: [entry, exit]
+  name: get_file_flags
+- callee: [entry, exit]
+  name: set_file_timestamp
+- callee: [entry, exit]
+  name: gethttp
+- callee: [entry, exit]
+  name: initialize_request
+- callee: [entry, exit]
+  name: request_new
+- callee: [entry, exit]
+  name: request_set_header
+- callee: [entry, exit]
+  name: release_header
+- callee: [entry, exit]
+  name: time_to_rfc1123
+- callee: [entry, exit]
+  name: maybe_send_basic_creds
+- callee: [entry, exit]
+  name: basic_authentication_encode
+- callee: [entry, exit]
+  name: request_free
+- callee: [entry, exit]
+  name: request_set_user_header
+- callee: [entry, exit]
+  name: initialize_proxy_configuration
+- callee: [entry, exit]
+  name: establish_connection
+- callee: [entry, exit]
+  name: persistent_available_p
+- callee: [entry, exit]
+  name: invalidate_persistent
+- callee: [entry, exit]
+  name: request_remove_header
+- callee: [entry, exit]
+  name: request_send
+- callee: [entry, exit]
+  name: read_http_response_head
+- callee: [entry, exit]
+  name: response_head_terminator
+- callee: [entry, exit]
+  name: resp_new
+- callee: [entry, exit]
+  name: resp_status
+- callee: [entry, exit]
+  name: resp_free
+- callee: [entry, exit]
+  name: body_file_send
+- callee: [entry, exit]
+  name: print_server_response
+- callee: [entry, exit]
+  name: print_response_line
+- callee: [entry, exit]
+  name: resp_header_copy
+- callee: [entry, exit]
+  name: resp_header_get
+- callee: [entry, exit]
+  name: resp_header_locate
+- callee: [entry, exit]
+  name: register_persistent
+- callee: [entry, exit]
+  name: resp_header_strdup
+- callee: [entry, exit]
+  name: read_response_body
+- callee: [entry, exit]
+  name: skip_short_body
+- callee: [entry, exit]
+  name: check_auth
+- callee: [entry, exit]
+  name: known_authentication_scheme_p
+- callee: [entry, exit]
+  name: request_method
+- callee: [entry, exit]
+  name: create_authorization_line
+- callee: [entry, exit]
+  name: digest_authentication_encode
+- callee: [entry, exit]
+  name: dump_hash
+- callee: [entry, exit]
+  name: register_basic_auth_host
+- callee: [entry, exit]
+  name: check_file_output
+- callee: [entry, exit]
+  name: parse_content_disposition
+- callee: [entry, exit]
+  name: append_value_to_filename
+- callee: [entry, exit]
+  name: parse_strict_transport_security
+- callee: [entry, exit]
+  name: parse_content_range
+- callee: [entry, exit]
+  name: set_content_type
+- callee: [entry, exit]
+  name: ensure_extension
+- callee: [entry, exit]
+  name: http_atotm
+- callee: [entry, exit]
+  name: check_end
+- callee: [entry, exit]
+  name: open_output_stream
+- callee: [entry, exit]
+  name: check_retry_on_http_error
+- callee: [entry, exit]
+  name: free_hstat
+- callee: [entry, exit]
+  name: save_cookies
+- callee: [entry, exit]
+  name: http_cleanup
+- callee: [entry, exit]
+  name: defaults
+- callee: [entry, exit]
+  name: home_dir
+- callee: [entry, exit]
+  name: wgetrc_env_file_name
+- callee: [entry, exit]
+  name: wgetrc_user_file_name
+- callee: [entry, exit]
+  name: wgetrc_file_name
+- callee: [entry, exit]
+  name: run_wgetrc
+- callee: [entry, exit]
+  name: parse_line
+- callee: [entry, exit]
+  name: dehyphen
+- callee: [entry, exit]
+  name: command_by_name
+- callee: [entry, exit]
+  name: cmd_vector
+- callee: [entry, exit]
+  name: cmd_string
+- callee: [entry, exit]
+  name: cmd_boolean
+- callee: [entry, exit]
+  name: cmd_boolean_internal
+- callee: [entry, exit]
+  name: cmd_number
+- callee: [entry, exit]
+  name: simple_atoi
+- callee: [entry, exit]
+  name: cmd_file
+- callee: [entry, exit]
+  name: cmd_directory
+- callee: [entry, exit]
+  name: cmd_cert_type
+- callee: [entry, exit]
+  name: decode_string
+- callee: [entry, exit]
+  name: cmd_check_cert
+- callee: [entry, exit]
+  name: cmd_time
+- callee: [entry, exit]
+  name: simple_atof
+- callee: [entry, exit]
+  name: cmd_file_once
+- callee: [entry, exit]
+  name: cmd_spec_dirstruct
+- callee: [entry, exit]
+  name: cmd_bytes
+- callee: [entry, exit]
+  name: parse_bytes_helper
+- callee: [entry, exit]
+  name: cmd_directory_vector
+- callee: [entry, exit]
+  name: cmd_spec_header
+- callee: [entry, exit]
+  name: check_user_specified_header
+- callee: [entry, exit]
+  name: cmd_spec_htmlify
+- callee: [entry, exit]
+  name: cmd_string_uppercase
+- callee: [entry, exit]
+  name: cmd_spec_mirror
+- callee: [entry, exit]
+  name: cmd_number_inf
+- callee: [entry, exit]
+  name: cmd_spec_prefer_family
+- callee: [entry, exit]
+  name: cmd_spec_progress
+- callee: [entry, exit]
+  name: cmd_bytes_sum
+- callee: [entry, exit]
+  name: cmd_spec_recursive
+- callee: [entry, exit]
+  name: cmd_spec_regex_type
+- callee: [entry, exit]
+  name: cmd_spec_report_speed
+- callee: [entry, exit]
+  name: cmd_spec_restrict_file_names
+- callee: [entry, exit]
+  name: cmd_spec_secure_protocol
+- callee: [entry, exit]
+  name: cmd_spec_progressdisp
+- callee: [entry, exit]
+  name: cmd_spec_timeout
+- callee: [entry, exit]
+  name: cmd_use_askpass
+- callee: [entry, exit]
+  name: cmd_spec_useragent
+- callee: [entry, exit]
+  name: cmd_spec_verbose
+- callee: [entry, exit]
+  name: cmd_spec_warc_header
+- callee: [entry, exit]
+  name: setval_internal_tilde
+- callee: [entry, exit]
+  name: setval_internal
+- callee: [entry, exit]
+  name: initialize
+- callee: [entry, exit]
+  name: setoptval
+- callee: [entry, exit]
+  name: run_command
+- callee: [entry, exit]
+  name: cleanup
+- callee: [entry, exit]
+  name: log_set_warc_log_fp
+- callee: [entry, exit]
+  name: logputs
+- callee: [entry, exit]
+  name: check_redirect_output
+- callee: [entry, exit]
+  name: redirect_output
+- callee: [entry, exit]
+  name: log_dump_context
+- callee: [entry, exit]
+  name: get_log_fp
+- callee: [entry, exit]
+  name: get_warc_log_fp
+- callee: [entry, exit]
+  name: get_progress_fp
+- callee: [entry, exit]
+  name: saved_append
+- callee: [entry, exit]
+  name: saved_append_1
+- callee: [entry, exit]
+  name: free_log_line
+- callee: [entry, exit]
+  name: logflush
+- callee: [entry, exit]
+  name: log_set_flush
+- callee: [entry, exit]
+  name: log_set_save_context
+- callee: [entry, exit]
+  name: logprintf
+- callee: [entry, exit]
+  name: log_vprintf_internal
+- callee: [entry, exit]
+  name: debug_logprintf
+- callee: [entry, exit]
+  name: log_init
+- callee: [entry, exit]
+  name: log_close
+- callee: [entry, exit]
+  name: escnonprint
+- callee: [entry, exit]
+  name: escnonprint_internal
+- callee: [entry, exit]
+  name: count_nonprint
+- callee: [entry, exit]
+  name: copy_and_escape
+- callee: [entry, exit]
+  name: escnonprint_uri
+- callee: [entry, exit]
+  name: log_cleanup
+- callee: [entry, exit]
+  name: main
+- callee: [entry, exit]
+  name: i18n_initialize
+- callee: [entry, exit]
+  name: init_switches
+- callee: [entry, exit]
+  name: print_help
+- callee: [entry, exit]
+  name: print_usage
+- callee: [entry, exit]
+  name: print_version
+- callee: [entry, exit]
+  name: format_and_print_line
+- callee: [entry, exit]
+  name: no_prefix
+- callee: [entry, exit]
+  name: prompt_for_password
+- callee: [entry, exit]
+  name: redirect_output_signal
+- callee: [entry, exit]
+  name: load_hsts
+- callee: [entry, exit]
+  name: get_hsts_database
+- callee: [entry, exit]
+  name: use_askpass
+- callee: [entry, exit]
+  name: run_use_askpass
+- callee: [entry, exit]
+  name: secs_to_human_time
+- callee: [entry, exit]
+  name: save_hsts
+- callee: [entry, exit]
+  name: netrc_cleanup
+- callee: [entry, exit]
+  name: free_netrc
+- callee: [entry, exit]
+  name: search_netrc
+- callee: [entry, exit]
+  name: parse_netrc
+- callee: [entry, exit]
+  name: shift_left
+- callee: [entry, exit]
+  name: maybe_add_to_list
+- callee: [entry, exit]
+  name: valid_progress_implementation_p
+- callee: [entry, exit]
+  name: dot_create
+- callee: [entry, exit]
+  name: dot_update
+- callee: [entry, exit]
+  name: dot_draw
+- callee: [entry, exit]
+  name: print_row_stats
+- callee: [entry, exit]
+  name: eta_to_human_short
+- callee: [entry, exit]
+  name: dot_finish
+- callee: [entry, exit]
+  name: dot_set_params
+- callee: [entry, exit]
+  name: bar_create
+- callee: [entry, exit]
+  name: create_image
+- callee: [entry, exit]
+  name: count_cols
+- callee: [entry, exit]
+  name: cols_to_bytes
+- callee: [entry, exit]
+  name: get_eta
+- callee: [entry, exit]
+  name: display_image
+- callee: [entry, exit]
+  name: bar_update
+- callee: [entry, exit]
+  name: update_speed_ring
+- callee: [entry, exit]
+  name: bar_draw
+- callee: [entry, exit]
+  name: bar_finish
+- callee: [entry, exit]
+  name: bar_set_params
+- callee: [entry, exit]
+  name: set_progress_implementation
+- callee: [entry, exit]
+  name: progress_schedule_redirect
+- callee: [entry, exit]
+  name: progress_create
+- callee: [entry, exit]
+  name: progress_interactive_p
+- callee: [entry, exit]
+  name: progress_update
+- callee: [entry, exit]
+  name: progress_finish
+- callee: [entry, exit]
+  name: progress_handle_sigwinch
+- callee: [entry, exit]
+  name: ptimer_new
+- callee: [entry, exit]
+  name: posix_init
+- callee: [entry, exit]
+  name: ptimer_reset
+- callee: [entry, exit]
+  name: posix_measure
+- callee: [entry, exit]
+  name: ptimer_destroy
+- callee: [entry, exit]
+  name: ptimer_measure
+- callee: [entry, exit]
+  name: posix_diff
+- callee: [entry, exit]
+  name: ptimer_read
+- callee: [entry, exit]
+  name: ptimer_resolution
+- callee: [entry, exit]
+  name: posix_resolution
+- callee: [entry, exit]
+  name: retrieve_tree
+- callee: [entry, exit]
+  name: url_queue_new
+- callee: [entry, exit]
+  name: url_enqueue
+- callee: [entry, exit]
+  name: blacklist_add
+- callee: [entry, exit]
+  name: write_reject_log_header
+- callee: [entry, exit]
+  name: url_dequeue
+- callee: [entry, exit]
+  name: descend_redirect
+- callee: [entry, exit]
+  name: download_child
+- callee: [entry, exit]
+  name: blacklist_contains
+- callee: [entry, exit]
+  name: write_reject_log_reason
+- callee: [entry, exit]
+  name: write_reject_log_url
+- callee: [entry, exit]
+  name: url_queue_delete
+- callee: [entry, exit]
+  name: res_parse
+- callee: [entry, exit]
+  name: match_user_agent
+- callee: [entry, exit]
+  name: add_path
+- callee: [entry, exit]
+  name: prune_non_exact
+- callee: [entry, exit]
+  name: res_parse_from_file
+- callee: [entry, exit]
+  name: res_match_path
+- callee: [entry, exit]
+  name: matches
+- callee: [entry, exit]
+  name: res_register_specs
+- callee: [entry, exit]
+  name: free_specs
+- callee: [entry, exit]
+  name: res_get_specs
+- callee: [entry, exit]
+  name: res_retrieve_file
+- callee: [entry, exit]
+  name: is_robots_txt_url
+- callee: [entry, exit]
+  name: res_cleanup
+- callee: [entry, exit]
+  name: fd_read_body
+- callee: [entry, exit]
+  name: limit_bandwidth_reset
+- callee: [entry, exit]
+  name: fd_read_line
+- callee: [entry, exit]
+  name: line_terminator
+- callee: [entry, exit]
+  name: fd_read_hunk
+- callee: [entry, exit]
+  name: write_data
+- callee: [entry, exit]
+  name: limit_bandwidth
+- callee: [entry, exit]
+  name: retr_rate
+- callee: [entry, exit]
+  name: calc_rate
+- callee: [entry, exit]
+  name: retrieve_url
+- callee: [entry, exit]
+  name: getproxy
+- callee: [entry, exit]
+  name: no_proxy_match
+- callee: [entry, exit]
+  name: retrieve_from_file
+- callee: [entry, exit]
+  name: free_urlpos
+- callee: [entry, exit]
+  name: printwhat
+- callee: [entry, exit]
+  name: sleep_between_retrievals
+- callee: [entry, exit]
+  name: rotate_backups
+- callee: [entry, exit]
+  name: url_uses_proxy
+- callee: [entry, exit]
+  name: set_local_file
+- callee: [entry, exit]
+  name: input_file_url
+- callee: [entry, exit]
+  name: spider_cleanup
+- callee: [entry, exit]
+  name: nonexisting_url
+- callee: [entry, exit]
+  name: print_broken_links
+- callee: [entry, exit]
+  name: url_unescape
+- callee: [entry, exit]
+  name: url_unescape_1
+- callee: [entry, exit]
+  name: url_unescape_except_reserved
+- callee: [entry, exit]
+  name: url_escape
+- callee: [entry, exit]
+  name: url_escape_1
+- callee: [entry, exit]
+  name: url_escape_unsafe_and_reserved
+- callee: [entry, exit]
+  name: url_scheme
+- callee: [entry, exit]
+  name: url_has_scheme
+- callee: [entry, exit]
+  name: url_valid_scheme
+- callee: [entry, exit]
+  name: scheme_default_port
+- callee: [entry, exit]
+  name: scheme_disable
+- callee: [entry, exit]
+  name: scheme_leading_string
+- callee: [entry, exit]
+  name: rewrite_shorthand_url
+- callee: [entry, exit]
+  name: url_parse
+- callee: [entry, exit]
+  name: reencode_escapes
+- callee: [entry, exit]
+  name: char_needs_escaping
+- callee: [entry, exit]
+  name: url_skip_credentials
+- callee: [entry, exit]
+  name: init_seps
+- callee: [entry, exit]
+  name: strpbrk_or_eos
+- callee: [entry, exit]
+  name: parse_credentials
+- callee: [entry, exit]
+  name: path_simplify
+- callee: [entry, exit]
+  name: split_path
+- callee: [entry, exit]
+  name: lowercase_str
+- callee: [entry, exit]
+  name: url_string
+- callee: [entry, exit]
+  name: full_path_length
+- callee: [entry, exit]
+  name: url_escape_allow_passthrough
+- callee: [entry, exit]
+  name: unescape_single_char
+- callee: [entry, exit]
+  name: full_path_write
+- callee: [entry, exit]
+  name: url_error
+- callee: [entry, exit]
+  name: url_full_path
+- callee: [entry, exit]
+  name: url_set_dir
+- callee: [entry, exit]
+  name: sync_path
+- callee: [entry, exit]
+  name: url_escape_dir
+- callee: [entry, exit]
+  name: url_set_file
+- callee: [entry, exit]
+  name: url_free
+- callee: [entry, exit]
+  name: mkalldirs
+- callee: [entry, exit]
+  name: url_file_name
+- callee: [entry, exit]
+  name: append_string
+- callee: [entry, exit]
+  name: append_null
+- callee: [entry, exit]
+  name: append_char
+- callee: [entry, exit]
+  name: append_dir_structure
+- callee: [entry, exit]
+  name: append_uri_pathel
+- callee: [entry, exit]
+  name: convert_fname
+- callee: [entry, exit]
+  name: uri_merge
+- callee: [entry, exit]
+  name: path_end
+- callee: [entry, exit]
+  name: schemes_are_similar_p
+- callee: [entry, exit]
+  name: are_urls_equal
+- callee: [entry, exit]
+  name: getchar_from_escaped_string
+- callee: [entry, exit]
+  name: warc_timestamp
+- callee: [entry, exit]
+  name: warc_uuid_str
+- callee: [entry, exit]
+  name: warc_init
+- callee: [entry, exit]
+  name: warc_load_cdx_dedup_file
+- callee: [entry, exit]
+  name: warc_parse_cdx_header
+- callee: [entry, exit]
+  name: warc_hash_sha1_digest
+- callee: [entry, exit]
+  name: warc_cmp_sha1_digest
+- callee: [entry, exit]
+  name: warc_process_cdx_line
+- callee: [entry, exit]
+  name: warc_tempfile
+- callee: [entry, exit]
+  name: warc_start_new_file
+- callee: [entry, exit]
+  name: warc_write_warcinfo_record
+- callee: [entry, exit]
+  name: warc_write_start_record
+- callee: [entry, exit]
+  name: warc_write_string
+- callee: [entry, exit]
+  name: warc_write_buffer
+- callee: [entry, exit]
+  name: warc_write_header
+- callee: [entry, exit]
+  name: warc_write_digest_headers
+- callee: [entry, exit]
+  name: warc_sha1_stream_with_payload
+- callee: [entry, exit]
+  name: warc_base32_sha1_digest
+- callee: [entry, exit]
+  name: warc_write_block_from_file
+- callee: [entry, exit]
+  name: warc_write_end_record
+- callee: [entry, exit]
+  name: warc_start_cdx_file
+- callee: [entry, exit]
+  name: warc_close
+- callee: [entry, exit]
+  name: warc_write_metadata
+- callee: [entry, exit]
+  name: warc_write_metadata_record
+- callee: [entry, exit]
+  name: warc_write_record
+- callee: [entry, exit]
+  name: warc_write_date_header
+- callee: [entry, exit]
+  name: warc_write_ip_header
+- callee: [entry, exit]
+  name: warc_write_resource_record
+- callee: [entry, exit]
+  name: warc_write_request_record
+- callee: [entry, exit]
+  name: warc_write_header_uri
+- callee: [entry, exit]
+  name: warc_write_response_record
+- callee: [entry, exit]
+  name: warc_find_duplicate_cdx_record
+- callee: [entry, exit]
+  name: warc_write_revisit_record
+- callee: [entry, exit]
+  name: warc_write_cdx_record
+- callee: [entry, exit]
+  name: set_file_metadata
+- callee: [entry, exit]
+  name: write_xattr_metadata
+- callee: [entry, exit]
+  name: xstrdup_lower
+- callee: [entry, exit]
+  name: strdupdelim
+- callee: [entry, exit]
+  name: sepstring
+- callee: [entry, exit]
+  name: aprintf
+- callee: [entry, exit]
+  name: memfatal
+- callee: [entry, exit]
+  name: strlcpy
+- callee: [entry, exit]
+  name: concat_strings
+- callee: [entry, exit]
+  name: time_str
+- callee: [entry, exit]
+  name: fmttime
+- callee: [entry, exit]
+  name: datetime_str
+- callee: [entry, exit]
+  name: fork_to_background
+- callee: [entry, exit]
+  name: unique_create
+- callee: [entry, exit]
+  name: unique_name
+- callee: [entry, exit]
+  name: file_exists_p
+- callee: [entry, exit]
+  name: unique_name_1
+- callee: [entry, exit]
+  name: number_to_string
+- callee: [entry, exit]
+  name: fopen_excl
+- callee: [entry, exit]
+  name: touch
+- callee: [entry, exit]
+  name: remove_link
+- callee: [entry, exit]
+  name: file_non_directory_p
+- callee: [entry, exit]
+  name: file_size
+- callee: [entry, exit]
+  name: make_directory
+- callee: [entry, exit]
+  name: file_merge
+- callee: [entry, exit]
+  name: fnmatch_nocase
+- callee: [entry, exit]
+  name: acceptable
+- callee: [entry, exit]
+  name: in_acclist
+- callee: [entry, exit]
+  name: has_wildcards_p
+- callee: [entry, exit]
+  name: match_tail
+- callee: [entry, exit]
+  name: accept_url
+- callee: [entry, exit]
+  name: subdir_p
+- callee: [entry, exit]
+  name: accdir
+- callee: [entry, exit]
+  name: dir_matches_p
+- callee: [entry, exit]
+  name: suffix
+- callee: [entry, exit]
+  name: has_html_suffix_p
+- callee: [entry, exit]
+  name: wget_read_file
+- callee: [entry, exit]
+  name: wget_read_file_free
+- callee: [entry, exit]
+  name: free_vec
+- callee: [entry, exit]
+  name: merge_vecs
+- callee: [entry, exit]
+  name: vec_append
+- callee: [entry, exit]
+  name: string_set_add
+- callee: [entry, exit]
+  name: string_set_contains
+- callee: [entry, exit]
+  name: string_set_to_array
+- callee: [entry, exit]
+  name: string_set_free
+- callee: [entry, exit]
+  name: free_keys_and_values
+- callee: [entry, exit]
+  name: with_thousand_seps
+- callee: [entry, exit]
+  name: get_grouping_data
+- callee: [entry, exit]
+  name: human_readable
+- callee: [entry, exit]
+  name: numdigit
+- callee: [entry, exit]
+  name: number_to_static_string
+- callee: [entry, exit]
+  name: convert_to_bits
+- callee: [entry, exit]
+  name: determine_screen_width
+- callee: [entry, exit]
+  name: random_number
+- callee: [entry, exit]
+  name: random_float
+- callee: [entry, exit]
+  name: run_with_timeout
+- callee: [entry, exit]
+  name: abort_run_with_timeout
+- callee: [entry, exit]
+  name: alarm_set
+- callee: [entry, exit]
+  name: alarm_cancel
+- callee: [entry, exit]
+  name: xsleep
+- callee: [entry, exit]
+  name: wget_base64_encode
+- callee: [entry, exit]
+  name: wget_base64_decode
+- callee: [entry, exit]
+  name: compile_pcre_regex
+- callee: [entry, exit]
+  name: compile_posix_regex
+- callee: [entry, exit]
+  name: match_pcre_regex
+- callee: [entry, exit]
+  name: match_posix_regex
+- callee: [entry, exit]
+  name: stable_sort
+- callee: [entry, exit]
+  name: mergesort_internal
+- callee: [entry, exit]
+  name: print_decimal
+- callee: [entry, exit]
+  name: get_max_length
+- callee: [entry, exit]
+  name: wg_hex_to_string
+- callee: [entry, exit]
+  name: wg_pin_peer_pubkey
+- callee: [entry, exit]
+  name: wg_pubkey_pem_to_der
+- callee: [entry, exit]
+  name: inform_exit_status
+- callee: [entry, exit]
+  name: get_status_for_err
+- callee: [entry, exit]
+  name: get_exit_status
+- callee: [entry, exit]
+  name: skey_response
+- callee: [entry, exit]
+  name: btoe
+- callee: [entry, exit]
+  name: extract
+- callee: [entry, exit]
+  name: ssl_init
+- callee: [entry, exit]
+  name: key_type_to_gnutls_type
+- callee: [entry, exit]
+  name: ssl_connect_wget
+- callee: [entry, exit]
+  name: _sni_hostname
+- callee: [entry, exit]
+  name: _do_handshake
+- callee: [entry, exit]
+  name: wgnutls_read
+- callee: [entry, exit]
+  name: wgnutls_read_timeout
+- callee: [entry, exit]
+  name: wgnutls_write
+- callee: [entry, exit]
+  name: wgnutls_poll
+- callee: [entry, exit]
+  name: wgnutls_peek
+- callee: [entry, exit]
+  name: wgnutls_errstr
+- callee: [entry, exit]
+  name: wgnutls_close
+- callee: [entry, exit]
+  name: ssl_check_certificate
+- callee: [entry, exit]
+  name: pkp_pin_peer_pubkey
+- callee: [entry, exit]
+  name: base32_encode
+- callee: [entry, exit]
+  name: to_uchar
+- callee: [entry, exit]
+  name: base32_encode_alloc
+- callee: [entry, exit]
+  name: isbase32
+- callee: [entry, exit]
+  name: base32_decode_ctx_init
+- callee: [entry, exit]
+  name: base32_decode_ctx
+- callee: [entry, exit]
+  name: decode_8
+- callee: [entry, exit]
+  name: get_8
+- callee: [entry, exit]
+  name: base32_decode_alloc_ctx
+- callee: [entry, exit]
+  name: c_isalnum
+- callee: [entry, exit]
+  name: c_isalpha
+- callee: [entry, exit]
+  name: c_isascii
+- callee: [entry, exit]
+  name: c_isblank
+- callee: [entry, exit]
+  name: c_iscntrl
+- callee: [entry, exit]
+  name: c_isdigit
+- callee: [entry, exit]
+  name: c_isgraph
+- callee: [entry, exit]
+  name: c_islower
+- callee: [entry, exit]
+  name: c_isprint
+- callee: [entry, exit]
+  name: c_ispunct
+- callee: [entry, exit]
+  name: c_isspace
+- callee: [entry, exit]
+  name: c_isupper
+- callee: [entry, exit]
+  name: c_isxdigit
+- callee: [entry, exit]
+  name: c_tolower
+- callee: [entry, exit]
+  name: c_toupper
+- callee: [entry, exit]
+  name: c_strcasecmp
+- callee: [entry, exit]
+  name: c_strncasecmp
+- callee: [entry, exit]
+  name: md5_init_ctx
+- callee: [entry, exit]
+  name: md5_read_ctx
+- callee: [entry, exit]
+  name: set_uint32
+- callee: [entry, exit]
+  name: md5_finish_ctx
+- callee: [entry, exit]
+  name: md5_process_block
+- callee: [entry, exit]
+  name: md5_stream
+- callee: [entry, exit]
+  name: md5_process_bytes
+- callee: [entry, exit]
+  name: md5_buffer
+- callee: [entry, exit]
+  name: sha1_init_ctx
+- callee: [entry, exit]
+  name: sha1_read_ctx
+- callee: [entry, exit]
+  name: set_uint32.1825
+- callee: [entry, exit]
+  name: sha1_finish_ctx
+- callee: [entry, exit]
+  name: sha1_process_block
+- callee: [entry, exit]
+  name: sha1_stream
+- callee: [entry, exit]
+  name: sha1_process_bytes
+- callee: [entry, exit]
+  name: sha1_buffer
+- callee: [entry, exit]
+  name: sha256_init_ctx
+- callee: [entry, exit]
+  name: sha224_init_ctx
+- callee: [entry, exit]
+  name: sha256_read_ctx
+- callee: [entry, exit]
+  name: set_uint32.1835
+- callee: [entry, exit]
+  name: sha224_read_ctx
+- callee: [entry, exit]
+  name: sha256_finish_ctx
+- callee: [entry, exit]
+  name: sha256_conclude_ctx
+- callee: [entry, exit]
+  name: sha256_process_block
+- callee: [entry, exit]
+  name: sha224_finish_ctx
+- callee: [entry, exit]
+  name: sha256_stream
+- callee: [entry, exit]
+  name: sha256_process_bytes
+- callee: [entry, exit]
+  name: sha224_stream
+- callee: [entry, exit]
+  name: sha256_buffer
+- callee: [entry, exit]
+  name: sha224_buffer
+- callee: [entry, exit]
+  name: base_name
+- callee: [entry, exit]
+  name: last_component
+- callee: [entry, exit]
+  name: base_len
+- callee: [entry, exit]
+  name: mb_width_aux
+- callee: [entry, exit]
+  name: mb_copy
+- callee: [entry, exit]
+  name: is_basic
+- callee: [entry, exit]
+  name: mbiter_multi_next
+- callee: [entry, exit]
+  name: mbiter_multi_reloc
+- callee: [entry, exit]
+  name: mbiter_multi_copy
+- callee: [entry, exit]
+  name: clone_quoting_options
+- callee: [entry, exit]
+  name: get_quoting_style
+- callee: [entry, exit]
+  name: set_quoting_style
+- callee: [entry, exit]
+  name: set_char_quoting
+- callee: [entry, exit]
+  name: set_quoting_flags
+- callee: [entry, exit]
+  name: set_custom_quoting
+- callee: [entry, exit]
+  name: quotearg_buffer
+- callee: [entry, exit]
+  name: quotearg_buffer_restyled
+- callee: [entry, exit]
+  name: gettext_quote
+- callee: [entry, exit]
+  name: quotearg_alloc
+- callee: [entry, exit]
+  name: quotearg_alloc_mem
+- callee: [entry, exit]
+  name: quotearg_free
+- callee: [entry, exit]
+  name: quotearg_n
+- callee: [entry, exit]
+  name: quotearg_n_options
+- callee: [entry, exit]
+  name: quotearg_n_mem
+- callee: [entry, exit]
+  name: quotearg
+- callee: [entry, exit]
+  name: quotearg_mem
+- callee: [entry, exit]
+  name: quotearg_n_style
+- callee: [entry, exit]
+  name: quoting_options_from_style
+- callee: [entry, exit]
+  name: quotearg_n_style_mem
+- callee: [entry, exit]
+  name: quotearg_style
+- callee: [entry, exit]
+  name: quotearg_style_mem
+- callee: [entry, exit]
+  name: quotearg_char_mem
+- callee: [entry, exit]
+  name: quotearg_char
+- callee: [entry, exit]
+  name: quotearg_colon
+- callee: [entry, exit]
+  name: quotearg_colon_mem
+- callee: [entry, exit]
+  name: quotearg_n_style_colon
+- callee: [entry, exit]
+  name: quotearg_n_custom
+- callee: [entry, exit]
+  name: quotearg_n_custom_mem
+- callee: [entry, exit]
+  name: quotearg_custom
+- callee: [entry, exit]
+  name: quotearg_custom_mem
+- callee: [entry, exit]
+  name: quote_n_mem
+- callee: [entry, exit]
+  name: quote_mem
+- callee: [entry, exit]
+  name: quote_n
+- callee: [entry, exit]
+  name: quote
+- callee: [entry, exit]
+  name: path_search
+- callee: [entry, exit]
+  name: direxists
+- callee: [entry, exit]
+  name: xnmalloc
+- callee: [entry, exit]
+  name: xmalloc
+- callee: [entry, exit]
+  name: xnrealloc
+- callee: [entry, exit]
+  name: xrealloc
+- callee: [entry, exit]
+  name: x2nrealloc
+- callee: [entry, exit]
+  name: xcharalloc
+- callee: [entry, exit]
+  name: x2realloc
+- callee: [entry, exit]
+  name: xzalloc
+- callee: [entry, exit]
+  name: xcalloc
+- callee: [entry, exit]
+  name: xmemdup
+- callee: [entry, exit]
+  name: xstrdup
+- callee: [entry, exit]
+  name: xalloc_die
+- callee: [entry, exit]
+  name: xstrndup
+- callee: [entry, exit]
+  name: rpl_fcntl
+- callee: [entry, exit]
+  name: gnu_getpass
+- callee: [entry, exit]
+  name: call_fclose
+- callee: [entry, exit]
+  name: rpl_ioctl
+- callee: [entry, exit]
+  name: rpl_mbrtowc
+- callee: [entry, exit]
+  name: mktime_internal
+- callee: [entry, exit]
+  name: leapyear
+- callee: [entry, exit]
+  name: ydhms_diff
+- callee: [entry, exit]
+  name: shr
+- callee: [entry, exit]
+  name: ranged_convert
+- callee: [entry, exit]
+  name: convert_time
+- callee: [entry, exit]
+  name: long_int_avg
+- callee: [entry, exit]
+  name: guess_time_tm
+- callee: [entry, exit]
+  name: isdst_differ
+- callee: [entry, exit]
+  name: rpl_mktime
+- callee: [entry, exit]
+  name: xmemdup0
+- callee: [entry, exit]
+  name: hard_locale
+- callee: [entry, exit]
+  name: locale_charset
+- callee: [entry, exit]
+  name: get_charset_aliases
